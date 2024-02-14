@@ -18,6 +18,12 @@ public class Element {
         this.prixAchat=prixAchat;
         this.prixVente=prixVente;
     }
+    public Element(String code,float quantite){
+        this.code=code;
+        this.quantite=quantite;
+
+    }
+
     public String getCode(){
         return this.code;
     }
