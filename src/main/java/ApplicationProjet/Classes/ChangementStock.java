@@ -3,9 +3,9 @@ package ApplicationProjet.Classes;
 public class ChangementStock {
     private String codeElement;
     private String nomElement;
-    private double quantiteModifiee;
-    private double prixAchat;
-    private double prixVente;
+    private float quantiteModifiee;
+    private float prixAchat;
+    private float prixVente;
     private String origine;  // Vente, Achat, Production, Sortie, Modification
 
     public ChangementStock(String codeElement, String nomElement, float quantiteModifiee, float prixAchat, float prixVente, String origine) {
@@ -25,19 +25,20 @@ public class ChangementStock {
         return nomElement;
     }
 
-    public double getQuantiteModifiee() {
+    public float getQuantiteModifiee() {
         return quantiteModifiee;
     }
 
-    public double getPrixAchat() {
+    public float getPrixAchat() {
         return prixAchat;
     }
 
-    public double getPrixVente() {
+    public float getPrixVente() {
         return prixVente;
     }
 
     public String getOrigine() {
         return origine;
     }
+
 }

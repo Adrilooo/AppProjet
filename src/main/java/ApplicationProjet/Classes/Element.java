@@ -21,8 +21,9 @@ public class Element {
         this.prixAchat=prixAchat;
         this.prixVente=prixVente;
     }
-    public Element(String code,float quantite){
+    public Element(String code,String nom,float quantite){
         this.code=code;
+        this.nom=nom;
         this.quantite=quantite;
 
     }
