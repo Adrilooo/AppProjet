@@ -6,11 +6,11 @@ import java.util.ArrayList;
 
 public class Element {
 
-    private String code;
-    private String nom;
+    private final String code;
+    private final String nom;
     private float quantite;
-    private String uniteMesure;
-    private double prixAchat;
+    private final String uniteMesure;
+    private final double prixAchat;
     private double prixVente;
 
 

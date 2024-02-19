@@ -21,6 +21,7 @@ public class Stocks {
             }
         }
         else{
+            e.setQuantite(n);
             EStock.add(e);
         }
    }

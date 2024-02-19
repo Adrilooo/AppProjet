@@ -8,6 +8,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.Map;
 
 public class Main extends Application {
     @Override
@@ -27,8 +28,8 @@ public class Main extends Application {
         Element a= new Element("2","Karmine Corp",8.0F,"km",120,180);
         float T=a.getQuantite();
         System.out.println(T);
+        Stocks.ajouterElem(a, 0.0F);
         a.setQuantite(3.0F);
-        Stocks.ajouterElem(a, a.getQuantite());
         a.Vendre(a,2.0F);
         float X=a.getQuantite();
         System.out.println(X);
@@ -42,6 +43,8 @@ public class Main extends Application {
         ElementSortie.put(m,1.0F);
         ChaineProduction ch = new ChaineProduction("C010","Propulsion",ElementEntree, ElementSortie);
         ch.valider();
+
+
         ch.fin();
         Stocks.afficherStock();
         Historique.afficherHistorique();
