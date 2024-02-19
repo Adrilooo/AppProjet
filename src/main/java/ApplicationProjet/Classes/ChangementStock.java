@@ -4,11 +4,11 @@ public class ChangementStock {
     private String codeElement;
     private String nomElement;
     private float quantiteModifiee;
-    private float prixAchat;
-    private float prixVente;
+    private double prixAchat;
+    private double prixVente;
     private String origine;  // Vente, Achat, Production, Sortie, Modification
 
-    public ChangementStock(String codeElement, String nomElement, float quantiteModifiee, float prixAchat, float prixVente, String origine) {
+    public ChangementStock(String codeElement, String nomElement, float quantiteModifiee, double prixAchat, double prixVente, String origine) {
         this.codeElement = codeElement;
         this.nomElement = nomElement;
         this.quantiteModifiee = quantiteModifiee;
@@ -29,11 +29,11 @@ public class ChangementStock {
         return quantiteModifiee;
     }
 
-    public float getPrixAchat() {
+    public double getPrixAchat() {
         return prixAchat;
     }
 
-    public float getPrixVente() {
+    public double getPrixVente() {
         return prixVente;
     }
 

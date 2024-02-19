@@ -1,5 +1,7 @@
 package ApplicationProjet.Classes;
 import ApplicationProjet.Classes.Stocks;
+
+import java.security.cert.CertificateRevokedException;
 import java.util.ArrayList;
 
 public class Element {
@@ -8,12 +10,12 @@ public class Element {
     private String nom;
     private float quantite;
     private String uniteMesure;
-    private float prixAchat;
-    private float prixVente;
+    private double prixAchat;
+    private double prixVente;
 
 
 
-    public Element(String code, String nom, float quantite, String uniteMesure,float prixAchat, float prixVente){
+    public Element(String code, String nom, float quantite, String uniteMesure,double prixAchat, double prixVente){
         this.code=code;
         this.nom=nom;
         this.quantite=quantite;
@@ -21,11 +23,13 @@ public class Element {
         this.prixAchat=prixAchat;
         this.prixVente=prixVente;
     }
-    public Element(String code,String nom,float quantite){
-        this.code=code;
-        this.nom=nom;
-        this.quantite=quantite;
-
+    public static Element trouverElement(String code){
+        for (Element e : Stocks.EStock){
+            if(e.getCode().equals(code))
+                return e;
+        }
+        System.exit(0);
+        return this;
     }
 
     public String getCode(){
@@ -40,10 +44,10 @@ public class Element {
     public String getUniteMesure(){
         return this.uniteMesure;
     }
-    public float getPrixAchat(){
+    public double getPrixAchat(){
         return this.prixAchat;
     }
-    public float getPrixVente(){
+    public double getPrixVente(){
         return this.prixVente;
     }
     public void setQuantite(float n){
@@ -56,7 +60,7 @@ public class Element {
 
 
     public void Acheter(Element e, float quantiteCommandee){
-        float Prix = PrixAchat(e,quantiteCommandee);
+        double Prix = PrixAchat(e,quantiteCommandee);
 
         Stocks.ajouterElem(e,quantiteCommandee);
         Historique.ajouterChangement(new ChangementStock(e.getCode(), e.getNom(), quantiteCommandee, Prix,0,"Achat"));
@@ -70,18 +74,18 @@ public class Element {
                 }
             }
         }
-        float Prix = PrixVente(e,quantiteVendue);
+        double Prix = PrixVente(e,quantiteVendue);
             Historique.ajouterChangement(new ChangementStock(e.getCode(), e.getNom(), quantiteVendue,0,Prix,"Vente"));
     }
 
-    public float PrixAchat(Element e, float quantite){
+    public double PrixAchat(Element e, float quantite){
 
             return (e.prixAchat)*(quantite);
     }
 
 
 
-        public float PrixVente(Element e, float quantite){
+        public double PrixVente(Element e, float quantite){
 
             return (e.prixVente)*(quantite);
     }
