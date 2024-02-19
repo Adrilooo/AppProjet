@@ -3,7 +3,9 @@ package ApplicationProjet.Classes;
 import java.io.*;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class CSV {
 
@@ -36,7 +38,7 @@ public class CSV {
             while ((line = reader.readLine()) != null) {
                 String[] row = line.split(";");
 
-                ArrayList <Element> E1 = new ArrayList<>();
+                HashMap<Element, Float> ElementEntree = new HashMap<Element, Float>();
                 String [] elementEntree = row[2].split(",");
                 for ( String data : elementEntree){
                     data = data.replaceAll("[()\\s]+","");
@@ -44,14 +46,24 @@ public class CSV {
                     String code = info[0];
                     float quantite=Float.parseFloat(info[1]);
                     Element e = Element.trouverElement(code);
-                    ElementEntree
-
+                    ElementEntree.put(e,quantite);
 
                 }
-                ArrayList <Element> E2 = new ArrayList<>();
+                HashMap<Element, Float> ElementSortie = new HashMap<Element, Float>();
+                String [] elementSortie = row[2].split(",");
+                for ( String data : elementEntree){
+                    data = data.replaceAll("[()\\s]+","");
+                    String[] info = data.split(":");
+                    String code = info[0];
+                    float quantite=Float.parseFloat(info[1]);
+                    Element e = Element.trouverElement(code);
+                    ElementSortie.put(e,quantite);
+
+                }
 
 
-                ChaineProduction chaine = new ChaineProduction(row[0],row[1], , );
+
+                ChaineProduction chaine = new ChaineProduction(row[0],row[1],ElementEntree,ElementSortie);
 
 
 

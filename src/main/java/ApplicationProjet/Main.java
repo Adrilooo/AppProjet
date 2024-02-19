@@ -1,15 +1,13 @@
 package ApplicationProjet;
-
-import ApplicationProjet.Classes.CSV;
-import ApplicationProjet.Classes.Element;
-import ApplicationProjet.Classes.Historique;
-import ApplicationProjet.Classes.Stocks;
+import ApplicationProjet.Classes.ChaineProduction;
+import ApplicationProjet.Classes.*;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.HashMap;
 
 public class Main extends Application {
     @Override
@@ -24,7 +22,9 @@ public class Main extends Application {
     public static void main(String[] args) {
         CSV b = new CSV();
         b.LireElement();
-        Element a= new Element("2","Karmine Corp",8.0F);
+        CSV c = new CSV();
+        c.LireChaine();
+        Element a= new Element("2","Karmine Corp",8.0F,"km",120,180);
         float T=a.getQuantite();
         System.out.println(T);
         a.setQuantite(3.0F);
@@ -35,6 +35,14 @@ public class Main extends Application {
         a.Acheter(a,4.0F);
         float H=a.getQuantite();
         System.out.println(H);
+        Element m= new Element("17","Vitality",0.0F,"km",120,180);
+        HashMap<Element, Float> ElementEntree = new HashMap<Element, Float>();
+        HashMap<Element, Float> ElementSortie = new HashMap<Element, Float>();
+        ElementEntree.put(a,2.0F);
+        ElementSortie.put(m,1.0F);
+        ChaineProduction ch = new ChaineProduction("C010","Propulsion",ElementEntree, ElementSortie);
+        ch.valider();
+        ch.fin();
         Stocks.afficherStock();
         Historique.afficherHistorique();
 

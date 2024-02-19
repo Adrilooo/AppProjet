@@ -28,8 +28,7 @@ public class Element {
             if(e.getCode().equals(code))
                 return e;
         }
-        System.exit(0);
-        return this;
+        return null;
     }
 
     public String getCode(){
