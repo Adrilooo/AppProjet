@@ -8,7 +8,7 @@ import java.util.List;
 public class CSV {
 
     public  void LireElement() {
-        String file = "C:\\Users\\adrie\\Documents\\ApplicationProjet\\src\\main\\java\\ApplicationProjet\\elements.csv";
+        String file = System.getProperty("user.dir") + "\\src\\main\\java\\ApplicationProjet\\elements.csv";
         String line = "";
         try {
             BufferedReader reader = new BufferedReader(new FileReader(file));
@@ -29,7 +29,7 @@ public class CSV {
         }
     }
     public void LireChaine() {
-        String file = "C:\\Users\\adrie\\Documents\\ApplicationProjet\\src\\main\\java\\ApplicationProjet\\chaines.csv";
+        String file = System.getProperty("user.dir") + "\\src\\main\\java\\ApplicationProjet\\chaines.csv";
         String line = "";
         try {
             BufferedReader reader = new BufferedReader(new FileReader(file));

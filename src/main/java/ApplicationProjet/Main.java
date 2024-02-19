@@ -14,7 +14,7 @@ import java.io.IOException;
 public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("hello-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("stock.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
         stage.setTitle("Hello!");
         stage.setScene(scene);
@@ -22,6 +22,7 @@ public class Main extends Application {
     }
 
     public static void main(String[] args) {
+        launch();
         CSV b = new CSV();
         b.LireElement();
         Element a= new Element("2","Karmine Corp",8.0F);

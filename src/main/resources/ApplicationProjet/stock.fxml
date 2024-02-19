@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane nodeOrientation="LEFT_TO_RIGHT" prefHeight="742.0" prefWidth="986.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ApplicationProjet.Controller">
+   <children>
+      <Label alignment="CENTER" layoutX="391.0" layoutY="19.0" prefHeight="41.0" prefWidth="375.0" text="Stocks">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cdcdcd" height="742.0" stroke="#cdcdcd" strokeType="INSIDE" width="166.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="820.0" AnchorPane.topAnchor="0.0" />
+      <Button layoutY="68.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="166.0" text="Commandes" />
+      <TableView fx:id="tableViewStock" layoutX="182.0" layoutY="68.0" prefHeight="633.0" prefWidth="793.0" AnchorPane.bottomAnchor="41.0" AnchorPane.leftAnchor="182.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="68.0">
+        <columns>
+          <TableColumn fx:id="colNom" prefWidth="125.0" text="Nom" />
+          <TableColumn fx:id="colCode" prefWidth="183.0" text="Code" />
+            <TableColumn fx:id="colQte" prefWidth="107.0" text="Quantité" />
+            <TableColumn fx:id="colUnite" prefWidth="91.0" text="Unité" />
+            <TableColumn fx:id="colAchat" prefWidth="137.0" text="Prix Achat" />
+            <TableColumn fx:id="colVente" prefWidth="149.0" text="Prix Vente" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnStock" layoutY="2.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="166.0" text="Stock" />
+      <Button fx:id="btnCProc" layoutY="35.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="166.0" text="Chaine de production" />
+      <Button fx:id="btnHistorique" layoutY="99.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="166.0" text="Historique" />
+      <Button layoutY="130.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="166.0" text="Paramètre" />
+   </children>
+</AnchorPane>
