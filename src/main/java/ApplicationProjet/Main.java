@@ -22,7 +22,6 @@ public class Main extends Application {
     }
 
     public static void main(String[] args) {
-        launch();
         CSV b = new CSV();
         b.LireElement();
         Element a= new Element("2","Karmine Corp",8.0F);
@@ -38,6 +37,7 @@ public class Main extends Application {
         System.out.println(H);
         Stocks.afficherStock();
         Historique.afficherHistorique();
+        launch();
 
     }
 }

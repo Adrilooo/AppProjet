@@ -2,6 +2,7 @@ package ApplicationProjet;
 
 import ApplicationProjet.Classes.Element;
 import ApplicationProjet.Classes.Stocks;
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -56,7 +57,15 @@ public class Controller implements Initializable {
         colQte.setCellValueFactory(new PropertyValueFactory<>("quantite"));
         colUnite.setCellValueFactory(new PropertyValueFactory<>("uniteMesure"));
 
-        ObservableList<Element> data = FXCollections.observableArrayList(Stocks.EStock);
+        ObservableList<Element> data = FXCollections.observableArrayList();
+        for (Element element : Stocks.EStock) {
+            data.add(element);
+        }
+
+
         tableViewStock.setItems(data);
+        System.out.println("Nombre d'éléments dans la TableView : " + data.size());
+        System.out.println("Taille de Stocks.EStock : " + Stocks.EStock.size());
+
     }
 }
