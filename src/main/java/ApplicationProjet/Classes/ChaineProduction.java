@@ -19,9 +19,9 @@ public class ChaineProduction {
     public ChaineProduction(String code, String nom, HashMap ElementEntree, HashMap ElementSortie) {
         this.code = code;
         this.nom = nom;
-        this.ElementEntree = ElementEntree ;
-        this.ElementSortie = ElementSortie ;
-        this.NivActivation=1;
+        this.ElementEntree = ElementEntree;
+        this.ElementSortie = ElementSortie;
+        this.NivActivation = 1;
     }
 
     public String getCode() {
@@ -62,53 +62,65 @@ public class ChaineProduction {
     }
 
     public void valider() {
-
+        boolean q = true;
+        ArrayList<Boolean> verif = new ArrayList<Boolean>();
         for (HashMap.Entry<Element, Float> m : ElementEntree.entrySet()) {
-            boolean q = true;
+
             for (Element e : Stocks.EStock) {
 
                 if (e == (Element) m.getKey()) {
                     for (int i = 0; i < this.NivActivation; i++) {
                         if (e.getQuantite() < (Float) m.getValue()) {
                             q = false;
-                            System.err.println("erreur stock element entree : "+ e.getNom() + " stock : " + e.getQuantite() + " < quantite demande : "+ m.getValue());
+                            verif.add(q);
+                            System.err.println("erreur stock element entree : " + e.getNom() + " stock : " + e.getQuantite() + " < quantite demande : " + m.getValue());
                         }
-                        if (q) {
+                    }
+                }
+            }
+        }
+        if (!verif.contains(Boolean.FALSE)) {
+            for (HashMap.Entry<Element, Float> m : ElementEntree.entrySet()) {
+
+                for (Element e : Stocks.EStock) {
+
+                    if (e == (Element) m.getKey()) {
+                        for (int i = 0; i < this.NivActivation; i++) {
                             Stocks.enleverElem((Element) m.getKey(), (Float) m.getValue());
                             Historique.ajouterChangement(new ChangementStock(e.getCode(), e.getNom(), (Float) m.getValue(), 0, 0, "Mis en production"));
+
                         }
+
+
                     }
-
-
                 }
             }
-        }
-    }
-    public void fin () {
-        for (Map.Entry<Element,Float> m : ElementSortie.entrySet()) {
-            if(Stocks.EStock.contains((Element)m.getKey()) ){
-                for (Element e : Stocks.EStock) {
-                    if (e == (Element) m.getKey()) {
-                        Stocks.ajouterElem((Element) m.getKey(), (Float) m.getValue());
-                        Historique.ajouterChangement(new ChangementStock(e.getCode(), e.getNom(), (Float) m.getValue(), 0, 0, "Produit"));
-                    }
+            for (Map.Entry<Element,Float> m : ElementSortie.entrySet()) {
+                if(Stocks.EStock.contains((Element)m.getKey()) ){
+                    for (Element e : Stocks.EStock) {
+                        if (e == (Element) m.getKey()) {
+                            Stocks.ajouterElem((Element) m.getKey(), (Float) m.getValue());
+                            Historique.ajouterChangement(new ChangementStock(e.getCode(), e.getNom(), (Float) m.getValue(), 0, 0, "Produit"));
+                        }
 
+                    }
+                }
+                else{
+                    Stocks.ajouterElem((Element)m.getKey(),(Float)m.getValue());
+                    Historique.ajouterChangement(new ChangementStock(getCode(), getNom(), (Float) m.getValue(), 0, 0, "Produit"));
                 }
             }
-            else{
-                Stocks.ajouterElem((Element)m.getKey(),(Float)m.getValue());
-                Historique.ajouterChangement(new ChangementStock(getCode(), getNom(), (Float) m.getValue(), 0, 0, "Produit"));
-            }
-        }
 
+
+
+
+        }
         this.NivActivation = 0;
         ElementEntree.clear();
         ElementSortie.clear();
-
-
     }
-
 }
+
 
 
 

@@ -10,7 +10,7 @@ import java.util.Map;
 public class CSV {
 
     public  void LireElement() {
-        String file = "C:\\Users\\adrie\\Documents\\ApplicationProjet\\src\\main\\java\\ApplicationProjet\\elements.csv";
+        String file = "src\\main\\java\\ApplicationProjet\\elements.csv";
         String line = "";
         try {
             BufferedReader reader = new BufferedReader(new FileReader(file));
@@ -31,7 +31,7 @@ public class CSV {
         }
     }
     public void LireChaine() {
-        String file = "C:\\Users\\adrie\\Documents\\ApplicationProjet\\src\\main\\java\\ApplicationProjet\\chaines.csv";
+        String file = "src\\main\\java\\ApplicationProjet\\chaines.csv";
         String line = "";
         try {
             BufferedReader reader = new BufferedReader(new FileReader(file));
@@ -65,7 +65,7 @@ public class CSV {
 
                 ChaineProduction chaine = new ChaineProduction(row[0],row[1],ElementEntree,ElementSortie);
                 chaine.valider();
-                chaine.fin();
+
 
 
 

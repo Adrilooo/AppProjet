@@ -45,11 +45,9 @@ public class Main extends Application {
 
         ChaineProduction ch = new ChaineProduction("C010","Propulsion",ElementEntree, ElementSortie);
         ch.valider();
-
-
-        ch.fin();
         Stocks.afficherStock();
         Historique.afficherHistorique();
+
 
     }
 }
