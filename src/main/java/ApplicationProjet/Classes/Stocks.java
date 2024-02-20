@@ -7,7 +7,12 @@ public class Stocks {
    public static void enleverElem(Element e, float n) {
         for (Element a : EStock){
             if (a.getCode().equals(e.getCode())){
-                a.ajouterQuantite(-n);
+                if(a.getQuantite()<n){
+                    System.err.println("Stock insuffisant");
+                }
+                else {
+                    a.ajouterQuantite(-n);
+                }
             }
         }
    }
