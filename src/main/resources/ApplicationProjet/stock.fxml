@@ -9,7 +9,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane nodeOrientation="LEFT_TO_RIGHT" prefHeight="742.0" prefWidth="986.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ApplicationProjet.Controller">
+<AnchorPane nodeOrientation="LEFT_TO_RIGHT" prefHeight="742.0" prefWidth="986.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ApplicationProjet.ControllerStock">
    <children>
       <Label alignment="CENTER" layoutX="391.0" layoutY="19.0" prefHeight="41.0" prefWidth="375.0" text="Stocks">
          <font>
@@ -17,7 +17,7 @@
          </font>
       </Label>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cdcdcd" height="742.0" stroke="#cdcdcd" strokeType="INSIDE" width="166.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="820.0" AnchorPane.topAnchor="0.0" />
-      <Button layoutY="80.0" mnemonicParsing="false" onAction="#PageCommande" prefHeight="22.0" prefWidth="166.0" text="Commandes" />
+      <Button fx:id="btnCommande" layoutY="80.0" mnemonicParsing="false" onAction="#PageCommande" prefHeight="22.0" prefWidth="166.0" text="Commandes" />
       <TableView fx:id="tableViewStock" fixedCellSize="0.0" layoutX="182.0" layoutY="68.0" prefHeight="633.0" prefWidth="493.0" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="70.0">
         <columns>
           <TableColumn fx:id="colNom" prefWidth="125.0" text="Nom" />
@@ -32,9 +32,8 @@
          </columnResizePolicy>
       </TableView>
       <Button fx:id="btnStock" mnemonicParsing="false" onAction="#PageStock" prefHeight="22.0" prefWidth="166.0" text="Stock" />
-      <Button fx:id="btnCProc" layoutY="40.0" mnemonicParsing="false" onAction="#PageChaine" prefHeight="22.0" prefWidth="166.0" text="Chaine de production" />
+      <Button fx:id="btnCProd" layoutY="40.0" mnemonicParsing="false" onAction="#PageChaine" prefHeight="22.0" prefWidth="166.0" text="Chaine de production" />
       <Button fx:id="btnHistorique" layoutY="120.0" mnemonicParsing="false" onAction="#PageHistorique" prefHeight="22.0" prefWidth="166.0" text="Historique" />
-      <Button layoutY="160.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="166.0" text="Paramètre" />
    </children>
    <opaqueInsets>
       <Insets />
