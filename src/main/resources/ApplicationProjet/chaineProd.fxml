@@ -1,14 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="ApplicationProjet.ChaineProd"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane nodeOrientation="LEFT_TO_RIGHT" prefHeight="742.0" prefWidth="986.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ApplicationProjet.Controller">
+   <children>
+      <Label alignment="CENTER" layoutX="391.0" layoutY="19.0" prefHeight="41.0" prefWidth="375.0" text="Chaine de Production">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cdcdcd" height="742.0" stroke="#cdcdcd" strokeType="INSIDE" width="166.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="820.0" AnchorPane.topAnchor="0.0" />
+      <Button fx:id="btnStock" mnemonicParsing="false" prefHeight="22.0" prefWidth="166.0" text="Stock" />
+      <Button layoutY="80.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="166.0" text="Commandes" />
+      <Button fx:id="btnCProc" layoutY="40.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="166.0" text="Chaine de production" />
+      <Button fx:id="btnHistorique" layoutY="120.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="166.0" text="Historique" />
+      <Button layoutY="160.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="166.0" text="Paramètre" />
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
 </AnchorPane>

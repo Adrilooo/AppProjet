@@ -47,6 +47,9 @@ public class Controller implements Initializable {
     private TableView<Element> tableViewStock;
 
 
+    public void PageStock(){
+
+    }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
