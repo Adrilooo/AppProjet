@@ -62,28 +62,37 @@ public class ChaineProduction {
     }
 
     public void valider() {
-        System.out.println("Taille de la HashMap après valider : " + ElementEntree.size());
-        for (HashMap.Entry<Element,Float> m : ElementEntree.entrySet()) {
 
+        for (HashMap.Entry<Element, Float> m : ElementEntree.entrySet()) {
+            boolean q = true;
             for (Element e : Stocks.EStock) {
 
-                if (e == (Element) m.getKey())
-                    Historique.ajouterChangement(new ChangementStock(e.getCode(), e.getNom(), (Float) m.getValue(), 0, 0, "Mis en production"));
+                if (e == (Element) m.getKey()) {
+                    for (int i = 0; i < this.NivActivation; i++) {
+                        if (e.getQuantite() < (Float) m.getValue()) {
+                            q = false;
+                            System.err.println("erreur stock element entree : "+ e.getNom() + " stock : " + e.getQuantite() + " < quantite demande : "+ m.getValue());
+                        }
+                        if (q) {
+                            Stocks.enleverElem((Element) m.getKey(), (Float) m.getValue());
+                            Historique.ajouterChangement(new ChangementStock(e.getCode(), e.getNom(), (Float) m.getValue(), 0, 0, "Mis en production"));
+                        }
+                    }
+
+
+                }
             }
-            for (int i = 0; i < this.NivActivation; i++) {
-
-                Stocks.enleverElem((Element) m.getKey(), (Float) m.getValue());
-            }
-
-
         }
     }
     public void fin () {
         for (Map.Entry<Element,Float> m : ElementSortie.entrySet()) {
             if(Stocks.EStock.contains((Element)m.getKey()) ){
                 for (Element e : Stocks.EStock) {
-                    if (e == (Element) m.getKey())
+                    if (e == (Element) m.getKey()) {
+                        Stocks.ajouterElem((Element) m.getKey(), (Float) m.getValue());
                         Historique.ajouterChangement(new ChangementStock(e.getCode(), e.getNom(), (Float) m.getValue(), 0, 0, "Produit"));
+                    }
+
                 }
             }
             else{

@@ -23,13 +23,14 @@ public class Main extends Application {
     public static void main(String[] args) {
         CSV b = new CSV();
         b.LireElement();
+        Stocks.afficherStock();
         CSV c = new CSV();
         c.LireChaine();
         Element a= new Element("2","Karmine Corp",8.0F,"km",120,180);
         float T=a.getQuantite();
         System.out.println(T);
-        Stocks.ajouterElem(a, 0.0F);
-        a.setQuantite(3.0F);
+        Stocks.ajouterElem(a, 8.0F);
+        a.ajouterQuantite(3.0F);
         a.Vendre(a,2.0F);
         float X=a.getQuantite();
         System.out.println(X);
@@ -41,6 +42,7 @@ public class Main extends Application {
         HashMap<Element, Float> ElementSortie = new HashMap<Element, Float>();
         ElementEntree.put(a,2.0F);
         ElementSortie.put(m,1.0F);
+
         ChaineProduction ch = new ChaineProduction("C010","Propulsion",ElementEntree, ElementSortie);
         ch.valider();
 

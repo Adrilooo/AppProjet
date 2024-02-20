@@ -50,8 +50,8 @@ public class CSV {
 
                 }
                 HashMap<Element, Float> ElementSortie = new HashMap<Element, Float>();
-                String [] elementSortie = row[2].split(",");
-                for ( String data : elementEntree){
+                String [] elementSortie = row[3].split(",");
+                for ( String data : elementSortie){
                     data = data.replaceAll("[()\\s]+","");
                     String[] info = data.split(":");
                     String code = info[0];
@@ -64,6 +64,8 @@ public class CSV {
 
 
                 ChaineProduction chaine = new ChaineProduction(row[0],row[1],ElementEntree,ElementSortie);
+                chaine.valider();
+                chaine.fin();
 
 
 

@@ -50,8 +50,9 @@ public class Element {
         return this.prixVente;
     }
     public void setQuantite(float n){
-        this.quantite+=n;
+        this.quantite=n;
     }
+    public void ajouterQuantite(float n){this.quantite+=n;}
     public void setPrixVente(float n){
         this.prixVente=n;
     }
