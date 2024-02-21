@@ -6,7 +6,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class ControllerCommande {
 
@@ -23,47 +26,26 @@ public class ControllerCommande {
     private Button btnStock;
 
     @FXML
-    void PageChaine(ActionEvent event) {
-        try {
-            Parent root = FXMLLoader.load(getClass().getResource("/ApplicationProjet/chaineProd.fxml"));
-            Scene scene = new Scene(root);
-            Stage stage = new Stage();
-            stage.setScene(scene);
-            stage.show();
-
-        }catch(Exception e){
-            e.printStackTrace();
-        }
+    public void PageChaine(MouseEvent event) {
+        ChargerPage("chaineProd");
     }
 
     @FXML
-    void PageHistorique(ActionEvent event) {
-        try {
-            Parent root = FXMLLoader.load(getClass().getResource("/ApplicationProjet/historique.fxml"));
-            Scene scene = new Scene(root);
-            Stage stage = new Stage();
-            stage.setScene(scene);
-            stage.show();
-
-        }catch(Exception e){
-            e.printStackTrace();
-        }
-
+    public void PageHistorique(MouseEvent event) {
+        ChargerPage("Historique");
     }
 
     @FXML
-    void PageStock(ActionEvent event) {
-        try {
-            Parent root = FXMLLoader.load(getClass().getResource("/ApplicationProjet/stock.fxml"));
-            Scene scene = new Scene(root);
-            Stage stage = new Stage();
-            stage.setScene(scene);
-            stage.show();
-
-        }catch(Exception e){
-            e.printStackTrace();
-        }
-
+    public void PageStock(MouseEvent event) {
+        ChargerPage("Stock");
     }
 
+    public void ChargerPage(String page){
+        Parent root = null;
+        try{
+            root = FXMLLoader.load(getClass().getResource(page + ".fxml"));
+        } catch(IOException e ){
+            e.printStackTrace();
+        }
+    }
 }

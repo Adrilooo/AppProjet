@@ -17,7 +17,7 @@ import java.util.ResourceBundle;
 public class Controller implements Initializable {
 
     @FXML
-    private Button Historique;
+    private Button btnHistorique;
 
     @FXML
     private Button btnCProc;
@@ -64,11 +64,8 @@ public class Controller implements Initializable {
         for (Element element : Stocks.EStock) {
             data.add(element);
         }
-
-
         tableViewStock.setItems(data);
         System.out.println("Nombre d'éléments dans la TableView : " + data.size());
         System.out.println("Taille de Stocks.EStock : " + Stocks.EStock.size());
-
     }
 }
