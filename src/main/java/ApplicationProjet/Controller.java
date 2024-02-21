@@ -68,5 +68,4 @@ public class Controller implements Initializable {
         System.out.println("Nombre d'éléments dans la TableView : " + data.size());
         System.out.println("Taille de Stocks.EStock : " + Stocks.EStock.size());
     }
-
 }

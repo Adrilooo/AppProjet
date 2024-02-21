@@ -1,13 +1,16 @@
 package ApplicationProjet;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
@@ -34,12 +37,12 @@ public class ControllerTest {
 
     @FXML
     public void PageChaine(MouseEvent event) {
-        ChargerPage("PageChaine");
+        ChargerPage("c  haine");
     }
 
     @FXML
     public void PageHistorique(MouseEvent event) {
-        ChargerPage("PageHistorique");
+        ChargerPage("historique");
     }
 
     @FXML
@@ -51,7 +54,7 @@ public class ControllerTest {
     public void PageCommande(MouseEvent event) {
         ChargerPage("test_page1");
     }
-    private void ChargerPage(String page){
+    public void ChargerPage(String page){
         Parent root = null;
         try{
             root = FXMLLoader.load((Objects.requireNonNull(getClass().getResource(page + ".fxml"))));
@@ -60,4 +63,10 @@ public class ControllerTest {
         }
         bp.setCenter(root);
     }
+    /*
+    public void ChargerPage2(String page, String onglet, ActionEvent AE) throws IOException{
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(page)));
+        Stage stage = (Stage) ((Node) AE.getSource()).getScene.getWindow();
+    }
+    */
 }

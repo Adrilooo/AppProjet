@@ -30,14 +30,17 @@ public class ControllerChaine {
     @FXML
     public void PageHistorique(MouseEvent event) {
         ChargerPage("historique");
-
     }
-
     @FXML
     public void PageStock(MouseEvent event) {
         ChargerPage("stock");
-
     }
+
+    @FXML
+    public void PageChaine(MouseEvent event) {
+        ChargerPage("chaine");
+    }
+
 
     public void ChargerPage(String page){
         Parent root = null;

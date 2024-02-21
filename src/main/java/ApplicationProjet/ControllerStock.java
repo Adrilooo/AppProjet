@@ -4,6 +4,7 @@ import ApplicationProjet.Classes.Element;
 import ApplicationProjet.Classes.Stocks;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -14,9 +15,9 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.io.IOException;
 
 public class ControllerStock implements Initializable {
 
@@ -48,26 +49,32 @@ public class ControllerStock implements Initializable {
     private TableColumn<Element, String> colUnite;
 
     @FXML
-    private TableColumn<Element, Float> colVente;
+    private TableColumn< Element, Float> colVente;
 
     @FXML
     private TableView<Element> tableViewStock;
 
-    @FXML
-    public void PageChaine(MouseEvent event) {
-        ChargerPage("chaineProd");
+    public void PageStock(ActionEvent event) {
+        ChargerPage("stock");
     }
 
     @FXML
-   public  void PageCommande(MouseEvent event) {
+    public void PageChaine(ActionEvent event) {
+        ChargerPage("chaine");
+    }
+
+    @FXML
+   public  void PageCommande(ActionEvent event) {
         ChargerPage("commande");
     }
 
     @FXML
-    private void PageHistorique(MouseEvent event) {
+    private void PageHistorique(ActionEvent event) {
         ChargerPage("historique");
     }
-    public void ChargerPage(String page){
+
+
+    private void ChargerPage(String page){
         Parent root = null;
         try{
             root = FXMLLoader.load(getClass().getResource(page + ".fxml"));
@@ -90,8 +97,6 @@ public class ControllerStock implements Initializable {
         for (Element element : Stocks.EStock) {
             data.add(element);
         }
-
-
         tableViewStock.setItems(data);
     }
 }

@@ -26,18 +26,23 @@ public class ControllerCommande {
     private Button btnStock;
 
     @FXML
+    public void PageCommande(MouseEvent event) {
+        ChargerPage("commande");
+    }
+
+    @FXML
     public void PageChaine(MouseEvent event) {
-        ChargerPage("chaineProd");
+        ChargerPage("chaine");
     }
 
     @FXML
     public void PageHistorique(MouseEvent event) {
-        ChargerPage("Historique");
+        ChargerPage("historique");
     }
 
     @FXML
     public void PageStock(MouseEvent event) {
-        ChargerPage("Stock");
+        ChargerPage("stock");
     }
 
     public void ChargerPage(String page){

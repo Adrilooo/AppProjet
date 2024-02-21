@@ -58,9 +58,15 @@ public class ControllerHistorique {
     @FXML
     private TableView<Element> tableViewStock;
 
+
+    @FXML
+    public void PageHistorique(MouseEvent event) {
+        ChargerPage("historique");
+    }
+
     @FXML
     public void PageChaine(MouseEvent event) {
-        ChargerPage("chaineProd");
+        ChargerPage("chaine");
     }
 
     @FXML
