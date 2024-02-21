@@ -9,11 +9,15 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
 
 import java.net.URL;
 import java.util.Objects;
@@ -21,6 +25,10 @@ import java.util.ResourceBundle;
 import java.io.IOException;
 
 public class ControllerStock implements Initializable {
+
+    @FXML
+    private AnchorPane bpStock;
+
 
     @FXML
     private Button btnCProd;
@@ -55,33 +63,31 @@ public class ControllerStock implements Initializable {
     @FXML
     private TableView<Element> tableViewStock;
 
-    public void PageStock(ActionEvent event) {
-        ChargerPage("stock");
+    public void PageStock(ActionEvent event) throws IOException {
+        ChargerPage("stock.fxml");
     }
 
     @FXML
-    public void PageChaine(ActionEvent event) {
-        ChargerPage("chaineProd");
+    public void PageChaine(ActionEvent event) throws IOException {
+        ChargerPage("chaineProd.fxml");
     }
 
     @FXML
-   public  void PageCommande(ActionEvent event) {
-        ChargerPage("commande");
+   public  void PageCommande(ActionEvent event) throws IOException {
+        ChargerPage("commande.fxml");
     }
 
     @FXML
-    private void PageHistorique(ActionEvent event) {
-        ChargerPage("historique");
+    private void PageHistorique(ActionEvent event) throws IOException {
+        ChargerPage("historique.fxml");
     }
 
-
-    private void ChargerPage(String page){
-        Parent root = null;
-        try{
-            root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(page + ".fxml")));
-        } catch(IOException e ){
-            e.printStackTrace();
-        }
+    public void ChargerPage(String page) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(page));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+        Main.primaryStage.setScene(scene);
+        Main.primaryStage.show();
     }
 
     @Override
@@ -94,10 +100,8 @@ public class ControllerStock implements Initializable {
         colQte.setCellValueFactory(new PropertyValueFactory<>("quantite"));
         colUnite.setCellValueFactory(new PropertyValueFactory<>("uniteMesure"));
 
-        ObservableList<Element> data = FXCollections.observableArrayList();
-        for (Element element : Stocks.EStock) {
-            data.add(element);
-        }
+        ObservableList <Element> data = FXCollections.observableArrayList();
+        data.addAll(Stocks.EStock);
         tableViewStock.setItems(data);
     }
 }

@@ -7,12 +7,16 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.Objects;
 
 public class ControllerChaine {
+
+    @FXML
+    private AnchorPane bpChaine;
 
     @FXML
     private Button btnCProd;
@@ -23,32 +27,30 @@ public class ControllerChaine {
     @FXML
     private Button btnStock;
     @FXML
-    public void PageCommande(MouseEvent event) {
-        ChargerPage("commande");
+    public void PageCommande(MouseEvent event) throws IOException {
+        ChargerPage("commande.fxml");
 
     }
 
     @FXML
-    public void PageHistorique(MouseEvent event) {
-        ChargerPage("historique");
+    public void PageHistorique(MouseEvent event) throws IOException {
+        ChargerPage("historique.fxml");
     }
     @FXML
-    public void PageStock(MouseEvent event) {
-        ChargerPage("stock");
+    public void PageStock(MouseEvent event) throws IOException {
+        ChargerPage("stock.fxml");
     }
 
     @FXML
-    public void PageChaine(MouseEvent event) {
-        ChargerPage("chaineProd");
+    public void PageChaine(MouseEvent event) throws IOException {
+        ChargerPage("chaineProd.fxml");
     }
 
-
-    public void ChargerPage(String page){
-        Parent root = null;
-        try{
-            root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(page + ".fxml")));
-        } catch(IOException e ){
-            e.printStackTrace();
-        }
+    public void ChargerPage(String page) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(page));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+        Main.primaryStage.setScene(scene);
+        Main.primaryStage.show();
     }
 }

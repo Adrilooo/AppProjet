@@ -8,11 +8,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane fx:id="bp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ApplicationProjet.Controller">
+<BorderPane fx:id="bp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ApplicationProjet.ControllerTest">
    <left>
       <VBox prefHeight="400.0" prefWidth="126.0" style="-fx-background-color: grey;" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="btnStock" mnemonicParsing="false" onMouseClicked="#PageStock" prefHeight="41.0" prefWidth="205.0" style="-fx-background-color: transpare; -fx-border-color: black; -fx-border-width: 0px 0px 3px 0px;" text="Stock">
+            <Button fx:id="btnStock" mnemonicParsing="false" onAction="#PageStock" prefHeight="41.0" prefWidth="205.0" style="-fx-background-color: transpare; -fx-border-color: black; -fx-border-width: 0px 0px 3px 0px;" text="Stock">
                <font>
                   <Font name="Calibri" size="18.0" />
                </font>
@@ -20,7 +20,7 @@
                   <Insets />
                </opaqueInsets>
             </Button>
-            <Button fx:id="btnCProd" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#PageChaine" prefHeight="41.0" prefWidth="205.0" style="-fx-background-color: transpare; -fx-border-color: black; -fx-border-width: 0px 0px 3px 0px;" text="Chaine de production">
+            <Button fx:id="btnCProd" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#PageChaine" prefHeight="41.0" prefWidth="205.0" style="-fx-background-color: transpare; -fx-border-color: black; -fx-border-width: 0px 0px 3px 0px;" text="Chaine de production">
                <font>
                   <Font name="Calibri" size="12.0" />
                </font>
@@ -28,7 +28,7 @@
                   <Insets />
                </opaqueInsets>
             </Button>
-            <Button fx:id="btnCommande" layoutX="10.0" layoutY="175.0" mnemonicParsing="false" onMouseClicked="#PageCommande" prefHeight="41.0" prefWidth="205.0" style="-fx-background-color: transpare; -fx-border-color: black; -fx-border-width: 0px 0px 3px 0px;" text="Commande">
+            <Button fx:id="btnCommande" layoutX="10.0" layoutY="175.0" mnemonicParsing="false" onAction="#PageCommande" prefHeight="41.0" prefWidth="205.0" style="-fx-background-color: transpare; -fx-border-color: black; -fx-border-width: 0px 0px 3px 0px;" text="Commande">
                <font>
                   <Font name="Calibri" size="18.0" />
                </font>
@@ -36,7 +36,7 @@
                   <Insets />
                </opaqueInsets>
             </Button>
-            <Button fx:id="btnHistorique" layoutX="10.0" layoutY="217.0" mnemonicParsing="false" onMouseClicked="#PageHistorique" prefHeight="41.0" prefWidth="205.0" style="-fx-background-color: transpare; -fx-border-color: black; -fx-border-width: 0px 0px 3px 0px;" text="historique">
+            <Button fx:id="btnHistorique" layoutX="10.0" layoutY="217.0" mnemonicParsing="false" onAction="#PageHistorique" prefHeight="41.0" prefWidth="205.0" style="-fx-background-color: transpare; -fx-border-color: black; -fx-border-width: 0px 0px 3px 0px;" text="historique">
                <font>
                   <Font name="Calibri" size="18.0" />
                </font>

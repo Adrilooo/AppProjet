@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
@@ -19,8 +20,13 @@ import java.util.ResourceBundle;
 
 public class ControllerTest {
 
+    @FXML
+    private Stage primaryStage;
+
+    @FXML
     private BorderPane bp;
 
+    @FXML
     private AnchorPane ap;
 
     @FXML
@@ -36,37 +42,30 @@ public class ControllerTest {
     private Button btnStock;
 
     @FXML
-    public void PageChaine(MouseEvent event) {
-        ChargerPage("c  haine");
+    public void PageChaine(MouseEvent event) throws IOException {
+        ChargerPage("chaine.fxml");
     }
 
     @FXML
-    public void PageHistorique(MouseEvent event) {
-        ChargerPage("historique");
+    public void PageHistorique(MouseEvent event) throws IOException {
+        ChargerPage("historique.fxml");
     }
 
     @FXML
-    public void PageStock(MouseEvent event) {
-        bp.setCenter(ap);
+    public void PageStock(MouseEvent event) throws IOException {
+        ChargerPage("stock.fxml");
     }
 
     @FXML
-    public void PageCommande(MouseEvent event) {
-        ChargerPage("test_page1");
+    public void PageCommande(ActionEvent event) throws IOException {
+        ChargerPage("commande.fxml");
     }
-    public void ChargerPage(String page){
-        Parent root = null;
-        try{
-            root = FXMLLoader.load((Objects.requireNonNull(getClass().getResource(page + ".fxml"))));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        bp.setCenter(root);
+    public void ChargerPage(String page) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(page));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+        Stage primary = Main.getPrimaryStage();
+        primary.setScene(scene);
+        primary.show();
     }
-    /*
-    public void ChargerPage2(String page, String onglet, ActionEvent AE) throws IOException{
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(page)));
-        Stage stage = (Stage) ((Node) AE.getSource()).getScene.getWindow();
-    }
-    */
 }

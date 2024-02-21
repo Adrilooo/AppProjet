@@ -7,11 +7,14 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
@@ -19,6 +22,9 @@ import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class ControllerHistorique {
+
+    @FXML
+    private AnchorPane bpHistorique;
 
     @FXML
     private TableColumn<?, ?> ColOrigine;
@@ -61,31 +67,30 @@ public class ControllerHistorique {
 
 
     @FXML
-    public void PageHistorique(MouseEvent event) {
-        ChargerPage("historique");
+    public void PageHistorique(MouseEvent event) throws IOException {
+        ChargerPage("historique.fxml");
     }
 
     @FXML
-    public void PageChaine(MouseEvent event) {
-        ChargerPage("chaineProd");
+    public void PageChaine(MouseEvent event) throws IOException {
+        ChargerPage("chaineProd.fxml");
     }
 
     @FXML
-    public void PageCommande(MouseEvent event) {
-        ChargerPage("commande");
+    public void PageCommande(MouseEvent event) throws IOException {
+        ChargerPage("commande.fxml");
     }
 
     @FXML
-    public void PageStock(MouseEvent event) {
-        ChargerPage("stock");
+    public void PageStock(MouseEvent event) throws IOException {
+        ChargerPage("stock.fxml");
     }
-    public void ChargerPage(String page){
-        Parent root = null;
-        try{
-            root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(page + ".fxml")));
-        } catch(IOException e ){
-            e.printStackTrace();
-        }
+    public void ChargerPage(String page) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(page));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+        Main.primaryStage.setScene(scene);
+        Main.primaryStage.show();
     }
 
     public void initialize(URL url, ResourceBundle resourceBundle) {
