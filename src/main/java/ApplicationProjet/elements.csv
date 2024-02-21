@@ -1,11 +1,9 @@
 E001;Circuit principal;200.0;pieces;50.0;20.0
-E002;Plastique;405.0;kilogrammes;3.0;0.0
-E003;Plaques aluminium;81.0;pieces;20.0;10.0
+E002;Plastique;485.0;kilogrammes;3.0;0.0
+E003;Plaques aluminium;97.0;pieces;20.0;10.0
 E004;Servomoteurs;250.0;pieces;15.0;10.0
 E005;Propulsions;0.0;pieces;0.0;15.0
-E006;Coques;190.0;pieces;0.0;0.0
+E006;Coques;30.0;pieces;0.0;0.0
 E007;Drones;0.0;pieces;0.0;150.0
-2;Karmine Corp;1.0;km;120.0;180.0
-17;Vitality;1.0;km;120.0;180.0
-2;Karmine Corp;9.0;km;120.0;180.0
-17;Vitality;1.0;km;120.0;180.0
+2;Karmine Corp;33.0;km;120.0;180.0
+17;Vitality;3.0;km;120.0;180.0

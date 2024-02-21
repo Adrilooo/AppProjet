@@ -63,7 +63,7 @@ public class Element {
         double Prix = PrixAchat(e,quantiteCommandee);
 
         Stocks.ajouterElem(e,quantiteCommandee);
-        Historique.ajouterChangement(new ChangementStock(e.getCode(), e.getNom(), quantiteCommandee, Prix,0,"Achat"));
+        Historique.ajouterChangement(new ChangementStock(e.getCode(), e.getNom(), quantiteCommandee, e.getUniteMesure(),Prix,0,"Achat"));
     }
     public void Vendre(Element e, float quantiteVendue){
         for (Element a : Stocks.EStock) {
@@ -73,7 +73,7 @@ public class Element {
             }
         }
         double Prix = PrixVente(e,quantiteVendue);
-            Historique.ajouterChangement(new ChangementStock(e.getCode(), e.getNom(), quantiteVendue,0,Prix,"Vente"));
+            Historique.ajouterChangement(new ChangementStock(e.getCode(), e.getNom(), quantiteVendue,e.getUniteMesure(),0,Prix,"Vente"));
     }
 
     public double PrixAchat(Element e, float quantite){

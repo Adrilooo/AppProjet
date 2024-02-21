@@ -87,7 +87,7 @@ public class ChaineProduction {
                     if (e == (Element) m.getKey()) {
                         for (int i = 0; i < this.NivActivation; i++) {
                             Stocks.enleverElem((Element) m.getKey(), (Float) m.getValue());
-                            Historique.ajouterChangement(new ChangementStock(e.getCode(), e.getNom(), (Float) m.getValue(), 0, 0, "Mis en production"));
+                            Historique.ajouterChangement(new ChangementStock(e.getCode(), e.getNom(), (Float) m.getValue(),e.getUniteMesure(), 0, 0, "Mis en production"));
 
                         }
 
@@ -100,14 +100,15 @@ public class ChaineProduction {
                     for (Element e : Stocks.EStock) {
                         if (e == (Element) m.getKey()) {
                             Stocks.ajouterElem((Element) m.getKey(), (Float) m.getValue());
-                            Historique.ajouterChangement(new ChangementStock(e.getCode(), e.getNom(), (Float) m.getValue(), 0, 0, "Produit"));
+                            Historique.ajouterChangement(new ChangementStock(e.getCode(), e.getNom(), (Float) m.getValue(),e.getUniteMesure(), 0, 0, "Produit"));
                         }
 
                     }
                 }
                 else{
+                    Element f = (Element)m.getKey();
                     Stocks.ajouterElem((Element)m.getKey(),(Float)m.getValue());
-                    Historique.ajouterChangement(new ChangementStock(getCode(), getNom(), (Float) m.getValue(), 0, 0, "Produit"));
+                    Historique.ajouterChangement(new ChangementStock(f.getCode(), f.getNom(), (Float) m.getValue(),f.getUniteMesure(), 0, 0, "Produit"));
                 }
             }
 

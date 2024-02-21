@@ -33,6 +33,22 @@ public class CsvWriter {
             System.err.println("Erreur lors du report des données dans le fichier CSV : " + filePath);
         }
     }
+    public static void writeHistoriqueCSVFile(String filePath, ArrayList<ChangementStock>Historique){
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
+            // Écriture des données de l'ArrayList dans le fichier CSV
+            for (ChangementStock data : Historique) {
+                // Construire la ligne CSV à partir des attributs de l'objet Element
+                String csvLine = data.getCodeElement() + ";" + data.getNomElement() + ";" + data.getQuantiteModifiee() +";"+data.getUniteMesure()+";"+data.getPrixAchat()+";"+data.getPrixVente()+"'"+data.getOrigine();
+
+                writer.write(csvLine);
+                writer.newLine();
+            }
+            System.out.println("Données de l'ArrayList reportées dans le fichier CSV : " + filePath);
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.err.println("Erreur lors du report des données dans le fichier CSV : " + filePath);
+        }
+    }
 
 
 }

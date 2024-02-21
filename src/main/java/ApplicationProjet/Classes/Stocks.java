@@ -21,7 +21,7 @@ public class Stocks {
         if (EStock.contains(e)) {
             for (Element a : EStock){
                if (a.getCode().equals(e.getCode())){
-                   e.ajouterQuantite(n);break;
+                   a.ajouterQuantite(n);break;
                }
             }
         }

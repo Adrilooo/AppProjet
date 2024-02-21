@@ -26,13 +26,11 @@ public class Main extends Application {
         Stocks.afficherStock();
         CSV c = new CSV();
         c.LireChaine();
-        Element a= new Element("2","Karmine Corp",8.0F,"km",120,180);
-        float T=a.getQuantite();
-        System.out.println(T);
+        Element a= Element.trouverElement("2");
         Stocks.ajouterElem(a, 8.0F);
         float l=a.getQuantite();
         System.out.println(l);
-        a.ajouterQuantite(3.0F);
+        Stocks.ajouterElem(a, 3.0F);
         float p=a.getQuantite();
         System.out.println(p);
         a.Vendre(a,2.0F);
@@ -41,19 +39,22 @@ public class Main extends Application {
         a.Acheter(a,4.0F);
         float H=a.getQuantite();
         System.out.println(H);
-        Element m= new Element("17","Vitality",0.0F,"km",120,180);
+        Element m= Element.trouverElement("17");
         HashMap<Element, Float> ElementEntree = new HashMap<Element, Float>();
         HashMap<Element, Float> ElementSortie = new HashMap<Element, Float>();
         ElementEntree.put(a,2.0F);
         ElementSortie.put(m,1.0F);
 
-        ChaineProduction ch = new ChaineProduction("C010","Propulsion",ElementEntree, ElementSortie);
+        ChaineProduction ch = new ChaineProduction("MDR","RLCS",ElementEntree, ElementSortie);
         ch.valider();
         Stocks.afficherStock();
         Historique.afficherHistorique();
         CsvWriter w = new CsvWriter();
-
+        w.clearCSVFile("src\\main\\java\\ApplicationProjet\\elements.csv");
         w.writeCSVFile("src\\main\\java\\ApplicationProjet\\elements.csv",Stocks.EStock);
+        w.clearCSVFile("src\\main\\java\\ApplicationProjet\\historique.csv");
+        w.writeHistoriqueCSVFile("src\\main\\java\\ApplicationProjet\\elements.csv",Historique.changements);
+
 
 
 

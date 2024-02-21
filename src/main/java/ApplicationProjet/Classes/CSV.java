@@ -76,4 +76,25 @@ public class CSV {
             e.printStackTrace();
         }
     }
+    public  void LireHistorique() {
+        String file = "src\\main\\java\\ApplicationProjet\\historique.csv";
+        String line = "";
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(file));
+            while ((line = reader.readLine()) != null) {
+                String[] row = line.split(";");
+                float r2 = Float.parseFloat(row[2]);
+                double r4 = Double.parseDouble(row[4]);
+                double r5 = Double.parseDouble(row[5]);
+                ChangementStock ch = new ChangementStock(row[0],row[1], r2, row[3], r4, r5,row[6]);
+                Historique.ajouterChangement(ch);
+
+
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch(IOException e){
+            e.printStackTrace();
+        }
+    }
 }
