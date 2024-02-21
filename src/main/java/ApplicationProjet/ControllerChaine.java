@@ -10,6 +10,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Objects;
 
 public class ControllerChaine {
 
@@ -38,14 +39,14 @@ public class ControllerChaine {
 
     @FXML
     public void PageChaine(MouseEvent event) {
-        ChargerPage("chaine");
+        ChargerPage("chaineProd");
     }
 
 
     public void ChargerPage(String page){
         Parent root = null;
         try{
-            root = FXMLLoader.load(getClass().getResource(page + ".fxml"));
+            root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(page + ".fxml")));
         } catch(IOException e ){
             e.printStackTrace();
         }

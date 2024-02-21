@@ -16,6 +16,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 
 import java.net.URL;
+import java.util.Objects;
 import java.util.ResourceBundle;
 import java.io.IOException;
 
@@ -60,7 +61,7 @@ public class ControllerStock implements Initializable {
 
     @FXML
     public void PageChaine(ActionEvent event) {
-        ChargerPage("chaine");
+        ChargerPage("chaineProd");
     }
 
     @FXML
@@ -77,7 +78,7 @@ public class ControllerStock implements Initializable {
     private void ChargerPage(String page){
         Parent root = null;
         try{
-            root = FXMLLoader.load(getClass().getResource(page + ".fxml"));
+            root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(page + ".fxml")));
         } catch(IOException e ){
             e.printStackTrace();
         }

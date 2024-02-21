@@ -15,6 +15,7 @@ import javafx.scene.input.MouseEvent;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class ControllerHistorique {
@@ -66,7 +67,7 @@ public class ControllerHistorique {
 
     @FXML
     public void PageChaine(MouseEvent event) {
-        ChargerPage("chaine");
+        ChargerPage("chaineProd");
     }
 
     @FXML
@@ -81,7 +82,7 @@ public class ControllerHistorique {
     public void ChargerPage(String page){
         Parent root = null;
         try{
-            root = FXMLLoader.load(getClass().getResource(page + ".fxml"));
+            root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(page + ".fxml")));
         } catch(IOException e ){
             e.printStackTrace();
         }
