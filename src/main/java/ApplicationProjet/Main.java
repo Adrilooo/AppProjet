@@ -30,7 +30,11 @@ public class Main extends Application {
         float T=a.getQuantite();
         System.out.println(T);
         Stocks.ajouterElem(a, 8.0F);
+        float l=a.getQuantite();
+        System.out.println(l);
         a.ajouterQuantite(3.0F);
+        float p=a.getQuantite();
+        System.out.println(p);
         a.Vendre(a,2.0F);
         float X=a.getQuantite();
         System.out.println(X);
@@ -48,7 +52,7 @@ public class Main extends Application {
         Stocks.afficherStock();
         Historique.afficherHistorique();
         CsvWriter w = new CsvWriter();
-        w.clearCSVFile("src\\main\\java\\ApplicationProjet\\elements.csv");
+
         w.writeCSVFile("src\\main\\java\\ApplicationProjet\\elements.csv",Stocks.EStock);
 
 

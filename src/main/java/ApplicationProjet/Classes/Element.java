@@ -68,10 +68,8 @@ public class Element {
     public void Vendre(Element e, float quantiteVendue){
         for (Element a : Stocks.EStock) {
             if (a.getCode().equals(e.getCode())) {
-                boolean b = quantiteVendue > a.getQuantite();
-                if (!b) {
                     Stocks.enleverElem(a, quantiteVendue);
-                }
+
             }
         }
         double Prix = PrixVente(e,quantiteVendue);

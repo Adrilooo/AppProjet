@@ -11,7 +11,7 @@ public class Stocks {
                     System.err.println("Stock insuffisant");
                 }
                 else {
-                    a.ajouterQuantite(-n);
+                    a.ajouterQuantite(-n);break;
                 }
             }
         }
@@ -21,7 +21,7 @@ public class Stocks {
         if (EStock.contains(e)) {
             for (Element a : EStock){
                if (a.getCode().equals(e.getCode())){
-                   a.ajouterQuantite(n);
+                   e.ajouterQuantite(n);break;
                }
             }
         }
