@@ -26,6 +26,8 @@ public class Main extends Application {
         Stocks.afficherStock();
         CSV c = new CSV();
         c.LireChaine();
+        CSV d = new CSV();
+        d.LireHistorique();
         Element a= Element.trouverElement("2");
         Stocks.ajouterElem(a, 8.0F);
         float l=a.getQuantite();
@@ -39,7 +41,7 @@ public class Main extends Application {
         a.Acheter(a,4.0F);
         float H=a.getQuantite();
         System.out.println(H);
-        Element m= Element.trouverElement("17");
+        Element m= Element.trouverElement("3");
         HashMap<Element, Float> ElementEntree = new HashMap<Element, Float>();
         HashMap<Element, Float> ElementSortie = new HashMap<Element, Float>();
         ElementEntree.put(a,2.0F);
@@ -53,7 +55,7 @@ public class Main extends Application {
         w.clearCSVFile("src\\main\\java\\ApplicationProjet\\elements.csv");
         w.writeCSVFile("src\\main\\java\\ApplicationProjet\\elements.csv",Stocks.EStock);
         w.clearCSVFile("src\\main\\java\\ApplicationProjet\\historique.csv");
-        w.writeHistoriqueCSVFile("src\\main\\java\\ApplicationProjet\\elements.csv",Historique.changements);
+        w.writeHistoriqueCSVFile("src\\main\\java\\ApplicationProjet\\historique.csv",Historique.changements);
 
 
 
