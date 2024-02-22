@@ -19,7 +19,7 @@ public class Main extends Application {
         Main.primaryStage = primaryStage;
         ChargerPage("stock.fxml");
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("stock.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 640, 480);
+        Scene scene = new Scene(fxmlLoader.load(), 1080, 720);
         primaryStage.setTitle("Usine");
         primaryStage.setScene(scene);
         primaryStage.show();
@@ -80,7 +80,5 @@ public class Main extends Application {
         w.writeHistoriqueCSVFile("src\\main\\java\\ApplicationProjet\\historique.csv",Historique.changements);
 
         launch();
-
-
     }
 }

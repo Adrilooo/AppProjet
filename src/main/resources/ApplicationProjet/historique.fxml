@@ -9,7 +9,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="bpHistorique" nodeOrientation="LEFT_TO_RIGHT" prefHeight="742.0" prefWidth="986.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ApplicationProjet.ControllerHistorique">
+<AnchorPane fx:id="bpHistorique" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ApplicationProjet.ControllerHistorique">
    <children>
       <Label alignment="CENTER" layoutX="391.0" layoutY="19.0" prefHeight="41.0" prefWidth="375.0" text="Historique des transactions">
          <font>
