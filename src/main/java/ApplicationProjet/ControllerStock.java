@@ -20,7 +20,9 @@ import java.util.Objects;
 import java.util.ResourceBundle;
 import java.io.IOException;
 
+import static ApplicationProjet.Classes.Element.trouverElement;
 import static ApplicationProjet.Main.primaryStage;
+import static java.lang.String.valueOf;
 
 public class ControllerStock implements Initializable {
 
@@ -88,9 +90,8 @@ public class ControllerStock implements Initializable {
 
     public void StockVendre(ActionEvent event){
 
-        float f = Float.parseFloat((InputQ.getText()));
-        Element e;
-        e = (Element.trouverElement(String.valueOf(InputCode)));
+        float f = Float.parseFloat(InputQ.getText());
+        Element e = trouverElement(valueOf(InputCode.getText()));
         Element.Vendre(e, f);
     }
 
