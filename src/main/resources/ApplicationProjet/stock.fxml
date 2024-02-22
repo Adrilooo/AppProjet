@@ -41,9 +41,9 @@
             <Font size="36.0" />
          </font>
       </Text>
-      <Button layoutX="956.0" layoutY="350.0" mnemonicParsing="false" text="Vendre" />
-      <TextField layoutX="908.0" layoutY="251.0" promptText="Code" />
-      <TextField layoutX="908.0" layoutY="298.0" promptText="Quantité" />
+      <Button fx:id="btnVendre" layoutX="956.0" layoutY="350.0" mnemonicParsing="false" onAction="#StockVendre" text="Vendre" />
+      <TextField fx:id="InputCode" layoutX="908.0" layoutY="251.0" promptText="Code" />
+      <TextField fx:id="InputQ" layoutX="908.0" layoutY="298.0" promptText="Quantité" />
    </children>
    <opaqueInsets>
       <Insets />

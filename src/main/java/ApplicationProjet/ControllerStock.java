@@ -4,6 +4,7 @@ import ApplicationProjet.Classes.Element;
 import ApplicationProjet.Classes.Stocks;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -12,6 +13,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import java.net.URL;
 import java.util.Objects;
@@ -33,6 +35,15 @@ public class ControllerStock implements Initializable {
 
     @FXML
     private Button btnStock;
+
+    @FXML
+    private Button btnVendre;
+
+    @FXML
+    private TextField InputCode;
+
+    @FXML
+    private TextField InputQ;
 
     @FXML
     private TableColumn<Element, Float> colAchat;
@@ -73,6 +84,19 @@ public class ControllerStock implements Initializable {
     public void PageHistorique() {
         ChargerPage("historique.fxml");
     }
+
+
+    public void StockVendre(ActionEvent event){
+
+    }
+
+
+
+
+
+
+
+
 
     public void ChargerPage(String page) {
         FXMLLoader loader = new FXMLLoader(Objects.requireNonNull(getClass().getResource(page)));
