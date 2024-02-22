@@ -3,21 +3,43 @@ import ApplicationProjet.Classes.ChaineProduction;
 import ApplicationProjet.Classes.*;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Objects;
 import java.util.HashMap;
 import java.util.Map;
-
 public class Main extends Application {
+
+    protected static Stage primaryStage;
     @Override
-    public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Hello!");
-        stage.setScene(scene);
-        stage.show();
+    public void start(Stage primaryStage) throws IOException {
+        Main.primaryStage = primaryStage;
+        ChargerPage("stock.fxml");
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("stock.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 640, 480);
+        primaryStage.setTitle("Usine");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
+
+    public void ChargerPage(String page) throws IOException{
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(page));
+        Parent root = null;
+        try {
+            root = loader.load();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        Scene scene = new Scene(root);
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
+
+    public static Stage getPrimaryStage(){
+        return primaryStage;
     }
 
     public static void main(String[] args) {

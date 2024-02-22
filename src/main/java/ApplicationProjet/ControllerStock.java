@@ -2,25 +2,34 @@ package ApplicationProjet;
 
 import ApplicationProjet.Classes.Element;
 import ApplicationProjet.Classes.Stocks;
-import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.control.*;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.stage.Stage;
-
 import java.net.URL;
+import java.util.Objects;
 import java.util.ResourceBundle;
+import java.io.IOException;
 
-public class Controller implements Initializable {
+import static ApplicationProjet.Main.primaryStage;
+
+public class ControllerStock implements Initializable {
+
+    @FXML
+    private Button btnCProd;
+
+    @FXML
+    private Button btnCommande;
 
     @FXML
     private Button btnHistorique;
-
-    @FXML
-    private Button btnCProc;
 
     @FXML
     private Button btnStock;
@@ -41,15 +50,43 @@ public class Controller implements Initializable {
     private TableColumn<Element, String> colUnite;
 
     @FXML
-    private TableColumn<Element, Float> colVente;
+    private TableColumn< Element, Float> colVente;
 
     @FXML
     private TableView<Element> tableViewStock;
 
-
-    public void PageStock(){
-
+    public void PageStock() {
+        ChargerPage("stock.fxml");
     }
+
+    @FXML
+    public void PageChaine() {
+        ChargerPage("chaineProd.fxml");
+    }
+
+    @FXML
+    public void PageCommande() {
+        ChargerPage("commande.fxml");
+    }
+
+    @FXML
+    public void PageHistorique() {
+        ChargerPage("historique.fxml");
+    }
+
+    public void ChargerPage(String page) {
+        FXMLLoader loader = new FXMLLoader(Objects.requireNonNull(getClass().getResource(page)));
+        Parent root;
+        try {
+            root = loader.load();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        Scene scene = new Scene(root);
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
@@ -60,12 +97,8 @@ public class Controller implements Initializable {
         colQte.setCellValueFactory(new PropertyValueFactory<>("quantite"));
         colUnite.setCellValueFactory(new PropertyValueFactory<>("uniteMesure"));
 
-        ObservableList<Element> data = FXCollections.observableArrayList();
-        for (Element element : Stocks.EStock) {
-            data.add(element);
-        }
+        ObservableList <Element> data = FXCollections.observableArrayList();
+        data.addAll(Stocks.EStock);
         tableViewStock.setItems(data);
-        System.out.println("Nombre d'éléments dans la TableView : " + data.size());
-        System.out.println("Taille de Stocks.EStock : " + Stocks.EStock.size());
     }
 }
