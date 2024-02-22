@@ -65,10 +65,6 @@ public class CSV {
 
 
                 ChaineProduction chaine = new ChaineProduction(row[0],row[1],ElementEntree,ElementSortie);
-                chaine.valider();
-
-
-
 
             }
         } catch (FileNotFoundException e) {

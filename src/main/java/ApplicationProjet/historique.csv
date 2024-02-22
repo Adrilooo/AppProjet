@@ -31,6 +31,30 @@ E006;Coques;10.0;pieces;0.0;0.0;Produit
 E002;Plastique;5.0;kilogrammes;0.0;0.0;Mis en production
 E003;Plaques aluminium;1.0;pieces;0.0;0.0;Mis en production
 E006;Coques;10.0;pieces;0.0;0.0;Produit
+E002;Plastique;5.0;kilogrammes;0.0;0.0;Mis en production
+E003;Plaques aluminium;1.0;pieces;0.0;0.0;Mis en production
+E006;Coques;10.0;pieces;0.0;0.0;Produit
+E002;Plastique;5.0;kilogrammes;0.0;0.0;Mis en production
+E003;Plaques aluminium;1.0;pieces;0.0;0.0;Mis en production
+E006;Coques;10.0;pieces;0.0;0.0;Produit
+E002;Plastique;5.0;kilogrammes;0.0;0.0;Mis en production
+E003;Plaques aluminium;1.0;pieces;0.0;0.0;Mis en production
+E006;Coques;10.0;pieces;0.0;0.0;Produit
+E002;Plastique;5.0;kilogrammes;0.0;0.0;Mis en production
+E003;Plaques aluminium;1.0;pieces;0.0;0.0;Mis en production
+E006;Coques;10.0;pieces;0.0;0.0;Produit
+E002;Plastique;5.0;kilogrammes;0.0;0.0;Mis en production
+E003;Plaques aluminium;1.0;pieces;0.0;0.0;Mis en production
+E006;Coques;10.0;pieces;0.0;0.0;Produit
+E002;Plastique;5.0;kilogrammes;0.0;0.0;Mis en production
+E003;Plaques aluminium;1.0;pieces;0.0;0.0;Mis en production
+E006;Coques;10.0;pieces;0.0;0.0;Produit
+E002;Plastique;5.0;kilogrammes;0.0;0.0;Mis en production
+E003;Plaques aluminium;1.0;pieces;0.0;0.0;Mis en production
+E006;Coques;10.0;pieces;0.0;0.0;Produit
+E002;Plastique;5.0;kilogrammes;0.0;0.0;Mis en production
+E003;Plaques aluminium;1.0;pieces;0.0;0.0;Mis en production
+E006;Coques;10.0;pieces;0.0;0.0;Produit
 E003;Plaques aluminium;1.0;pieces;0.0;0.0;Mis en production
 E002;Plastique;5.0;kilogrammes;0.0;0.0;Mis en production
 E006;Coques;10.0;pieces;0.0;0.0;Produit
@@ -64,6 +88,54 @@ E006;Coques;10.0;pieces;0.0;0.0;Produit
 E002;Plastique;5.0;kilogrammes;0.0;0.0;Mis en production
 E003;Plaques aluminium;1.0;pieces;0.0;0.0;Mis en production
 E006;Coques;10.0;pieces;0.0;0.0;Produit
+2;KC;2.0;win;0.0;0.0;Vente
+2;KC;4.0;win;0.0;0.0;Achat
+2;KC;2.0;win;0.0;0.0;Mis en production
+3;VITA;1.0;lose;0.0;0.0;Produit
+2;KC;2.0;win;0.0;0.0;Vente
+2;KC;4.0;win;0.0;0.0;Achat
+2;KC;2.0;win;0.0;0.0;Mis en production
+3;VITA;1.0;lose;0.0;0.0;Produit
+2;KC;2.0;win;0.0;0.0;Vente
+2;KC;4.0;win;0.0;0.0;Achat
+2;KC;2.0;win;0.0;0.0;Mis en production
+3;VITA;1.0;lose;0.0;0.0;Produit
+2;KC;2.0;win;0.0;0.0;Vente
+2;KC;4.0;win;0.0;0.0;Achat
+2;KC;2.0;win;0.0;0.0;Mis en production
+3;VITA;1.0;lose;0.0;0.0;Produit
+2;KC;2.0;win;0.0;0.0;Vente
+2;KC;4.0;win;0.0;0.0;Achat
+2;KC;2.0;win;0.0;0.0;Mis en production
+3;VITA;1.0;lose;0.0;0.0;Produit
+2;KC;2.0;win;0.0;0.0;Vente
+2;KC;4.0;win;0.0;0.0;Achat
+2;KC;2.0;win;0.0;0.0;Mis en production
+3;VITA;1.0;lose;0.0;0.0;Produit
+2;KC;2.0;win;0.0;0.0;Vente
+2;KC;4.0;win;0.0;0.0;Achat
+2;KC;2.0;win;0.0;0.0;Mis en production
+3;VITA;1.0;lose;0.0;0.0;Produit
+2;KC;2.0;win;0.0;0.0;Vente
+2;KC;4.0;win;0.0;0.0;Achat
+2;KC;2.0;win;0.0;0.0;Mis en production
+3;VITA;1.0;lose;0.0;0.0;Produit
+2;KC;2.0;win;0.0;0.0;Vente
+2;KC;4.0;win;0.0;0.0;Achat
+2;KC;2.0;win;0.0;0.0;Mis en production
+3;VITA;1.0;lose;0.0;0.0;Produit
+2;KC;2.0;win;0.0;0.0;Vente
+2;KC;4.0;win;0.0;0.0;Achat
+2;KC;2.0;win;0.0;0.0;Mis en production
+3;VITA;1.0;lose;0.0;0.0;Produit
+2;KC;2.0;win;0.0;0.0;Vente
+2;KC;4.0;win;0.0;0.0;Achat
+2;KC;2.0;win;0.0;0.0;Mis en production
+3;VITA;1.0;lose;0.0;0.0;Produit
+2;KC;2.0;win;0.0;0.0;Vente
+2;KC;4.0;win;0.0;0.0;Achat
+2;KC;2.0;win;0.0;0.0;Mis en production
+3;VITA;1.0;lose;0.0;0.0;Produit
 2;KC;2.0;win;0.0;0.0;Vente
 2;KC;4.0;win;0.0;0.0;Achat
 2;KC;2.0;win;0.0;0.0;Mis en production

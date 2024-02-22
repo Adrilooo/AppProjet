@@ -52,7 +52,10 @@ public class Element {
     public void setQuantite(float n){
         this.quantite=n;
     }
+
+
     public void ajouterQuantite(float n){this.quantite+=n;}
+
     public void setPrixVente(float n){
         this.prixVente=n;
     }

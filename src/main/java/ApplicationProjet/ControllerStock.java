@@ -93,13 +93,16 @@ public class ControllerStock implements Initializable {
         float f = Float.parseFloat(InputQ.getText());
         Element e = trouverElement(valueOf(InputCode.getText()));
         Element.Vendre(e, f);
+        CsvWriter a = new CsvWriter();
+
+        a.clearCSVFile("src/main/java/ApplicationProjet/elements.csv");
+        a.writeCSVFile("src/main/java/ApplicationProjet/elements.csv", Stocks.EStock);
+
 
         Historique.ajouterChangement(new ChangementStock(Objects.requireNonNull(e).getCode(), e.getNom(), e.getQuantite(),e.getUniteMesure(),0, e.getPrixVente(),"Vente"));
+        a.clearCSVFile("src/main/java/ApplicationProjet/historique.csv");
+        a.writeHistoriqueCSVFile("src/main/java/ApplicationProjet/historique.csv", Historique.changements);
     }
-
-
-
-
 
 
 
