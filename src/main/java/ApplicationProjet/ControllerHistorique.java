@@ -88,6 +88,9 @@ public class ControllerHistorique implements Initializable {
     private void PageStock() {
         ChargerPage("stock.fxml");
     }
+
+
+
     public void ChargerPage(String page) {
         FXMLLoader loader = new FXMLLoader(Objects.requireNonNull(getClass().getResource(page)));
         Parent root;
@@ -97,6 +100,7 @@ public class ControllerHistorique implements Initializable {
             throw new RuntimeException(e);
         }
         Scene scene = new Scene(root);
+
         primaryStage.setScene(scene);
         primaryStage.show();
     }
@@ -104,18 +108,18 @@ public class ControllerHistorique implements Initializable {
 
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-        /*
-        colNom.setCellValueFactory(new PropertyValueFactory<>("nom"));
-        colCode.setCellValueFactory(new PropertyValueFactory<>("code"));
-        colQte.setCellValueFactory(new PropertyValueFactory<>("quantite"));
-        colUnite.setCellValueFactory(new PropertyValueFactory<>("unite"));
+
+        colNom.setCellValueFactory(new PropertyValueFactory<>("codeElement"));
+        colCode.setCellValueFactory(new PropertyValueFactory<>("nomElement"));
+        colQte.setCellValueFactory(new PropertyValueFactory<>("quantiteModifiee"));
+        colUnite.setCellValueFactory(new PropertyValueFactory<>("uniteMesure"));
         colAchat.setCellValueFactory(new PropertyValueFactory<>("prixAchat"));
         colVente.setCellValueFactory(new PropertyValueFactory<>("prixVente"));
         colOrigine.setCellValueFactory(new PropertyValueFactory<>("Origine"));
 
         ObservableList<ChangementStock> data = FXCollections.observableArrayList();
-        data.add((ChangementStock) changements);
+        data.addAll(Historique.changements);
         tableViewStock.setItems(data);
-        */
+
     }
 }

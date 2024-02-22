@@ -73,12 +73,12 @@ public class Main extends Application {
         ch.valider();
         Stocks.afficherStock();
         Historique.afficherHistorique();
-        CsvWriter w = new CsvWriter();
-        w.clearCSVFile("src\\main\\java\\ApplicationProjet\\elements.csv");
-        w.writeCSVFile("src\\main\\java\\ApplicationProjet\\elements.csv",Stocks.EStock);
-        w.clearCSVFile("src\\main\\java\\ApplicationProjet\\historique.csv");
-        w.writeHistoriqueCSVFile("src\\main\\java\\ApplicationProjet\\historique.csv",Historique.changements);
+
 
         launch();
+
+
+
+
     }
 }
