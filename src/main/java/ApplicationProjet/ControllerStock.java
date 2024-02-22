@@ -4,7 +4,6 @@ import ApplicationProjet.Classes.Element;
 import ApplicationProjet.Classes.Stocks;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -14,21 +13,14 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.BorderPane;
-import javafx.stage.Stage;
-
 import java.net.URL;
 import java.util.Objects;
 import java.util.ResourceBundle;
 import java.io.IOException;
 
+import static ApplicationProjet.Main.primaryStage;
+
 public class ControllerStock implements Initializable {
-
-    @FXML
-    private AnchorPane bpStock;
-
 
     @FXML
     private Button btnCProd;
@@ -63,31 +55,36 @@ public class ControllerStock implements Initializable {
     @FXML
     private TableView<Element> tableViewStock;
 
-    public void PageStock(ActionEvent event) throws IOException {
+    public void PageStock() {
         ChargerPage("stock.fxml");
     }
 
     @FXML
-    public void PageChaine(ActionEvent event) throws IOException {
+    public void PageChaine() {
         ChargerPage("chaineProd.fxml");
     }
 
     @FXML
-   public  void PageCommande(ActionEvent event) throws IOException {
+   public  void PageCommande() {
         ChargerPage("commande.fxml");
     }
 
     @FXML
-    private void PageHistorique(ActionEvent event) throws IOException {
+    private void PageHistorique() {
         ChargerPage("historique.fxml");
     }
 
-    public void ChargerPage(String page) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource(page));
-        Parent root = loader.load();
+    public void ChargerPage(String page) {
+        FXMLLoader loader = new FXMLLoader(Objects.requireNonNull(getClass().getResource(page)));
+        Parent root;
+        try {
+            root = loader.load();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
         Scene scene = new Scene(root);
-        Main.primaryStage.setScene(scene);
-        Main.primaryStage.show();
+        primaryStage.setScene(scene);
+        primaryStage.show();
     }
 
     @Override

@@ -1,11 +1,14 @@
 package ApplicationProjet;
 
+import ApplicationProjet.Classes.ChangementStock;
 import ApplicationProjet.Classes.Element;
+import ApplicationProjet.Classes.Historique;
 import ApplicationProjet.Classes.Stocks;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -21,13 +24,13 @@ import java.net.URL;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
-public class ControllerHistorique {
+import static ApplicationProjet.Classes.Historique.changements;
+import static ApplicationProjet.Main.primaryStage;
+
+public class ControllerHistorique implements Initializable {
 
     @FXML
     private AnchorPane bpHistorique;
-
-    @FXML
-    private TableColumn<?, ?> ColOrigine;
 
     @FXML
     private Button btnCProd;
@@ -41,72 +44,78 @@ public class ControllerHistorique {
     @FXML
     private Button btnStock;
 
-    @FXML
-    private TableColumn<?, ?> colAchat;
+        @FXML
+    private TableColumn<ChangementStock, String> colCode;
 
     @FXML
-    private TableColumn<?, ?> colCode;
+    private TableColumn<ChangementStock, String> colNom;
 
     @FXML
-    private TableColumn<?, ?> colNom;
+    private TableColumn<ChangementStock, Float> colQte;
 
     @FXML
-    private TableColumn<?, ?> colQte;
+    private TableColumn<ChangementStock, String> colUnite;
 
     @FXML
-    private TableColumn<?, ?> colUnite;
+    private TableColumn<ChangementStock, Double> colAchat;
 
     @FXML
-    private TableColumn<?, ?> colVente;
+    private TableColumn<ChangementStock, Float> colVente;
 
     @FXML
-    private TableColumn<?, ?> colOrigine;
+    private TableColumn<ChangementStock, String> colOrigine;
 
     @FXML
-    private TableView<Element> tableViewStock;
+    private TableView<ChangementStock> tableViewStock;
 
 
     @FXML
-    public void PageHistorique(MouseEvent event) throws IOException {
+    private void PageHistorique() {
         ChargerPage("historique.fxml");
     }
 
     @FXML
-    public void PageChaine(MouseEvent event) throws IOException {
+    private void PageChaine() {
         ChargerPage("chaineProd.fxml");
     }
 
     @FXML
-    public void PageCommande(MouseEvent event) throws IOException {
+    private void PageCommande() {
         ChargerPage("commande.fxml");
     }
 
     @FXML
-    public void PageStock(MouseEvent event) throws IOException {
+    private void PageStock() {
         ChargerPage("stock.fxml");
     }
-    public void ChargerPage(String page) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource(page));
-        Parent root = loader.load();
+    public void ChargerPage(String page) {
+        FXMLLoader loader = new FXMLLoader(Objects.requireNonNull(getClass().getResource(page)));
+        Parent root;
+        try {
+            root = loader.load();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
         Scene scene = new Scene(root);
-        Main.primaryStage.setScene(scene);
-        Main.primaryStage.show();
+        primaryStage.setScene(scene);
+        primaryStage.show();
     }
+
 
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
+        /*
         colNom.setCellValueFactory(new PropertyValueFactory<>("nom"));
         colCode.setCellValueFactory(new PropertyValueFactory<>("code"));
         colQte.setCellValueFactory(new PropertyValueFactory<>("quantite"));
-        colUnite.setCellValueFactory(new PropertyValueFactory<>("uniteMesure"));
+        colUnite.setCellValueFactory(new PropertyValueFactory<>("unite"));
         colAchat.setCellValueFactory(new PropertyValueFactory<>("prixAchat"));
         colVente.setCellValueFactory(new PropertyValueFactory<>("prixVente"));
         colOrigine.setCellValueFactory(new PropertyValueFactory<>("Origine"));
 
-        ObservableList<Element> data = FXCollections.observableArrayList();
-        for (Element element : Stocks.EStock) {
-            data.add(element);
-        }
+        ObservableList<ChangementStock> data = FXCollections.observableArrayList();
+        data.add((ChangementStock) changements);
         tableViewStock.setItems(data);
+        */
     }
 }
