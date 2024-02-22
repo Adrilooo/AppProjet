@@ -15,8 +15,8 @@
          </font>
       </Label>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cdcdcd" height="742.0" stroke="#cdcdcd" strokeType="INSIDE" width="166.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="820.0" AnchorPane.topAnchor="0.0" />
-      <Button fx:id="btnStock" mnemonicParsing="false" onAction="#PageStock" prefHeight="22.0" prefWidth="166.0" text="Stock" />
       <Button fx:id="btnCommande" layoutY="80.0" mnemonicParsing="false" onAction="#PageCommande" prefHeight="22.0" prefWidth="166.0" text="Commandes" />
+      <Button fx:id="btnStock" mnemonicParsing="false" onAction="#PageStock" prefHeight="22.0" prefWidth="166.0" text="Stock" />
       <Button fx:id="btnCProd" layoutY="40.0" mnemonicParsing="false" onAction="#PageChaine" prefHeight="22.0" prefWidth="166.0" text="Chaine de production" />
       <Button fx:id="btnHistorique" layoutY="120.0" mnemonicParsing="false" onAction="#PageHistorique" prefHeight="22.0" prefWidth="166.0" text="Historique" />
    </children>
