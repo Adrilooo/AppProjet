@@ -65,12 +65,12 @@ public class ControllerStock implements Initializable {
     }
 
     @FXML
-   public  void PageCommande() {
+    public void PageCommande() {
         ChargerPage("commande.fxml");
     }
 
     @FXML
-    private void PageHistorique() {
+    public void PageHistorique() {
         ChargerPage("historique.fxml");
     }
 
