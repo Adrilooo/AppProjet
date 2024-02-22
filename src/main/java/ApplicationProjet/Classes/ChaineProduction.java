@@ -88,10 +88,7 @@ public class ChaineProduction {
                         for (int i = 0; i < this.NivActivation; i++) {
                             Stocks.enleverElem((Element) m.getKey(), (Float) m.getValue());
                             Historique.ajouterChangement(new ChangementStock(e.getCode(), e.getNom(), (Float) m.getValue(),e.getUniteMesure(), 0, 0, "Mis en production"));
-
                         }
-
-
                     }
                 }
             }
@@ -111,10 +108,6 @@ public class ChaineProduction {
                     Historique.ajouterChangement(new ChangementStock(f.getCode(), f.getNom(), (Float) m.getValue(),f.getUniteMesure(), 0, 0, "Produit"));
                 }
             }
-
-
-
-
         }
         this.NivActivation = 0;
         ElementEntree.clear();

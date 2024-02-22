@@ -33,7 +33,7 @@ public class CsvWriter {
             System.err.println("Erreur lors du report des données dans le fichier CSV : " + filePath);
         }
     }
-    public static void writeHistoriqueCSVFile(String filePath, ArrayList<ChangementStock>Historique){
+    public static void writeHistoriqueCSVFile(String filePath, ArrayList <ChangementStock> Historique){
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
 
             for (ChangementStock data : Historique) {

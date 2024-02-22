@@ -1,7 +1,6 @@
 package ApplicationProjet;
 
-import ApplicationProjet.Classes.Element;
-import ApplicationProjet.Classes.Stocks;
+import ApplicationProjet.Classes.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -21,6 +20,7 @@ import java.util.ResourceBundle;
 import java.io.IOException;
 
 import static ApplicationProjet.Classes.Element.trouverElement;
+import static ApplicationProjet.Classes.Historique.ajouterChangement;
 import static ApplicationProjet.Main.primaryStage;
 import static java.lang.String.valueOf;
 
@@ -93,6 +93,8 @@ public class ControllerStock implements Initializable {
         float f = Float.parseFloat(InputQ.getText());
         Element e = trouverElement(valueOf(InputCode.getText()));
         Element.Vendre(e, f);
+
+        Historique.ajouterChangement(new ChangementStock(Objects.requireNonNull(e).getCode(), e.getNom(), e.getQuantite(),e.getUniteMesure(),0, e.getPrixVente(),"Vente"));
     }
 
 
