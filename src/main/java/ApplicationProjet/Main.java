@@ -79,7 +79,7 @@ public class Main extends Application {
         w.clearCSVFile("src\\main\\java\\ApplicationProjet\\historique.csv");
         w.writeHistoriqueCSVFile("src\\main\\java\\ApplicationProjet\\historique.csv",Historique.changements);
 
-
+        launch();
 
 
     }
