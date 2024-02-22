@@ -1,102 +1,127 @@
 package ApplicationProjet.Classes;
-import java.util.ArrayList;
-import java.util.Timer;
-import java.util.TimerTask;
+import java.util.*;
 
 import ApplicationProjet.Classes.Stocks;
 import ApplicationProjet.Classes.Element;
 
 
 
-public class ChaineProduction{
+public class ChaineProduction {
     private String code;
     private String nom;
     private int NivActivation;
 
-    private ArrayList <Element> ElementEntree;
-    private ArrayList <Element> ElementSortie;
 
-    public ChaineProduction(String code, String nom, ArrayList ElementEntree, ArrayList ElementSortie){
-        this.code=code;
-        this.nom=nom;
-        this.ElementEntree = new ArrayList <Element>();
-        this.ElementSortie = new ArrayList <Element>();
+    HashMap<Element, Float> ElementEntree = new HashMap<Element, Float>();
+    HashMap<Element, Float> ElementSortie = new HashMap<Element, Float>();
+
+
+    public ChaineProduction(String code, String nom, HashMap ElementEntree, HashMap ElementSortie) {
+        this.code = code;
+        this.nom = nom;
+        this.ElementEntree = ElementEntree;
+        this.ElementSortie = ElementSortie;
+        this.NivActivation = 1;
     }
-    public String getCode(){
+
+    public String getCode() {
         return this.code;
     }
-    public String getNom(){
+
+    public String getNom() {
         return this.nom;
     }
-    public void addElemEntree(Element e){
-        ElementEntree.add(e);
 
 
-    }
-    public void addElementSortie(Element e){
-        ElementSortie.add(e);
-
-    }
-    public void removeElemEntree(Element e){
-        if(!ElementEntree.remove(e)){
-            System.err.println("Tentative de retirer un élément non contenu dans la chaîne");
-        };
-    }
-    public void removeElemSortie(Element e){
-        if(!ElementSortie.remove(e)){
-            System.err.println("Tentative de retirer un élément non contenu dans la chaîne");
-        };
-    }
-    public String getElementEntree(){
+    public String getElementEntree() {
         String s = "";
-        for(Element e:ElementEntree) {
-            s += e;
-            s+='|';
+        for (Map.Entry m : ElementEntree.entrySet()) {
+            s += m.getKey();
+            s += '|';
         }
         return s;
 
     }
-    public void getElementSortie(){
-        for(Element e:ElementSortie){
-            System.out.println(e);
+
+    public String getElementSortie() {
+        String s = "";
+        for (Map.Entry m : ElementSortie.entrySet()) {
+            s += m.getKey();
+            s += '|';
         }
+        return s;
+
     }
+
     public int getNivActivation() {
         return NivActivation;
     }
+
     public void setNivActivation(int Niv) {
-        this.NivActivation=Niv;
+        this.NivActivation = Niv;
     }
-    public void valider(){
-        for (Element e:this.ElementEntree) {
-            for (int i = 0; i < this.NivActivation; i++) {
-                Stocks.enleverElem(e,e.getQuantite());
+
+    public void valider() {
+        boolean q = true;
+        ArrayList<Boolean> verif = new ArrayList<Boolean>();
+        for (HashMap.Entry<Element, Float> m : ElementEntree.entrySet()) {
+
+            for (Element e : Stocks.EStock) {
+
+                if (e == (Element) m.getKey()) {
+                    for (int i = 0; i < this.NivActivation; i++) {
+                        if (e.getQuantite() < (Float) m.getValue()) {
+                            q = false;
+                            verif.add(q);
+                            System.err.println("erreur stock element entree : " + e.getNom() + " stock : " + e.getQuantite() + " < quantite demande : " + m.getValue());
+                        }
+                    }
+                }
             }
         }
-        for (Element e:ElementEntree) {
-            Historique.ajouterChangement(new ChangementStock(e.getCode(), e.getNom(), e.getQuantite(), 0,0,"Mis en production"));
-        }
+        if (!verif.contains(Boolean.FALSE)) {
+            for (HashMap.Entry<Element, Float> m : ElementEntree.entrySet()) {
 
-    }
-    public void fin(){
-        for (Element e:ElementSortie) {
-            for (int i = 0; i < this.NivActivation; i++) {
-                Stocks.ajouterElem(e,e.getQuantite());
+                for (Element e : Stocks.EStock) {
+
+                    if (e == (Element) m.getKey()) {
+                        for (int i = 0; i < this.NivActivation; i++) {
+                            Stocks.enleverElem((Element) m.getKey(), (Float) m.getValue());
+                            Historique.ajouterChangement(new ChangementStock(e.getCode(), e.getNom(), (Float) m.getValue(),e.getUniteMesure(), 0, 0, "Mis en production"));
+
+                        }
+
+
+                    }
+                }
             }
-        }
-        this.NivActivation=0;
-        for (Element e:ElementSortie) {
-            ElementSortie.remove(e);
-        }
-        for (Element e:ElementEntree) {
-            ElementEntree.remove(e);
-        }
-        for (Element e:ElementSortie) {
-            Historique.ajouterChangement(new ChangementStock(e.getCode(), e.getNom(), e.getQuantite(), 0,0,"Production"));
-        }
+            for (Map.Entry<Element,Float> m : ElementSortie.entrySet()) {
+                if(Stocks.EStock.contains((Element)m.getKey()) ){
+                    for (Element e : Stocks.EStock) {
+                        if (e == (Element) m.getKey()) {
+                            Stocks.ajouterElem((Element) m.getKey(), (Float) m.getValue());
+                            Historique.ajouterChangement(new ChangementStock(e.getCode(), e.getNom(), (Float) m.getValue(),e.getUniteMesure(), 0, 0, "Produit"));
+                        }
+
+                    }
+                }
+                else{
+                    Element f = (Element)m.getKey();
+                    Stocks.ajouterElem((Element)m.getKey(),(Float)m.getValue());
+                    Historique.ajouterChangement(new ChangementStock(f.getCode(), f.getNom(), (Float) m.getValue(),f.getUniteMesure(), 0, 0, "Produit"));
+                }
+            }
 
 
+
+
+        }
+        this.NivActivation = 0;
+        ElementEntree.clear();
+        ElementSortie.clear();
     }
-
-
 }
+
+
+
+

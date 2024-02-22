@@ -7,7 +7,12 @@ public class Stocks {
    public static void enleverElem(Element e, float n) {
         for (Element a : EStock){
             if (a.getCode().equals(e.getCode())){
-                a.setQuantite(-n);
+                if(a.getQuantite()<n){
+                    System.err.println("Stock insuffisant");
+                }
+                else {
+                    a.ajouterQuantite(-n);break;
+                }
             }
         }
    }
@@ -16,11 +21,12 @@ public class Stocks {
         if (EStock.contains(e)) {
             for (Element a : EStock){
                if (a.getCode().equals(e.getCode())){
-                   a.setQuantite(n);
+                   a.ajouterQuantite(n);break;
                }
             }
         }
         else{
+            e.setQuantite(n);
             EStock.add(e);
         }
    }

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Historique {
-    public static List<ChangementStock> changements = new ArrayList<>();
+    public static ArrayList<ChangementStock> changements = new ArrayList<>();
 
     public static void ajouterChangement(ChangementStock changement) {
         changements.add(changement);
@@ -16,7 +16,7 @@ public class Historique {
             System.out.println("Code : " + e.getCodeElement() +
                     ", Nom : " + e.getNomElement() +
                     ", Quantité en stock : " + e.getQuantiteModifiee() +
-                    " " + e.getPrixAchat()+", "+e.getPrixVente()+", origine : "+e.getOrigine());
+                    " " + e.getUniteMesure()+" ," +e.getPrixAchat()+", "+e.getPrixVente()+", origine : "+e.getOrigine());
         }
     }
 }
