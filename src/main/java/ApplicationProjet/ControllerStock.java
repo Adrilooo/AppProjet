@@ -88,6 +88,10 @@ public class ControllerStock implements Initializable {
 
     public void StockVendre(ActionEvent event){
 
+        float f = Float.parseFloat((InputQ.getText()));
+        Element e;
+        e = (Element.trouverElement(String.valueOf(InputCode)));
+        Element.Vendre(e, f);
     }
 
 
