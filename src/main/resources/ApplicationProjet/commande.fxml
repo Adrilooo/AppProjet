@@ -8,6 +8,8 @@
 
 <AnchorPane fx:id="bpHistorique" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: #14242B;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ApplicationProjet.ControllerCommande">
    <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2f4961" height="584.0" layoutX="603.0" layoutY="137.0" stroke="BLACK" strokeType="INSIDE" width="478.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#303c51" height="584.0" layoutX="164.0" layoutY="137.0" stroke="BLACK" strokeType="INSIDE" width="437.0" />
       <Label alignment="CENTER" layoutX="435.0" layoutY="14.0" prefHeight="41.0" prefWidth="375.0" text="Commande" textFill="WHITE">
          <font>
             <Font size="36.0" />
@@ -16,7 +18,7 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#272e38" height="720.0" stroke="#cdcdcd" strokeType="INSIDE" width="166.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="914.0" AnchorPane.topAnchor="0.0" />
       <Button fx:id="btnHistorique" layoutY="180.0" mnemonicParsing="false" onAction="#PageHistorique" prefHeight="60.0" prefWidth="166.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Historique" textFill="WHITE">
          <font>
-            <Font size="18.0" />
+            <Font size="14.0" />
          </font>
       </Button>
       <Button fx:id="btnCProd" layoutY="60.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#PageChaine" prefHeight="60.0" prefWidth="166.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Chaine de production" textFill="WHITE">
@@ -31,15 +33,15 @@
       </Button>
       <Button fx:id="btnCommande" layoutY="120.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#PageCommande" prefHeight="60.0" prefWidth="166.0" style="-fx-background-color: TRANSPARENT; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Commandes" textFill="WHITE">
          <font>
-            <Font size="18.0" />
+            <Font size="14.0" />
          </font>
       </Button>
-      <Label layoutX="763.0" layoutY="126.0" text="Element nouveau" textFill="WHITE" underline="true">
+      <Label layoutX="767.0" layoutY="144.0" text="Element nouveau" textFill="WHITE" underline="true">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <Label layoutX="270.0" layoutY="126.0" text="Element existant" textFill="WHITE" underline="true">
+      <Label layoutX="270.0" layoutY="144.0" text="Element existant" textFill="WHITE" underline="true">
          <font>
             <Font size="24.0" />
          </font>
