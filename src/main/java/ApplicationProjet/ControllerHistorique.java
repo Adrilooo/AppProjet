@@ -89,8 +89,6 @@ public class ControllerHistorique implements Initializable {
         ChargerPage("stock.fxml");
     }
 
-
-
     public void ChargerPage(String page) {
         FXMLLoader loader = new FXMLLoader(Objects.requireNonNull(getClass().getResource(page)));
         Parent root;

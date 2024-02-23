@@ -11,16 +11,22 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="bpStock" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ApplicationProjet.ControllerStock">
+<AnchorPane fx:id="bpStock" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: #14242B;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ApplicationProjet.ControllerStock">
    <children>
-      <Label alignment="CENTER" layoutX="391.0" layoutY="19.0" prefHeight="41.0" prefWidth="375.0" text="Stocks">
+      <Label alignment="CENTER" layoutX="391.0" layoutY="19.0" prefHeight="41.0" prefWidth="375.0" text="Stocks" textFill="WHITE">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cdcdcd" height="720.0" stroke="#cdcdcd" strokeType="INSIDE" width="166.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="914.0" AnchorPane.topAnchor="0.0" />
-      <Button fx:id="btnStock" mnemonicParsing="false" onAction="#PageStock" prefHeight="22.0" prefWidth="166.0" text="Stock" />
-      <TableView fx:id="tableViewStock" fixedCellSize="0.0" layoutX="182.0" layoutY="68.0" prefHeight="633.0" prefWidth="697.0" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="203.0" AnchorPane.topAnchor="70.0">
+      <Rectangle fill="#272e38" height="720.0" stroke="#cdcdcd" strokeType="INSIDE" width="166.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="914.0" AnchorPane.topAnchor="0.0" />
+      <Button fx:id="btnStock" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#PageStock" prefHeight="60.0" prefWidth="166.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Stock" textFill="WHITE">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <TableView fx:id="tableViewStock" fixedCellSize="0.0" layoutX="182.0" layoutY="68.0" prefHeight="633.0" prefWidth="697.0" style="-fx-background-color: #14242B;" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="203.0" AnchorPane.topAnchor="70.0">
         <columns>
           <TableColumn fx:id="colNom" prefWidth="125.0" text="Nom" />
           <TableColumn fx:id="colCode" prefWidth="183.0" text="Code" />
@@ -33,10 +39,22 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-      <Button fx:id="btnCommande" layoutY="80.0" mnemonicParsing="false" onAction="#PageCommande" prefHeight="22.0" prefWidth="166.0" text="Commandes" />
-      <Button fx:id="btnCProd" layoutY="40.0" mnemonicParsing="false" onAction="#PageChaine" prefHeight="22.0" prefWidth="166.0" text="Chaine de production" />
-      <Button fx:id="btnHistorique" layoutY="120.0" mnemonicParsing="false" onAction="#PageHistorique" prefHeight="22.0" prefWidth="166.0" text="Historique" />
-      <Text layoutX="926.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vendre" wrappingWidth="133.3665771484375">
+      <Button fx:id="btnCommande" layoutY="120.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#PageCommande" prefHeight="60.0" prefWidth="166.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Commandes" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Button fx:id="btnCProd" layoutY="60.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#PageChaine" prefHeight="60.0" prefWidth="166.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Chaine de production" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Button fx:id="btnHistorique" layoutY="180.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#PageHistorique" prefHeight="60.0" prefWidth="166.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Historique" textFill="WHITE">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Text fill="WHITE" layoutX="926.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vendre" wrappingWidth="133.3665771484375">
          <font>
             <Font size="36.0" />
          </font>
