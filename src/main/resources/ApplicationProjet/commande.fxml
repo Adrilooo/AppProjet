@@ -46,9 +46,9 @@
       </Label>
       <TextField fx:id="saisieCodeNew" layoutX="817.0" layoutY="259.0" />
       <TextField fx:id="saisieNom" layoutX="817.0" layoutY="310.0" />
-      <TextField fx:id="saisieUnite" layoutX="817.0" layoutY="360.0" />
+      <TextField fx:id="saisieUnite" layoutX="817.0" layoutY="406.0" />
       <TextField fx:id="saisiePrixAchat" layoutX="817.0" layoutY="455.0" />
-      <TextField fx:id="saisieQteNew" layoutX="817.0" layoutY="405.0" />
+      <TextField fx:id="saisieQteNew" layoutX="817.0" layoutY="360.0" />
       <TextField fx:id="saisieCodeEx" layoutX="282.0" layoutY="272.0" />
       <TextField fx:id="saisieQteEX" layoutX="282.0" layoutY="360.0" />
       <Label layoutX="731.0" layoutY="256.0" text="Code" textFill="WHITE">
