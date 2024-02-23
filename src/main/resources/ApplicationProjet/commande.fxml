@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.shape.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="bpHistorique" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: #15404a;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ApplicationProjet.ControllerCommande">
+<AnchorPane fx:id="bpHistorique" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: #15404a;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ApplicationProjet.ControllerCommande">
    <children>
-      <Label alignment="CENTER" layoutX="391.0" layoutY="19.0" prefHeight="41.0" prefWidth="375.0" text="Commande" textFill="WHITE">
+      <Label alignment="CENTER" layoutX="435.0" layoutY="14.0" prefHeight="41.0" prefWidth="375.0" text="Commande" textFill="WHITE">
          <font>
-            <Font size="24.0" />
+            <Font size="36.0" />
          </font>
       </Label>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#255965" height="742.0" stroke="#cdcdcd" strokeType="INSIDE" width="166.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="820.0" AnchorPane.topAnchor="0.0" />
@@ -34,6 +36,60 @@
             <Font size="18.0" />
          </font>
       </Button>
+      <Label layoutX="531.0" layoutY="73.0" text="Element nouveau" textFill="WHITE" underline="true">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="536.0" layoutY="418.0" text="Element existant" textFill="WHITE" underline="true">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="saisieCodeNew" layoutX="305.0" layoutY="180.0" />
+      <TextField fx:id="saisieNom" layoutX="469.0" layoutY="180.0" />
+      <TextField fx:id="saisieUnite" layoutX="631.0" layoutY="180.0" />
+      <TextField fx:id="saisiePrixAchat" layoutX="793.0" layoutY="180.0" />
+      <TextField fx:id="saisieQteNew" layoutX="544.0" layoutY="258.0" />
+      <TextField fx:id="saisieCodeEx" layoutX="557.0" layoutY="504.0" />
+      <TextField fx:id="saisieQteEX" layoutX="557.0" layoutY="579.0" />
+      <Label layoutX="356.0" layoutY="150.0" text="Code" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="521.0" layoutY="150.0" text="Nom" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="817.0" layoutY="150.0" text="Prix d'achat" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="682.0" layoutY="150.0" text="Unite" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="580.0" layoutY="225.0" text="Quantite" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="593.0" layoutY="549.0" text="Quantite" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="608.0" layoutY="474.0" text="Code" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnAchatEX" layoutX="534.0" layoutY="624.0" mnemonicParsing="false" onAction="#achatEx" prefHeight="53.0" prefWidth="195.0" text="ACHAT" />
+      <Button fx:id="btnAchatNew" layoutX="526.0" layoutY="307.0" mnemonicParsing="false" onAction="#achatNew" prefHeight="53.0" prefWidth="195.0" text="ACHAT" />
    </children>
    <opaqueInsets>
       <Insets />
