@@ -45,12 +45,7 @@ public class Main extends Application {
     public static void main(String[] args) {
         CSV b = new CSV();
         b.LireElement();
-        CsvWriter a = new CsvWriter();
-
-        a.clearCSVFile("src/main/java/ApplicationProjet/elements.csv");
-        a.writeCSVFile("src/main/java/ApplicationProjet/elements.csv", Stocks.EStock);
-        a.clearCSVFile("src/main/java/ApplicationProjet/historique.csv");
-        a.writeHistoriqueCSVFile("src/main/java/ApplicationProjet/historique.csv", Historique.changements);
+        b.LireHistorique();
         launch();
     }
 }
