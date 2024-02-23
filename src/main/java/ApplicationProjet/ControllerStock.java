@@ -97,6 +97,8 @@ public class ControllerStock implements Initializable {
 
         a.clearCSVFile("src/main/java/ApplicationProjet/elements.csv");
         a.writeCSVFile("src/main/java/ApplicationProjet/elements.csv", Stocks.EStock);
+        a.clearCSVFile("src/main/java/ApplicationProjet/historique.csv");
+        a.writeHistoriqueCSVFile("src/main/java/ApplicationProjet/historique.csv", Historique.changements);
 
     }
 
