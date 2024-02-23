@@ -1,5 +1,7 @@
 package ApplicationProjet;
 
+import ApplicationProjet.Classes.Element;
+import ApplicationProjet.Classes.Stocks;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -7,6 +9,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.SplitMenuButton;
+import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -16,7 +20,9 @@ import java.net.URL;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
+import static ApplicationProjet.Classes.Element.trouverElement;
 import static ApplicationProjet.Main.primaryStage;
+import static java.lang.String.valueOf;
 
 public class ControllerCommande implements Initializable{
     @FXML
@@ -33,6 +39,33 @@ public class ControllerCommande implements Initializable{
 
     @FXML
     private Button btnStock;
+
+    @FXML
+    private Button btnAchatEX;
+
+    @FXML
+    private Button btnAchatNew;
+
+    @FXML
+    private TextField saisieCodeEx;
+
+    @FXML
+    private TextField saisieCodeNew;
+
+    @FXML
+    private TextField saisieNom;
+
+    @FXML
+    private TextField saisiePrixAchat;
+
+    @FXML
+    private TextField saisieQteEX;
+
+    @FXML
+    private TextField saisieQteNew;
+
+    @FXML
+    private TextField saisieUnite;
 
     @FXML
     private void PageCommande() {
@@ -65,6 +98,28 @@ public class ControllerCommande implements Initializable{
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
         primaryStage.show();
+    }
+
+    @FXML
+    public void achatEx(ActionEvent event) {
+        Element elem = trouverElement(valueOf(saisieCodeEx.getText()));
+        float qte = Float.parseFloat(saisieQteEX.getText());
+        elem.Acheter(elem, qte);
+    }
+
+    @FXML
+    public void achatNew(ActionEvent event) {
+        String code = saisieCodeNew.getText();
+        float qte = Float.parseFloat(saisieQteNew.getText());
+        for (Element elem : Stocks.EStock){
+            if (elem.getCode().equals(code)) {
+                elem.Acheter(elem, qte);
+                return;
+            }
+        }
+        Element element = new Element(code, saisieNom.getText(), 0, saisieUnite.getText(), Double.parseDouble(saisiePrixAchat.getText()), 0);
+        Stocks.ajouterElem(element, 0);
+        element.Acheter(element, qte);
     }
 
     public void initialize(URL url, ResourceBundle resourceBundle){
