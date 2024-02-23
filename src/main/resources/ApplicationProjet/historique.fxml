@@ -6,14 +6,14 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="bpHistorique" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: #15404a;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ApplicationProjet.ControllerHistorique">
+<AnchorPane fx:id="bpHistorique" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: #14242B;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ApplicationProjet.ControllerHistorique">
    <children>
       <Label alignment="CENTER" layoutX="391.0" layoutY="19.0" prefHeight="41.0" prefWidth="375.0" text="Historique des transactions" textFill="WHITE">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#255965" height="720.0" stroke="#cdcdcd" strokeType="INSIDE" width="166.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="914.0" AnchorPane.topAnchor="0.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#272e38" height="720.0" stroke="#cdcdcd" strokeType="INSIDE" width="166.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="914.0" AnchorPane.topAnchor="0.0" />
       <Button fx:id="btnHistorique" layoutY="180.0" mnemonicParsing="false" onAction="#PageHistorique" prefHeight="60.0" prefWidth="166.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Historique" textFill="WHITE">
          <font>
             <Font size="18.0" />
@@ -30,7 +30,7 @@
          <font>
             <Font size="18.0" />
          </font></Button>
-      <TableView fx:id="tableViewStock" fixedCellSize="0.0" layoutX="202.0" layoutY="88.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="633.0" prefWidth="493.0" style="-fx-background-color: #15404a;" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="70.0">
+      <TableView fx:id="tableViewStock" fixedCellSize="0.0" layoutX="202.0" layoutY="88.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="633.0" prefWidth="493.0" style="-fx-background-color: #14242B;" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="70.0">
          <columns>
             <TableColumn fx:id="colNom" prefWidth="125.0" sortType="DESCENDING" text="Nom" />
             <TableColumn fx:id="colCode" prefWidth="183.0" text="Code" />
