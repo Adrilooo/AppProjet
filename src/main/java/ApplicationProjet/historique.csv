@@ -1,3 +1,6 @@
-2;KC;5.0;win;0.0;0.0;Vente
+E006;Coques;150.0;pieces;0.0;0.0;Vente
 2;KC;100.0;win;0.0;0.0;Achat
 4;M8;50.0;lose;1000.0;0.0;Achat
+E001;Circuit principal;10.0;pieces;0.0;200.0;Vente
+E001;Circuit principal;10.0;pieces;0.0;200.0;Vente
+E001;Circuit principal;10.0;pieces;0.0;200.0;Vente

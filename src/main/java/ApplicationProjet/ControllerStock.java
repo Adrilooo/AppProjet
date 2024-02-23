@@ -93,6 +93,7 @@ public class ControllerStock implements Initializable {
         float f = Float.parseFloat(InputQ.getText());
         Element e = trouverElement(valueOf(InputCode.getText()));
         Element.Vendre(e, f);
+        tableViewStock.refresh();
         CsvWriter a = new CsvWriter();
 
         a.clearCSVFile("src/main/java/ApplicationProjet/elements.csv");
