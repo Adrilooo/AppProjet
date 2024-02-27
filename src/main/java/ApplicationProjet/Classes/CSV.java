@@ -9,6 +9,8 @@ import java.util.Map;
 
 public class CSV {
 
+    public static ArrayList<ChaineProduction> Chaines = new ArrayList<ChaineProduction>();
+
     public  void LireElement() {
         String file = "src/main/java/ApplicationProjet/elements.csv";
 
@@ -34,6 +36,7 @@ public class CSV {
     public void LireChaine() {
         String file = "src/main/java/ApplicationProjet/chaines.csv";
         String line = "";
+
         try {
             BufferedReader reader = new BufferedReader(new FileReader(file));
             while ((line = reader.readLine()) != null) {
@@ -65,6 +68,7 @@ public class CSV {
 
 
                 ChaineProduction chaine = new ChaineProduction(row[0],row[1],ElementEntree,ElementSortie);
+                Chaines.add(chaine);
 
             }
         } catch (FileNotFoundException e) {
