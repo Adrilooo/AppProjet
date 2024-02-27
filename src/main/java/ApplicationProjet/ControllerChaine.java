@@ -1,5 +1,6 @@
 package ApplicationProjet;
 
+import ApplicationProjet.Classes.Element;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -7,6 +8,9 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -22,7 +26,6 @@ public class ControllerChaine implements Initializable {
 
     @FXML
     private AnchorPane bpChaine;
-
     @FXML
     private Button btnCProd;
     @FXML
@@ -31,6 +34,83 @@ public class ControllerChaine implements Initializable {
     private Button btnHistorique;
     @FXML
     private Button btnStock;
+
+    @FXML
+    private Button BtnV1;
+
+    @FXML
+    private Button BtnV2;
+
+    @FXML
+    private Button BtnV3;
+
+    @FXML
+    private TextField IdChaine1;
+
+    @FXML
+    private TextField IdChaine2;
+
+    @FXML
+    private TextField IdChaine3;
+
+    @FXML
+    private TableView<Element> TabChaineE1;
+
+    @FXML
+    private TableView<Element> TabChaineE2;
+
+    @FXML
+    private TableView<Element> TabChaineE3;
+
+    @FXML
+    private TableView<Element> TabChaineS1;
+
+    @FXML
+    private TableView<Element> TabChaineS2;
+
+    @FXML
+    private TableView<Element> TabChaineS3;
+
+    @FXML
+    private AnchorPane bpCommande;
+
+
+    @FXML
+    private TableColumn<Element, String> colNomE1;
+
+    @FXML
+    private TableColumn<Element, String> colNomE2;
+
+    @FXML
+    private TableColumn<Element, String> colNomE3;
+
+    @FXML
+    private TableColumn<Element, String> colNomS1;
+
+    @FXML
+    private TableColumn<Element, String> colNomS2;
+
+    @FXML
+    private TableColumn<Element, String> colNomS3;
+
+    @FXML
+    private TableColumn<Element, Float> colQE1;
+
+    @FXML
+    private TableColumn<Element, Float> colQE2;
+
+    @FXML
+    private TableColumn<Element, Float> colQE3;
+
+    @FXML
+    private TableColumn<Element, Float> colQS1;
+
+    @FXML
+    private TableColumn<Element, Float> colQS2;
+
+    @FXML
+    private TableColumn<Element, Float> colQS3;
+
     @FXML
     public void PageCommande() {
         ChargerPage("commande.fxml");
