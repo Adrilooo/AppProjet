@@ -16,7 +16,7 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#272e38" height="720.0" stroke="#cdcdcd" strokeType="INSIDE" width="166.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="914.0" AnchorPane.topAnchor="0.0" />
       <Button fx:id="btnHistorique" layoutY="180.0" mnemonicParsing="false" onAction="#PageHistorique" prefHeight="60.0" prefWidth="166.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Historique" textFill="WHITE">
          <font>
-            <Font size="18.0" />
+            <Font size="14.0" />
          </font></Button>
       <Button fx:id="btnCProd" layoutY="60.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#PageChaine" prefHeight="60.0" prefWidth="166.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Chaine de production" textFill="WHITE">
          <font>
@@ -28,12 +28,12 @@
          </font></Button>
       <Button fx:id="btnCommande" layoutY="120.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#PageCommande" prefHeight="60.0" prefWidth="166.0" style="-fx-background-color: TRANSPARENT; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Commandes" textFill="WHITE">
          <font>
-            <Font size="18.0" />
+            <Font size="14.0" />
          </font></Button>
       <TableView fx:id="tableViewStock" fixedCellSize="0.0" layoutX="202.0" layoutY="88.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="633.0" prefWidth="493.0" style="-fx-background-color: #14242B;" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="70.0">
          <columns>
-            <TableColumn fx:id="colNom" prefWidth="125.0" sortType="DESCENDING" text="Nom" />
-            <TableColumn fx:id="colCode" prefWidth="183.0" text="Code" />
+            <TableColumn fx:id="colNom" prefWidth="125.0" sortType="DESCENDING" text="Code" />
+            <TableColumn fx:id="colCode" prefWidth="183.0" text="Nom" />
             <TableColumn fx:id="colQte" prefWidth="107.0" text="Quantité" />
             <TableColumn fx:id="colUnite" prefWidth="91.0" text="Unité" />
             <TableColumn fx:id="colAchat" prefWidth="108.0" text="Prix Achat" />

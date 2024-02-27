@@ -45,6 +45,7 @@ public class Main extends Application {
     public static void main(String[] args) {
         CSV b = new CSV();
         b.LireElement();
+        b.LireHistorique();
         launch();
     }
 }

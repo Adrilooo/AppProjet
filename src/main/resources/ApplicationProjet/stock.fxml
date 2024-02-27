@@ -8,7 +8,8 @@
 
 <AnchorPane fx:id="bpStock" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: #14242B;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ApplicationProjet.ControllerStock">
    <children>
-      <Label alignment="CENTER" layoutX="391.0" layoutY="19.0" prefHeight="41.0" prefWidth="375.0" text="Stocks" textFill="WHITE">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#272e38" height="731.0" layoutX="883.0" layoutY="-5.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+      <Label alignment="CENTER" layoutX="320.0" layoutY="14.0" prefHeight="41.0" prefWidth="375.0" text="Stocks" textFill="WHITE">
          <font>
             <Font size="24.0" />
          </font>
@@ -21,7 +22,7 @@
          <font>
             <Font size="24.0" />
          </font></Button>
-      <TableView fx:id="tableViewStock" fixedCellSize="0.0" layoutX="182.0" layoutY="68.0" prefHeight="633.0" prefWidth="697.0" style="-fx-background-color: #14242B;" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="203.0" AnchorPane.topAnchor="70.0">
+      <TableView fx:id="tableViewStock" fixedCellSize="0.0" layoutX="175.0" layoutY="68.0" prefHeight="651.0" prefWidth="708.0" style="-fx-background-color: #14242B;" AnchorPane.leftAnchor="175.0" AnchorPane.rightAnchor="197.0" AnchorPane.topAnchor="70.0">
         <columns>
           <TableColumn fx:id="colNom" prefWidth="125.0" text="Nom" />
           <TableColumn fx:id="colCode" prefWidth="183.0" text="Code" />
@@ -36,7 +37,7 @@
       </TableView>
       <Button fx:id="btnCommande" layoutY="120.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#PageCommande" prefHeight="60.0" prefWidth="166.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Commandes" textFill="WHITE">
          <font>
-            <Font size="18.0" />
+            <Font size="14.0" />
          </font></Button>
       <Button fx:id="btnCProd" layoutY="60.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#PageChaine" prefHeight="60.0" prefWidth="166.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Chaine de production" textFill="WHITE">
          <font>
@@ -47,16 +48,16 @@
             <Insets />
          </opaqueInsets>
          <font>
-            <Font size="18.0" />
+            <Font size="14.0" />
          </font></Button>
-      <Text fill="WHITE" layoutX="926.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vendre" wrappingWidth="133.3665771484375">
+      <Text fill="WHITE" layoutX="882.0" layoutY="249.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vendre" textAlignment="CENTER" underline="true" wrappingWidth="200.0">
          <font>
             <Font size="36.0" />
          </font>
       </Text>
-      <Button fx:id="btnVendre" layoutX="956.0" layoutY="350.0" mnemonicParsing="false" onAction="#StockVendre" text="Vendre" />
-      <TextField fx:id="InputCode" layoutX="908.0" layoutY="251.0" promptText="Code" />
-      <TextField fx:id="InputQ" layoutX="908.0" layoutY="298.0" promptText="Quantité" />
+      <Button fx:id="btnVendre" layoutX="955.0" layoutY="404.0" mnemonicParsing="false" onAction="#StockVendre" text="Vendre" />
+      <TextField fx:id="InputCode" layoutX="907.0" layoutY="300.0" promptText="Code" />
+      <TextField fx:id="InputQ" layoutX="907.0" layoutY="348.0" promptText="Quantité" />
    </children>
    <opaqueInsets>
       <Insets />
