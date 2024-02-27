@@ -42,7 +42,7 @@
       </Button>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#606d79" height="180.0" layoutX="187.0" layoutY="90.0" stroke="BLACK" strokeType="INSIDE" width="856.0" />
       <TextField fx:id="IdChaine1" layoutX="575.0" layoutY="100.0" prefHeight="25.0" prefWidth="115.0" promptText="Niveau d'activation" />
-      <Button fx:id="BtnV1" layoutX="600.0" layoutY="210.0" mnemonicParsing="false" onAction="#Valider" style="-fx-border-width: 1px 1px 1px 1px; -fx-border-color: white;" text="Valider" />
+      <Button fx:id="BtnV1" layoutX="600.0" layoutY="210.0" mnemonicParsing="false" onAction="#Valider1" style="-fx-border-width: 1px 1px 1px 1px; -fx-border-color: white;" text="Valider" />
       <Line endX="70.11111450195312" endY="90.0" layoutX="405.0" layoutY="180.0" startX="70.11111450195312" startY="-90.0" />
       <Text fill="WHITE" layoutX="271.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Elements en entrée">
          <font>
@@ -60,7 +60,7 @@
       <Line endX="59.4444580078125" endY="-61.4444580078125" layoutX="664.0" layoutY="230.0" startX="46.0" startY="-48.33332824707031" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#606d79" height="180.0" layoutX="187.0" layoutY="293.0" stroke="BLACK" strokeType="INSIDE" width="856.0" />
       <TextField fx:id="IdChaine2" layoutX="576.0" layoutY="304.0" prefHeight="25.0" prefWidth="115.0" promptText="Niveau d'activation" />
-      <Button fx:id="BtnV2" layoutX="599.0" layoutY="420.0" mnemonicParsing="false" onAction="#Valider" style="-fx-border-width: 1px 1px 1px 1px; -fx-border-color: white;" text="Valider" />
+      <Button fx:id="BtnV2" layoutX="599.0" layoutY="420.0" mnemonicParsing="false" onAction="#Valider2" style="-fx-border-width: 1px 1px 1px 1px; -fx-border-color: white;" text="Valider" />
       <Line endX="70.11114501953125" endY="78.0" layoutX="405.0" layoutY="395.0" startX="70.11114501953125" startY="-102.0" />
       <Text fill="WHITE" layoutX="271.0" layoutY="314.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Elements en entrée">
          <font>
@@ -78,7 +78,7 @@
       <Line endX="59.4444580078125" endY="-61.4444580078125" layoutX="664.0" layoutY="445.0" startX="46.0" startY="-48.33332824707031" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#606d79" height="180.0" layoutX="187.0" layoutY="493.0" stroke="BLACK" strokeType="INSIDE" width="856.0" />
       <TextField fx:id="IdChaine3" layoutX="573.0" layoutY="504.0" prefHeight="25.0" prefWidth="115.0" promptText="Niveau d'activation" />
-      <Button fx:id="BtnV3" layoutX="601.0" layoutY="622.0" mnemonicParsing="false" onAction="#Valider" style="-fx-border-width: 1px 1px 1px 1px; -fx-border-color: white;" text="Valider" />
+      <Button fx:id="BtnV3" layoutX="601.0" layoutY="622.0" mnemonicParsing="false" onAction="#Valider3" style="-fx-border-width: 1px 1px 1px 1px; -fx-border-color: white;" text="Valider" />
       <Line endX="70.11114501953125" endY="78.0" layoutX="405.0" layoutY="595.0" startX="70.11114501953125" startY="-102.0" />
       <Text fill="WHITE" layoutX="273.0" layoutY="512.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Elements en entrée">
          <font>

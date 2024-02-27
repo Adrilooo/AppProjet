@@ -1,5 +1,6 @@
 package ApplicationProjet;
 
+import ApplicationProjet.Classes.ChaineProduction;
 import ApplicationProjet.Classes.Element;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -145,7 +146,27 @@ public class ControllerChaine implements Initializable {
 
     }
 
-    public void Valider(){
+    public void Valider1(){
+        int i = Integer.parseInt(IdChaine1.getText());
+        if (0 <= i && i <= 9){
+            ChaineProduction.setNivActivation(i, "C001");
+        }
+    }
+
+    public void Valider2(){
+        int i = Integer.parseInt(IdChaine2.getText());
+        if (0 <= i && i <= 9){
+            ChaineProduction.setNivActivation(i, "C002");
+
+        }
+
+    }
+
+    public void Valider3(){
+        int i = Integer.parseInt(IdChaine3.getText());
+        if (0 <= i && i <= 9){
+            ChaineProduction.setNivActivation(i, "C003");
+        }
 
     }
 }
