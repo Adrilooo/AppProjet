@@ -159,9 +159,7 @@ public class ControllerChaine implements Initializable {
             ChaineProduction.setNivActivation(i, "C002");
 
         }
-
     }
-
     public void Valider3(){
         int i = Integer.parseInt(IdChaine3.getText());
         if (0 <= i && i <= 9){

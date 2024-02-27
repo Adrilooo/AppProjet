@@ -21,7 +21,7 @@ public class ChaineProduction {
         this.nom = nom;
         this.ElementEntree = ElementEntree;
         this.ElementSortie = ElementSortie;
-        this.NivActivation = 1;
+        this.NivActivation = 0;
     }
 
     public String getCode() {
@@ -57,7 +57,7 @@ public class ChaineProduction {
         return NivActivation;
     }
 
-    public static void setNivActivation(int Niv, String code) {
+    public void setNivActivation(int Niv, String code) {
         this.NivActivation = Niv;
     }
 
