@@ -94,40 +94,40 @@
       <Line endX="100.0" layoutX="624.0" layoutY="583.0" startX="-100.0" />
       <Line endX="68.66668701171875" endY="-23.4444580078125" layoutX="655.0" layoutY="606.0" startX="55.33331298828125" startY="-36.5" />
       <Line endX="59.4444580078125" endY="-61.4444580078125" layoutX="664.0" layoutY="645.0" startX="46.0" startY="-48.33332824707031" />
-      <TableView layoutX="237.0" layoutY="125.0" prefHeight="137.0" prefWidth="201.0">
+      <TableView fx:id="TabChaineE1" layoutX="237.0" layoutY="125.0" prefHeight="137.0" prefWidth="201.0">
         <columns>
-          <TableColumn prefWidth="99.33332824707031" text="Nom" />
-          <TableColumn prefWidth="101.3333740234375" text="Quantité" />
+          <TableColumn fx:id="colNomE1" prefWidth="99.33332824707031" text="Nom" />
+          <TableColumn fx:id="colQE1" prefWidth="101.3333740234375" text="Quantité" />
         </columns>
       </TableView>
-      <TableView layoutX="237.0" layoutY="328.0" prefHeight="137.0" prefWidth="201.0">
+      <TableView fx:id="TabChaineE2" layoutX="237.0" layoutY="328.0" prefHeight="137.0" prefWidth="201.0">
          <columns>
-            <TableColumn prefWidth="99.33332824707031" text="Nom" />
-            <TableColumn prefWidth="101.3333740234375" text="Quantité" />
+            <TableColumn fx:id="colNomE2" prefWidth="99.33332824707031" text="Nom" />
+            <TableColumn fx:id="colQE2" prefWidth="101.3333740234375" text="Quantité" />
          </columns>
       </TableView>
-      <TableView layoutX="237.0" layoutY="528.0" prefHeight="137.0" prefWidth="201.0">
+      <TableView fx:id="TabChaineE3" layoutX="237.0" layoutY="528.0" prefHeight="137.0" prefWidth="201.0">
          <columns>
-            <TableColumn prefWidth="99.33332824707031" text="Nom" />
-            <TableColumn prefWidth="101.3333740234375" text="Quantité" />
+            <TableColumn fx:id="colNomE3" prefWidth="99.33332824707031" text="Nom" />
+            <TableColumn fx:id="colQE3" prefWidth="101.3333740234375" text="Quantité" />
          </columns>
       </TableView>
-      <TableView layoutX="819.0" layoutY="113.0" prefHeight="137.0" prefWidth="201.0">
+      <TableView fx:id="TabChaineS1" layoutX="819.0" layoutY="113.0" prefHeight="137.0" prefWidth="201.0">
          <columns>
-            <TableColumn prefWidth="99.33332824707031" text="Nom" />
-            <TableColumn prefWidth="101.3333740234375" text="Quantité" />
+            <TableColumn fx:id="colNomS1" prefWidth="99.33332824707031" text="Nom" />
+            <TableColumn fx:id="colQS1" prefWidth="101.3333740234375" text="Quantité" />
          </columns>
       </TableView>
-      <TableView layoutX="816.0" layoutY="328.0" prefHeight="137.0" prefWidth="201.0">
+      <TableView fx:id="TabChaineS2" layoutX="816.0" layoutY="328.0" prefHeight="137.0" prefWidth="201.0">
          <columns>
-            <TableColumn prefWidth="99.33332824707031" text="Nom" />
-            <TableColumn prefWidth="101.3333740234375" text="Quantité" />
+            <TableColumn fx:id="colNomS2" prefWidth="99.33332824707031" text="Nom" />
+            <TableColumn fx:id="colQS2" prefWidth="101.3333740234375" text="Quantité" />
          </columns>
       </TableView>
-      <TableView layoutX="816.0" layoutY="521.0" prefHeight="137.0" prefWidth="201.0">
+      <TableView fx:id="TabChaineS3" layoutX="816.0" layoutY="521.0" prefHeight="137.0" prefWidth="201.0">
          <columns>
-            <TableColumn prefWidth="99.33332824707031" text="Nom" />
-            <TableColumn prefWidth="101.3333740234375" text="Quantité" />
+            <TableColumn fx:id="colNomE3" prefWidth="99.33332824707031" text="Nom" />
+            <TableColumn fx:id="colQS3" prefWidth="101.3333740234375" text="Quantité" />
          </columns>
       </TableView>
    </children>
