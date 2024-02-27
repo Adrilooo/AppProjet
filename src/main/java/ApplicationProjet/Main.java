@@ -46,6 +46,7 @@ public class Main extends Application {
         CSV b = new CSV();
         b.LireElement();
         b.LireHistorique();
+        b.LireChaine();
         launch();
     }
 }

@@ -117,6 +117,5 @@ public class ControllerHistorique implements Initializable {
         ObservableList<ChangementStock> data = FXCollections.observableArrayList();
         data.addAll(Historique.changements);
         tableViewStock.setItems(data);
-
     }
 }
