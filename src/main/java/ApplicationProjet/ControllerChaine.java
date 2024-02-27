@@ -155,6 +155,7 @@ public class ControllerChaine implements Initializable {
                 if(c.getCode().equals("C001")) {
                     c.setNivActivation(i);
                 }
+                c.valider();
             }
         }
     }
@@ -167,7 +168,9 @@ public class ControllerChaine implements Initializable {
                 if(c.getCode().equals("C002")) {
                     c.setNivActivation(i);
                 }
+                c.valider();
             }
+
 
         }
     }
@@ -178,7 +181,9 @@ public class ControllerChaine implements Initializable {
                 if(c.getCode().equals("C003")) {
                     c.setNivActivation(i);
                 }
+                c.valider();
             }
+
         }
     }
 }
