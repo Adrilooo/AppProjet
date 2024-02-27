@@ -154,8 +154,9 @@ public class ControllerChaine implements Initializable {
             for (ChaineProduction c : CSV.Chaines) {
                 if(c.getCode().equals("C001")) {
                     c.setNivActivation(i);
+                    c.valider();
                 }
-                c.valider();
+
             }
         }
     }
@@ -167,8 +168,9 @@ public class ControllerChaine implements Initializable {
             for (ChaineProduction c : CSV.Chaines) {
                 if(c.getCode().equals("C002")) {
                     c.setNivActivation(i);
+                    c.valider();
                 }
-                c.valider();
+
             }
 
 
@@ -180,8 +182,9 @@ public class ControllerChaine implements Initializable {
             for (ChaineProduction c : CSV.Chaines) {
                 if(c.getCode().equals("C003")) {
                     c.setNivActivation(i);
+                    c.valider();
                 }
-                c.valider();
+
             }
 
         }
