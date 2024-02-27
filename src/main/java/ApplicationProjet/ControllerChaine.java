@@ -71,9 +71,6 @@ public class ControllerChaine implements Initializable {
     @FXML
     private TableView<Element> TabChaineS3;
 
-    @FXML
-    private AnchorPane bpCommande;
-
 
     @FXML
     private TableColumn<Element, String> colNomE1;
@@ -145,6 +142,10 @@ public class ControllerChaine implements Initializable {
     }
 
     public void initialize(URL url, ResourceBundle resourceBundle){
+
+    }
+
+    public void Valider(){
 
     }
 }
