@@ -3,6 +3,8 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
@@ -39,8 +41,8 @@
          </font>
       </Button>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#606d79" height="180.0" layoutX="187.0" layoutY="90.0" stroke="BLACK" strokeType="INSIDE" width="856.0" />
-      <TextField fx:id="IdChaine1" layoutX="574.0" layoutY="107.0" prefHeight="25.0" prefWidth="115.0" promptText="Niveau d'activation" />
-      <Button layoutX="609.0" layoutY="217.0" mnemonicParsing="false" onAction="#Valider" style="-fx-border-width: 1px 1px 1px 1px; -fx-border-color: white;" text="Valider" />
+      <TextField fx:id="IdChaine1" layoutX="575.0" layoutY="100.0" prefHeight="25.0" prefWidth="115.0" promptText="Niveau d'activation" />
+      <Button layoutX="600.0" layoutY="210.0" mnemonicParsing="false" onAction="#Valider" style="-fx-border-width: 1px 1px 1px 1px; -fx-border-color: white;" text="Valider" />
       <Line endX="70.11111450195312" endY="90.0" layoutX="405.0" layoutY="180.0" startX="70.11111450195312" startY="-90.0" />
       <Text fill="WHITE" layoutX="269.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Elements en entrée">
          <font>
@@ -57,15 +59,15 @@
       <Line endX="68.66668701171875" endY="-23.4444580078125" layoutX="655.0" layoutY="191.0" startX="55.33331298828125" startY="-36.5" />
       <Line endX="59.4444580078125" endY="-61.4444580078125" layoutX="664.0" layoutY="230.0" startX="46.0" startY="-48.33332824707031" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#606d79" height="180.0" layoutX="187.0" layoutY="293.0" stroke="BLACK" strokeType="INSIDE" width="856.0" />
-      <TextField fx:id="IdChaine2" layoutX="574.0" layoutY="322.0" prefHeight="25.0" prefWidth="115.0" promptText="Niveau d'activation" />
-      <Button layoutX="609.0" layoutY="432.0" mnemonicParsing="false" onAction="#Valider" style="-fx-border-width: 1px 1px 1px 1px; -fx-border-color: white;" text="Valider" />
+      <TextField fx:id="IdChaine2" layoutX="576.0" layoutY="304.0" prefHeight="25.0" prefWidth="115.0" promptText="Niveau d'activation" />
+      <Button layoutX="599.0" layoutY="420.0" mnemonicParsing="false" onAction="#Valider" style="-fx-border-width: 1px 1px 1px 1px; -fx-border-color: white;" text="Valider" />
       <Line endX="70.11114501953125" endY="78.0" layoutX="405.0" layoutY="395.0" startX="70.11114501953125" startY="-102.0" />
-      <Text fill="WHITE" layoutX="269.0" layoutY="326.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Elements en entrée">
+      <Text fill="WHITE" layoutX="271.0" layoutY="314.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Elements en entrée">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="848.0" layoutY="325.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Elements en sortie">
+      <Text fill="WHITE" layoutX="844.0" layoutY="312.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Elements en sortie">
          <font>
             <Font size="18.0" />
          </font>
@@ -75,15 +77,15 @@
       <Line endX="68.66668701171875" endY="-23.4444580078125" layoutX="655.0" layoutY="406.0" startX="55.33331298828125" startY="-36.5" />
       <Line endX="59.4444580078125" endY="-61.4444580078125" layoutX="664.0" layoutY="445.0" startX="46.0" startY="-48.33332824707031" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#606d79" height="180.0" layoutX="187.0" layoutY="493.0" stroke="BLACK" strokeType="INSIDE" width="856.0" />
-      <TextField fx:id="IdChaine3" layoutX="574.0" layoutY="522.0" prefHeight="25.0" prefWidth="115.0" promptText="Niveau d'activation" />
-      <Button layoutX="609.0" layoutY="632.0" mnemonicParsing="false" onAction="#Valider" style="-fx-border-width: 1px 1px 1px 1px; -fx-border-color: white;" text="Valider" />
+      <TextField fx:id="IdChaine3" layoutX="573.0" layoutY="504.0" prefHeight="25.0" prefWidth="115.0" promptText="Niveau d'activation" />
+      <Button layoutX="601.0" layoutY="622.0" mnemonicParsing="false" onAction="#Valider" style="-fx-border-width: 1px 1px 1px 1px; -fx-border-color: white;" text="Valider" />
       <Line endX="70.11114501953125" endY="78.0" layoutX="405.0" layoutY="595.0" startX="70.11114501953125" startY="-102.0" />
-      <Text fill="WHITE" layoutX="269.0" layoutY="526.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Elements en entrée">
+      <Text fill="WHITE" layoutX="273.0" layoutY="512.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Elements en entrée">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="848.0" layoutY="525.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Elements en sortie">
+      <Text fill="WHITE" layoutX="847.0" layoutY="511.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Elements en sortie">
          <font>
             <Font size="18.0" />
          </font>
@@ -92,6 +94,42 @@
       <Line endX="100.0" layoutX="624.0" layoutY="583.0" startX="-100.0" />
       <Line endX="68.66668701171875" endY="-23.4444580078125" layoutX="655.0" layoutY="606.0" startX="55.33331298828125" startY="-36.5" />
       <Line endX="59.4444580078125" endY="-61.4444580078125" layoutX="664.0" layoutY="645.0" startX="46.0" startY="-48.33332824707031" />
+      <TableView layoutX="237.0" layoutY="125.0" prefHeight="137.0" prefWidth="201.0">
+        <columns>
+          <TableColumn prefWidth="99.33332824707031" text="Nom" />
+          <TableColumn prefWidth="101.3333740234375" text="Quantité" />
+        </columns>
+      </TableView>
+      <TableView layoutX="237.0" layoutY="328.0" prefHeight="137.0" prefWidth="201.0">
+         <columns>
+            <TableColumn prefWidth="99.33332824707031" text="Nom" />
+            <TableColumn prefWidth="101.3333740234375" text="Quantité" />
+         </columns>
+      </TableView>
+      <TableView layoutX="237.0" layoutY="528.0" prefHeight="137.0" prefWidth="201.0">
+         <columns>
+            <TableColumn prefWidth="99.33332824707031" text="Nom" />
+            <TableColumn prefWidth="101.3333740234375" text="Quantité" />
+         </columns>
+      </TableView>
+      <TableView layoutX="819.0" layoutY="113.0" prefHeight="137.0" prefWidth="201.0">
+         <columns>
+            <TableColumn prefWidth="99.33332824707031" text="Nom" />
+            <TableColumn prefWidth="101.3333740234375" text="Quantité" />
+         </columns>
+      </TableView>
+      <TableView layoutX="816.0" layoutY="328.0" prefHeight="137.0" prefWidth="201.0">
+         <columns>
+            <TableColumn prefWidth="99.33332824707031" text="Nom" />
+            <TableColumn prefWidth="101.3333740234375" text="Quantité" />
+         </columns>
+      </TableView>
+      <TableView layoutX="816.0" layoutY="521.0" prefHeight="137.0" prefWidth="201.0">
+         <columns>
+            <TableColumn prefWidth="99.33332824707031" text="Nom" />
+            <TableColumn prefWidth="101.3333740234375" text="Quantité" />
+         </columns>
+      </TableView>
    </children>
    <opaqueInsets>
       <Insets />
