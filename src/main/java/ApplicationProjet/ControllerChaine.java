@@ -3,6 +3,8 @@ package ApplicationProjet;
 import ApplicationProjet.Classes.CSV;
 import ApplicationProjet.Classes.ChaineProduction;
 import ApplicationProjet.Classes.Element;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,6 +15,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -144,7 +147,46 @@ public class ControllerChaine implements Initializable {
     }
 
     public void initialize(URL url, ResourceBundle resourceBundle){
+        colNomE1.setCellValueFactory(new PropertyValueFactory<>("nom"));
+        colNomE2.setCellValueFactory(new PropertyValueFactory<>("nom"));
+        colNomE3.setCellValueFactory(new PropertyValueFactory<>("nom"));
+        colNomS1.setCellValueFactory(new PropertyValueFactory<>("nom"));
+        colNomS2.setCellValueFactory(new PropertyValueFactory<>("nom"));
+        colNomS3.setCellValueFactory(new PropertyValueFactory<>("nom"));
+        colQE1.setCellValueFactory(new PropertyValueFactory<>("quantite"));
+        colQE2.setCellValueFactory(new PropertyValueFactory<>("quantite"));
+        colQE3.setCellValueFactory(new PropertyValueFactory<>("quantite"));
+        colQS1.setCellValueFactory(new PropertyValueFactory<>("quantite"));
+        colQS2.setCellValueFactory(new PropertyValueFactory<>("quantite"));
+        colQS3.setCellValueFactory(new PropertyValueFactory<>("quantite"));
 
+        ObservableList<Element> dataE1 = FXCollections.observableArrayList();
+        ObservableList<Element> dataE2 = FXCollections.observableArrayList();
+        ObservableList<Element> dataE3 = FXCollections.observableArrayList();
+        ObservableList<Element> dataS1 = FXCollections.observableArrayList();
+        ObservableList<Element> dataS2 = FXCollections.observableArrayList();
+        ObservableList<Element> dataS3 = FXCollections.observableArrayList();
+
+        for (ChaineProduction c : CSV.Chaines){
+            if(c.getCode().equals("C001")){
+                dataE1.addAll(c.getElementsEntreeKeys());
+                dataS1.addAll(c.getElementsSortieKeys());
+                TabChaineE1.setItems(dataE1);
+                TabChaineS1.setItems(dataS1);
+            }
+            if(c.getCode().equals("C002")){
+                dataE2.addAll(c.getElementsEntreeKeys());
+                dataS2.addAll(c.getElementsSortieKeys());
+                TabChaineE2.setItems(dataE2);
+                TabChaineS2.setItems(dataS2);
+            }
+            if(c.getCode().equals("C003")){
+                dataE3.addAll(c.getElementsEntreeKeys());
+                dataS3.addAll(c.getElementsSortieKeys());
+                TabChaineE3.setItems(dataE3);
+                TabChaineS3.setItems(dataS3);
+            }
+        }
     }
 
     public void Valider1(){

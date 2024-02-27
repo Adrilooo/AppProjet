@@ -24,6 +24,13 @@ public class ChaineProduction {
         this.NivActivation = 0;
     }
 
+    public Set<Element> getElementsEntreeKeys() {
+        return ElementEntree.keySet();
+    }
+
+    public Set<Element> getElementsSortieKeys() {
+        return ElementSortie.keySet();
+    }
     public String getCode() {
         return this.code;
     }
