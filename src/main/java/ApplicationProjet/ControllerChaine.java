@@ -1,5 +1,6 @@
 package ApplicationProjet;
 
+import ApplicationProjet.Classes.CSV;
 import ApplicationProjet.Classes.ChaineProduction;
 import ApplicationProjet.Classes.Element;
 import javafx.event.ActionEvent;
@@ -149,22 +150,35 @@ public class ControllerChaine implements Initializable {
     public void Valider1(){
         int i = Integer.parseInt(IdChaine1.getText());
         if (0 <= i && i <= 9){
-            ChaineProduction.setNivActivation(i, "C001");
+
+            for (ChaineProduction c : CSV.Chaines) {
+                if(c.getCode().equals("C001")) {
+                    c.setNivActivation(i);
+                }
+            }
         }
     }
 
     public void Valider2(){
         int i = Integer.parseInt(IdChaine2.getText());
         if (0 <= i && i <= 9){
-            ChaineProduction.setNivActivation(i, "C002");
+
+            for (ChaineProduction c : CSV.Chaines) {
+                if(c.getCode().equals("C002")) {
+                    c.setNivActivation(i);
+                }
+            }
 
         }
     }
     public void Valider3(){
         int i = Integer.parseInt(IdChaine3.getText());
         if (0 <= i && i <= 9){
-            ChaineProduction.setNivActivation(i, "C003");
+            for (ChaineProduction c : CSV.Chaines) {
+                if(c.getCode().equals("C003")) {
+                    c.setNivActivation(i);
+                }
+            }
         }
-
     }
 }

@@ -57,7 +57,7 @@ public class ChaineProduction {
         return NivActivation;
     }
 
-    public void setNivActivation(int Niv, String code) {
+    public void setNivActivation(int Niv) {
         this.NivActivation = Niv;
     }
 
