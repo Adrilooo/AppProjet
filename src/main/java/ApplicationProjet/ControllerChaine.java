@@ -203,6 +203,7 @@ public class ControllerChaine implements Initializable {
         }
     }
 
+
     public void Valider2(){
         int i = Integer.parseInt(IdChaine2.getText());
         if (0 <= i && i <= 9){

@@ -109,6 +109,7 @@ public class ChaineProduction {
 
                     }
                 }
+
                 else{
                     Element f = (Element)m.getKey();
                     Stocks.ajouterElem((Element)m.getKey(),(Float)m.getValue());
