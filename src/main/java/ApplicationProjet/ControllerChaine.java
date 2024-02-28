@@ -1,8 +1,6 @@
 package ApplicationProjet;
 
-import ApplicationProjet.Classes.CSV;
-import ApplicationProjet.Classes.ChaineProduction;
-import ApplicationProjet.Classes.Element;
+import ApplicationProjet.Classes.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -153,12 +151,12 @@ public class ControllerChaine implements Initializable {
         colNomS1.setCellValueFactory(new PropertyValueFactory<>("nom"));
         colNomS2.setCellValueFactory(new PropertyValueFactory<>("nom"));
         colNomS3.setCellValueFactory(new PropertyValueFactory<>("nom"));
-        colQE1.setCellValueFactory(new PropertyValueFactory<>("quantite"));
-        colQE2.setCellValueFactory(new PropertyValueFactory<>("quantite"));
-        colQE3.setCellValueFactory(new PropertyValueFactory<>("quantite"));
-        colQS1.setCellValueFactory(new PropertyValueFactory<>("quantite"));
-        colQS2.setCellValueFactory(new PropertyValueFactory<>("quantite"));
-        colQS3.setCellValueFactory(new PropertyValueFactory<>("quantite"));
+        colQE1.setCellValueFactory(new PropertyValueFactory<>("quantiteEnProd"));
+        colQE2.setCellValueFactory(new PropertyValueFactory<>("quantiteEnProd"));
+        colQE3.setCellValueFactory(new PropertyValueFactory<>("quantiteEnProd"));
+        colQS1.setCellValueFactory(new PropertyValueFactory<>("quantiteEnProd"));
+        colQS2.setCellValueFactory(new PropertyValueFactory<>("quantiteEnProd"));
+        colQS3.setCellValueFactory(new PropertyValueFactory<>("quantiteEnProd"));
 
         ObservableList<Element> dataE1 = FXCollections.observableArrayList();
         ObservableList<Element> dataE2 = FXCollections.observableArrayList();
@@ -200,6 +198,12 @@ public class ControllerChaine implements Initializable {
                 }
 
             }
+            CsvWriter a = new CsvWriter();
+
+            a.clearCSVFile("src/main/java/ApplicationProjet/elements.csv");
+            a.writeCSVFile("src/main/java/ApplicationProjet/elements.csv", Stocks.EStock);
+            a.clearCSVFile("src/main/java/ApplicationProjet/historique.csv");
+            a.writeHistoriqueCSVFile("src/main/java/ApplicationProjet/historique.csv", Historique.changements);
         }
     }
 
@@ -215,6 +219,12 @@ public class ControllerChaine implements Initializable {
                 }
 
             }
+            CsvWriter a = new CsvWriter();
+
+            a.clearCSVFile("src/main/java/ApplicationProjet/elements.csv");
+            a.writeCSVFile("src/main/java/ApplicationProjet/elements.csv", Stocks.EStock);
+            a.clearCSVFile("src/main/java/ApplicationProjet/historique.csv");
+            a.writeHistoriqueCSVFile("src/main/java/ApplicationProjet/historique.csv", Historique.changements);
 
 
         }
@@ -229,6 +239,12 @@ public class ControllerChaine implements Initializable {
                 }
 
             }
+            CsvWriter a = new CsvWriter();
+
+            a.clearCSVFile("src/main/java/ApplicationProjet/elements.csv");
+            a.writeCSVFile("src/main/java/ApplicationProjet/elements.csv", Stocks.EStock);
+            a.clearCSVFile("src/main/java/ApplicationProjet/historique.csv");
+            a.writeHistoriqueCSVFile("src/main/java/ApplicationProjet/historique.csv", Historique.changements);
 
         }
     }

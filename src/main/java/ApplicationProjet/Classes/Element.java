@@ -12,6 +12,7 @@ public class Element {
     private final String uniteMesure;
     private final double prixAchat;
     private double prixVente;
+    private float quantiteEnProd;
 
 
 
@@ -53,6 +54,14 @@ public class Element {
         this.quantite=n;
     }
 
+    public float getQuantiteEnProd() {
+        return quantiteEnProd;
+
+    }
+
+    public void setQuantiteEnProd(float quantiteEnProd) {
+        this.quantiteEnProd = quantiteEnProd;
+    }
 
     public void ajouterQuantite(float n){this.quantite+=n;}
 

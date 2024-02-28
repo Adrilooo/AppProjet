@@ -40,23 +40,21 @@ public class ChaineProduction {
     }
 
 
-    public String getElementEntree() {
-        String s = "";
+    public void getElementEntree() {
         for (Map.Entry m : ElementEntree.entrySet()) {
-            s += m.getKey();
-            s += '|';
+            Element p =(Element)m.getKey();
+            p.setQuantiteEnProd((Float)m.getValue());
         }
-        return s;
+
 
     }
 
-    public String getElementSortie() {
-        String s = "";
+    public void getElementSortie() {
         for (Map.Entry m : ElementSortie.entrySet()) {
-            s += m.getKey();
-            s += '|';
+
+            Element p =(Element)m.getKey();
+            p.setQuantiteEnProd((Float)m.getValue());
         }
-        return s;
 
     }
 
@@ -92,10 +90,11 @@ public class ChaineProduction {
                 for (Element e : Stocks.EStock) {
 
                     if (e == (Element) m.getKey()) {
-                        for (int i = 0; i < this.NivActivation; i++) {
-                            Stocks.enleverElem((Element) m.getKey(), (Float) m.getValue());
-                            Historique.ajouterChangement(new ChangementStock(e.getCode(), e.getNom(), (Float) m.getValue(),e.getUniteMesure(), 0, 0, "Mis en production"));
-                        }
+
+                        Stocks.enleverElem((Element) m.getKey(), (Float) m.getValue()*Float.parseFloat(String.valueOf(this.NivActivation)));
+
+
+                        Historique.ajouterChangement(new ChangementStock(e.getCode(), e.getNom(), (Float) m.getValue()*Float.parseFloat(String.valueOf(this.NivActivation)),e.getUniteMesure(), 0, 0, "Mis en production"));
                     }
                 }
             }
@@ -103,8 +102,11 @@ public class ChaineProduction {
                 if(Stocks.EStock.contains((Element)m.getKey()) ){
                     for (Element e : Stocks.EStock) {
                         if (e == (Element) m.getKey()) {
-                            Stocks.ajouterElem((Element) m.getKey(), (Float) m.getValue());
-                            Historique.ajouterChangement(new ChangementStock(e.getCode(), e.getNom(), (Float) m.getValue(),e.getUniteMesure(), 0, 0, "Produit"));
+
+                            Stocks.ajouterElem((Element) m.getKey(), (Float) m.getValue()*Float.parseFloat(String.valueOf(this.NivActivation)));
+
+
+                            Historique.ajouterChangement(new ChangementStock(e.getCode(), e.getNom(), (Float) m.getValue()*Float.parseFloat(String.valueOf(this.NivActivation)),e.getUniteMesure(), 0, 0, "Produit"));
                         }
 
                     }
@@ -112,14 +114,12 @@ public class ChaineProduction {
 
                 else{
                     Element f = (Element)m.getKey();
-                    Stocks.ajouterElem((Element)m.getKey(),(Float)m.getValue());
-                    Historique.ajouterChangement(new ChangementStock(f.getCode(), f.getNom(), (Float) m.getValue(),f.getUniteMesure(), 0, 0, "Produit"));
+                    Stocks.ajouterElem((Element)m.getKey(),(Float) m.getValue()*Float.parseFloat(String.valueOf(this.NivActivation)));
+                    Historique.ajouterChangement(new ChangementStock(f.getCode(), f.getNom(), (Float) m.getValue()*Float.parseFloat(String.valueOf(this.NivActivation)),f.getUniteMesure(), 0, 0, "Produit"));
                 }
             }
         }
         this.NivActivation = 0;
-        ElementEntree.clear();
-        ElementSortie.clear();
     }
 }
 

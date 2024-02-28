@@ -51,6 +51,7 @@ public class CSV {
                     float quantite=Float.parseFloat(info[1]);
                     Element e = Element.trouverElement(code);
                     ElementEntree.put(e,quantite);
+                    e.setQuantiteEnProd(quantite);
 
                 }
                 HashMap<Element, Float> ElementSortie = new HashMap<Element, Float>();
@@ -62,6 +63,7 @@ public class CSV {
                     float quantite=Float.parseFloat(info[1]);
                     Element e = Element.trouverElement(code);
                     ElementSortie.put(e,quantite);
+                    e.setQuantiteEnProd(quantite);
 
                 }
 
@@ -71,6 +73,7 @@ public class CSV {
                 Chaines.add(chaine);
 
             }
+
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch(IOException e){
