@@ -170,10 +170,7 @@ public class ControllerChaine implements Initializable {
                     c.setNivActivation(i);
                     c.valider();
                 }
-
             }
-
-
         }
     }
     public void Valider3(){
