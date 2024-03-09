@@ -39,6 +39,14 @@ public class ChaineProduction {
         return this.nom;
     }
 
+    public void addElemEntree(Element e){
+        this.ElementEntree.put(e, e.getQuantite());
+    }
+
+    public void addElemSortie(Element e){
+        this.ElementSortie.put(e, e.getQuantite());
+    }
+
 
     public void getElementEntree() {
         for (Map.Entry m : ElementEntree.entrySet()) {
