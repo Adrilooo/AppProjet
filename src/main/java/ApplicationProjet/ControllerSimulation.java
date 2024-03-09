@@ -1,14 +1,12 @@
 package ApplicationProjet;
 
+import ApplicationProjet.Classes.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
@@ -71,6 +69,9 @@ public class ControllerSimulation {
 
     @FXML
     private Button btnStock;
+
+    @FXML
+    private Label Cout1;
 
     @FXML
     private TableColumn<?, ?> colNomE1;
@@ -147,17 +148,23 @@ public class ControllerSimulation {
     }
 
     @FXML
-    void Valider1(ActionEvent event) {
+    public void Simuler1(){ //15035
+        int i = Integer.parseInt(IdChaine1.getText());
+        if (0 <= i && i <= 9){
+            String message;
+            message = String.valueOf(i * 15035);
+            Cout1 = "cout d'achat : " + message;
+
+        }
+    }
+
+    @FXML
+    public void Simuler2() {
 
     }
 
     @FXML
-    void Valider2(ActionEvent event) {
-
-    }
-
-    @FXML
-    void Valider3(ActionEvent event) {
+    public void Simuler3 () {
 
     }
 }
