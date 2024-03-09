@@ -44,6 +44,9 @@ public class ControllerHistorique implements Initializable {
     @FXML
     private Button btnStock;
 
+    @FXML
+    private Button btnSimulation;
+
         @FXML
     private TableColumn<ChangementStock, String> colCode;
 
@@ -87,6 +90,11 @@ public class ControllerHistorique implements Initializable {
     @FXML
     private void PageStock() {
         ChargerPage("stock.fxml");
+    }
+
+    @FXML
+    private void PageSimulation(){
+        ChargerPage("Simulation.fxml");
     }
 
     public void ChargerPage(String page) {

@@ -43,6 +43,9 @@ public class ControllerCommande implements Initializable{
     private Button btnStock;
 
     @FXML
+    private Button btnSimulation;
+
+    @FXML
     private Button btnAchatEX;
 
     @FXML
@@ -87,6 +90,11 @@ public class ControllerCommande implements Initializable{
     @FXML
     private void PageStock() {
         ChargerPage("stock.fxml");
+    }
+
+    @FXML
+    private void PageSimulation(){
+        ChargerPage("Simulation.fxml");
     }
 
     public void ChargerPage(String page) {

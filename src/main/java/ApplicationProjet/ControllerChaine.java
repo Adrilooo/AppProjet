@@ -37,6 +37,8 @@ public class ControllerChaine implements Initializable {
     private Button btnHistorique;
     @FXML
     private Button btnStock;
+    @FXML
+    private Button btnSimulation;
 
     @FXML
     private Button BtnV1;
@@ -129,6 +131,11 @@ public class ControllerChaine implements Initializable {
     @FXML
     private void PageChaine() {
         ChargerPage("chaineProd.fxml");
+    }
+
+    @FXML
+    private void PageSimulation(){
+        ChargerPage("Simulation.fxml");
     }
 
     public void ChargerPage(String page) {

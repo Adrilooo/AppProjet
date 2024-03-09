@@ -39,6 +39,9 @@ public class ControllerStock implements Initializable {
     private Button btnStock;
 
     @FXML
+    private Button btnSimulation;
+
+    @FXML
     private Button btnVendre;
 
     @FXML
@@ -87,6 +90,11 @@ public class ControllerStock implements Initializable {
         ChargerPage("historique.fxml");
     }
 
+    @FXML
+    private void PageSimulation(){
+        ChargerPage("Simulation.fxml");
+    }
+
 
     public void StockVendre(ActionEvent event){
         float f = Float.parseFloat(InputQ.getText());
@@ -101,10 +109,6 @@ public class ControllerStock implements Initializable {
         a.writeHistoriqueCSVFile("src/main/java/ApplicationProjet/historique.csv", Historique.changements);
 
     }
-
-
-
-
 
     public void ChargerPage(String page) {
         FXMLLoader loader = new FXMLLoader(Objects.requireNonNull(getClass().getResource(page)));
