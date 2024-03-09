@@ -148,23 +148,35 @@ public class ControllerSimulation {
     }
 
     @FXML
-    public void Simuler1(){ //15035
+    public void Simuler1(){ /* cout d'achat: 15035 */
         int i = Integer.parseInt(IdChaine1.getText());
         if (0 <= i && i <= 9){
             String message;
             message = String.valueOf(i * 15035);
-            Cout1 = "cout d'achat : " + message;
+            Cout1.setText("cout d'achat: " + message);
 
         }
     }
 
     @FXML
-    public void Simuler2() {
+    public void Simuler2(){ /* cout d'achat: 35 */
+        int i = Integer.parseInt(IdChaine2.getText());
+        if (0 <= i && i <= 9){
+            String message;
+            message = String.valueOf(i * 35);
+            Cout1.setText("cout d'achat: " + message);
 
+        }
     }
 
     @FXML
-    public void Simuler3 () {
+    public void Simuler3(){ /* cout d'achat: 15470*/
+        int i = Integer.parseInt(IdChaine3.getText());
+        if (0 <= i && i <= 9){
+            String message;
+            message = String.valueOf(i * 15470);
+            Cout1.setText("cout d'achat: " + message);
 
+        }
     }
 }

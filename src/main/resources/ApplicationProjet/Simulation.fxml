@@ -135,7 +135,9 @@
             <Font size="14.0" />
          </font>
       </Button>
-      <Label fx:id="Cout1" layoutX="482.0" layoutY="215.0" prefHeight="17.0" prefWidth="115.0" text="message" />
+      <Label fx:id="Cout1" layoutX="482.0" layoutY="185.0" prefHeight="17.0" prefWidth="115.0" text="cout d'achat: " textFill="WHITE" />
+      <Label fx:id="Cout2" layoutX="482.0" layoutY="397.0" prefHeight="17.0" prefWidth="115.0" text="cout d'achat: " textFill="WHITE" />
+      <Label fx:id="Cout3" layoutX="482.0" layoutY="597.0" prefHeight="17.0" prefWidth="115.0" text="cout d'achat: " textFill="WHITE" />
    </children>
    <opaqueInsets>
       <Insets />
