@@ -78,7 +78,7 @@
       <Line endX="59.4444580078125" endY="-61.4444580078125" layoutX="664.0" layoutY="445.0" startX="46.0" startY="-48.33332824707031" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#606d79" height="180.0" layoutX="187.0" layoutY="493.0" stroke="BLACK" strokeType="INSIDE" width="856.0" />
       <TextField fx:id="IdChaine3" layoutX="573.0" layoutY="504.0" prefHeight="25.0" prefWidth="115.0" promptText="Niveau d'activation" />
-      <Button fx:id="BtnV3" layoutX="601.0" layoutY="622.0" mnemonicParsing="false" onAction="#Simuler3" style="-fx-border-width: 1px 1px 1px 1px; -fx-border-color: white;" text="Simuler" />
+      <Button fx:id="BtnV3" layoutX="598.0" layoutY="614.0" mnemonicParsing="false" onAction="#Simuler3" style="-fx-border-width: 1px 1px 1px 1px; -fx-border-color: white;" text="Simuler" />
       <Line endX="70.11114501953125" endY="78.0" layoutX="405.0" layoutY="595.0" startX="70.11114501953125" startY="-102.0" />
       <Text fill="WHITE" layoutX="273.0" layoutY="512.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Elements en entrée">
          <font>
@@ -138,6 +138,9 @@
       <Label fx:id="Cout1" layoutX="482.0" layoutY="185.0" prefHeight="17.0" prefWidth="115.0" text="cout d'achat: " textFill="WHITE" />
       <Label fx:id="Cout2" layoutX="482.0" layoutY="397.0" prefHeight="17.0" prefWidth="115.0" text="cout d'achat: " textFill="WHITE" />
       <Label fx:id="Cout3" layoutX="482.0" layoutY="597.0" prefHeight="17.0" prefWidth="115.0" text="cout d'achat: " textFill="WHITE" />
+      <Label fx:id="Erreur1" layoutX="509.0" layoutY="241.0" prefHeight="17.0" prefWidth="249.0" text=" " textFill="RED" />
+      <Label fx:id="Erreur2" layoutX="509.0" layoutY="449.0" prefHeight="17.0" prefWidth="249.0" text=" " textFill="RED" />
+      <Label fx:id="Erreur3" layoutX="506.0" layoutY="649.0" prefHeight="17.0" prefWidth="249.0" text=" " textFill="RED" />
    </children>
    <opaqueInsets>
       <Insets />

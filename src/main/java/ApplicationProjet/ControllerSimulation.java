@@ -88,6 +88,15 @@ public class ControllerSimulation implements Initializable {
     private Label Cout3;
 
     @FXML
+    private Label Erreur1;
+
+    @FXML
+    private Label Erreur2;
+
+    @FXML
+    private Label Erreur3;
+
+    @FXML
     private TableColumn<Element, String> colNomE1;
 
     @FXML
@@ -168,6 +177,8 @@ public class ControllerSimulation implements Initializable {
             String message;
             message = String.valueOf(i * 15035);
             Cout1.setText("cout d'achat: " + message);
+            Erreur1.setText(" ");
+
             ObservableList<Element> dataE = FXCollections.observableArrayList();
             ObservableList<Element> dataS = FXCollections.observableArrayList();
             for (ChaineProduction c : CSV.Chaines){
@@ -193,6 +204,10 @@ public class ControllerSimulation implements Initializable {
                 }
             }
         }
+        else {
+            Erreur1.setText("niveau d'activation est compris entre 0 et 9");
+            Cout1.setText("cout d'achat: ");
+        }
     }
 
     @FXML
@@ -202,7 +217,11 @@ public class ControllerSimulation implements Initializable {
             String message;
             message = String.valueOf(i * 35);
             Cout2.setText("cout d'achat: " + message);
-
+            Erreur2.setText(" ");
+        }
+        else {
+            Erreur2.setText("niveau d'activation est compris entre 0 et 9");
+            Cout2.setText("cout d'achat: ");
         }
     }
 
@@ -213,7 +232,12 @@ public class ControllerSimulation implements Initializable {
             String message;
             message = String.valueOf(i * 15470);
             Cout3.setText("cout d'achat: " + message);
+            Erreur3.setText(" ");
 
+        }
+        else{
+            Erreur3.setText("niveau d'activation est compris entre 0 et 9");
+            Cout3.setText("cout d'achat: ");
         }
     }
 
