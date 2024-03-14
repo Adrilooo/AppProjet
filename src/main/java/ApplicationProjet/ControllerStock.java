@@ -9,10 +9,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import java.net.URL;
 import java.util.Objects;
@@ -97,9 +94,15 @@ public class ControllerStock implements Initializable {
 
 
     public void StockVendre(ActionEvent event){
-        float f = Float.parseFloat(InputQ.getText());
+        float quantiteVente = Float.parseFloat(InputQ.getText());
         Element e = trouverElement(valueOf(InputCode.getText()));
-        Element.Vendre(e, f);
+        if (quantiteVente > e.getQuantite()){
+            Alert erreurQteVente = new Alert(Alert.AlertType.ERROR);
+            erreurQteVente.setHeaderText("Saisie non conforme");
+            erreurQteVente.setContentText("Le stock n'est pas suffisant pour la vente");
+            erreurQteVente.showAndWait();
+        }
+        Element.Vendre(e, quantiteVente);
         tableViewStock.refresh();
         CsvWriter a = new CsvWriter();
 
