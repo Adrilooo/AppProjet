@@ -48,6 +48,9 @@ public class ControllerStock implements Initializable {
     private TextField InputQ;
 
     @FXML
+    private  Label ErreurVendre;
+
+    @FXML
     private TableColumn<Element, Float> colAchat;
 
     @FXML
@@ -97,10 +100,10 @@ public class ControllerStock implements Initializable {
         float quantiteVente = Float.parseFloat(InputQ.getText());
         Element e = trouverElement(valueOf(InputCode.getText()));
         if (quantiteVente > e.getQuantite()){
-            Alert erreurQteVente = new Alert(Alert.AlertType.ERROR);
-            erreurQteVente.setHeaderText("Saisie non conforme");
-            erreurQteVente.setContentText("Le stock n'est pas suffisant pour la vente");
-            erreurQteVente.showAndWait();
+            ErreurVendre.setText("Stock insuffisant");
+        }
+        else {
+            ErreurVendre.setText(" ");
         }
         Element.Vendre(e, quantiteVente);
         tableViewStock.refresh();

@@ -68,6 +68,7 @@
             <Font size="14.0" />
          </font>
       </Button>
+      <Label fx:id="ErreurVendre" layoutX="907.0" layoutY="451.0" prefHeight="35.0" prefWidth="149.0" textAlignment="CENTER" textFill="RED" />
    </children>
    <opaqueInsets>
       <Insets />

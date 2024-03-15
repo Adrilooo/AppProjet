@@ -11,6 +11,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.SplitMenuButton;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
@@ -50,6 +51,12 @@ public class ControllerCommande implements Initializable{
 
     @FXML
     private Button btnAchatNew;
+
+    @FXML
+    private Label LabelAchat;
+
+    @FXML
+    private Label LabelAchat2;
 
     @FXML
     private TextField saisieCodeEx;
@@ -121,6 +128,7 @@ public class ControllerCommande implements Initializable{
         a.writeCSVFile("src/main/java/ApplicationProjet/elements.csv", Stocks.EStock);
         a.clearCSVFile("src/main/java/ApplicationProjet/historique.csv");
         a.writeHistoriqueCSVFile("src/main/java/ApplicationProjet/historique.csv", Historique.changements);
+        LabelAchat.setText("Commande passée");
     }
 
     @FXML
@@ -142,6 +150,7 @@ public class ControllerCommande implements Initializable{
         a.writeCSVFile("src/main/java/ApplicationProjet/elements.csv", Stocks.EStock);
         a.clearCSVFile("src/main/java/ApplicationProjet/historique.csv");
         a.writeHistoriqueCSVFile("src/main/java/ApplicationProjet/historique.csv", Historique.changements);
+        LabelAchat2.setText("Commande passée");
     }
 
     public void initialize(URL url, ResourceBundle resourceBundle){

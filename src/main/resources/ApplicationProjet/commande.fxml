@@ -99,6 +99,8 @@
             <Font size="14.0" />
          </font>
       </Button>
+      <Label fx:id="LabelAchat" layoutX="259.0" layoutY="597.0" prefHeight="17.0" prefWidth="195.0" textAlignment="CENTER" textFill="WHITE" />
+      <Label fx:id="LabelAchat2" layoutX="794.0" layoutY="605.0" prefHeight="17.0" prefWidth="195.0" textAlignment="CENTER" textFill="WHITE" />
    </children>
    <opaqueInsets>
       <Insets />

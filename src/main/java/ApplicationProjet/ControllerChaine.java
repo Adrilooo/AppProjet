@@ -9,10 +9,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
@@ -48,6 +45,24 @@ public class ControllerChaine implements Initializable {
 
     @FXML
     private Button BtnV3;
+
+    @FXML
+    private Label Cout1;
+
+    @FXML
+    private Label Cout2;
+
+    @FXML
+    private Label Cout3;
+
+    @FXML
+    private Label Erreur1;
+
+    @FXML
+    private Label Erreur2;
+
+    @FXML
+    private Label Erreur3;
 
     @FXML
     private TextField IdChaine1;
@@ -197,11 +212,18 @@ public class ControllerChaine implements Initializable {
     public void Valider1(){
         int i = Integer.parseInt(IdChaine1.getText());
         if (0 <= i && i <= 9){
-
             for (ChaineProduction c : CSV.Chaines) {
                 if(c.getCode().equals("C001")) {
                     c.setNivActivation(i);
-                    c.valider();
+
+                    if (!c.valider()){
+                        Erreur1.setText("Stock insuffisant");
+                    }
+                    else{
+                        Erreur1.setText("Commande validée");
+
+
+                    }
                 }
 
             }
@@ -212,19 +234,26 @@ public class ControllerChaine implements Initializable {
             a.clearCSVFile("src/main/java/ApplicationProjet/historique.csv");
             a.writeHistoriqueCSVFile("src/main/java/ApplicationProjet/historique.csv", Historique.changements);
         }
+        else {
+            Erreur1.setText("Niveau d'activation incorrect");
+        }
+
+
     }
 
 
     public void Valider2(){
         int i = Integer.parseInt(IdChaine2.getText());
         if (0 <= i && i <= 9){
-
             for (ChaineProduction c : CSV.Chaines) {
                 if(c.getCode().equals("C002")) {
                     c.setNivActivation(i);
-                    c.valider();
+                    if (!c.valider()) {
+                        Erreur2.setText("Stock insuffisant");
+                    } else {
+                        Erreur2.setText("Commande validée");
+                    }
                 }
-
             }
             CsvWriter a = new CsvWriter();
 
@@ -234,6 +263,9 @@ public class ControllerChaine implements Initializable {
             a.writeHistoriqueCSVFile("src/main/java/ApplicationProjet/historique.csv", Historique.changements);
 
 
+        }
+        else {
+            Erreur2.setText("Niveau d'activation incorrect");
         }
     }
     public void Valider3(){
@@ -242,7 +274,11 @@ public class ControllerChaine implements Initializable {
             for (ChaineProduction c : CSV.Chaines) {
                 if(c.getCode().equals("C003")) {
                     c.setNivActivation(i);
-                    c.valider();
+                    if (!c.valider()) {
+                        Erreur3.setText("Stock insuffisant");
+                    } else {
+                        Erreur3.setText("Commande validée");
+                    }
                 }
 
             }
@@ -253,6 +289,9 @@ public class ControllerChaine implements Initializable {
             a.clearCSVFile("src/main/java/ApplicationProjet/historique.csv");
             a.writeHistoriqueCSVFile("src/main/java/ApplicationProjet/historique.csv", Historique.changements);
 
+        }
+        else {
+            Erreur3.setText("Niveau d'activation incorrect");
         }
     }
 }

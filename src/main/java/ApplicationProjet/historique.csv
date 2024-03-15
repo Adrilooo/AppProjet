@@ -3,5 +3,196 @@
 4;M8;50.0;lose;1000.0;0.0;Achat
 2;KC;25.0;win;0.0;0.0;Vente
 4;M8;10.0;lose;0.0;0.0;Vente
+E002;Plastique;15.0;kilogrammes;0.0;0.0;Mis en production
+E003;Plaques aluminium;3.0;pieces;0.0;0.0;Mis en production
+E006;Coques;30.0;pieces;0.0;0.0;Produit
 2;KC;100.0;win;0.0;0.0;Vente
 3;VITA;10.0;lose;0.0;0.0;Vente
+4;M8;31.0;lose;0.0;0.0;Vente
+4;M8;31.0;lose;0.0;0.0;Vente
+4;M8;10.0;lose;0.0;0.0;Vente
+4;M8;23456.0;lose;0.0;0.0;Vente
+4;M8;345.0;lose;0.0;0.0;Vente
+E004;Servomoteurs;3000.0;pieces;0.0;0.0;Mis en production
+E002;Plastique;1.5;kilogrammes;0.0;0.0;Mis en production
+E003;Plaques aluminium;0.3;pieces;0.0;0.0;Mis en production
+E005;Propulsions;3.0;pieces;0.0;0.0;Produit
+E004;Servomoteurs;3000.0;pieces;0.0;0.0;Mis en production
+E002;Plastique;1.5;kilogrammes;0.0;0.0;Mis en production
+E003;Plaques aluminium;0.3;pieces;0.0;0.0;Mis en production
+E005;Propulsions;3.0;pieces;0.0;0.0;Produit
+E004;Servomoteurs;3000.0;pieces;0.0;0.0;Mis en production
+E002;Plastique;1.5;kilogrammes;0.0;0.0;Mis en production
+E003;Plaques aluminium;0.3;pieces;0.0;0.0;Mis en production
+E005;Propulsions;3.0;pieces;0.0;0.0;Produit
+E004;Servomoteurs;3000.0;pieces;0.0;0.0;Mis en production
+E002;Plastique;1.5;kilogrammes;0.0;0.0;Mis en production
+E003;Plaques aluminium;0.3;pieces;0.0;0.0;Mis en production
+E005;Propulsions;3.0;pieces;0.0;0.0;Produit
+E004;Servomoteurs;3000.0;pieces;0.0;0.0;Mis en production
+E002;Plastique;1.5;kilogrammes;0.0;0.0;Mis en production
+E003;Plaques aluminium;0.3;pieces;0.0;0.0;Mis en production
+E005;Propulsions;3.0;pieces;0.0;0.0;Produit
+E004;Servomoteurs;3000.0;pieces;0.0;0.0;Mis en production
+E002;Plastique;1.5;kilogrammes;0.0;0.0;Mis en production
+E003;Plaques aluminium;0.3;pieces;0.0;0.0;Mis en production
+E005;Propulsions;3.0;pieces;0.0;0.0;Produit
+E004;Servomoteurs;3000.0;pieces;0.0;0.0;Mis en production
+E002;Plastique;1.5;kilogrammes;0.0;0.0;Mis en production
+E003;Plaques aluminium;0.3;pieces;0.0;0.0;Mis en production
+E005;Propulsions;3.0;pieces;0.0;0.0;Produit
+E004;Servomoteurs;3000.0;pieces;0.0;0.0;Mis en production
+E002;Plastique;1.5;kilogrammes;0.0;0.0;Mis en production
+E003;Plaques aluminium;0.3;pieces;0.0;0.0;Mis en production
+E005;Propulsions;3.0;pieces;0.0;0.0;Produit
+E004;Servomoteurs;3000.0;pieces;0.0;0.0;Mis en production
+E002;Plastique;1.5;kilogrammes;0.0;0.0;Mis en production
+E003;Plaques aluminium;0.3;pieces;0.0;0.0;Mis en production
+E005;Propulsions;3.0;pieces;0.0;0.0;Produit
+E004;Servomoteurs;3000.0;pieces;0.0;0.0;Mis en production
+E002;Plastique;1.5;kilogrammes;0.0;0.0;Mis en production
+E003;Plaques aluminium;0.3;pieces;0.0;0.0;Mis en production
+E005;Propulsions;3.0;pieces;0.0;0.0;Produit
+E004;Servomoteurs;3000.0;pieces;0.0;0.0;Mis en production
+E002;Plastique;1.5;kilogrammes;0.0;0.0;Mis en production
+E003;Plaques aluminium;0.3;pieces;0.0;0.0;Mis en production
+E005;Propulsions;3.0;pieces;0.0;0.0;Produit
+E004;Servomoteurs;3000.0;pieces;0.0;0.0;Mis en production
+E002;Plastique;1.5;kilogrammes;0.0;0.0;Mis en production
+E003;Plaques aluminium;0.3;pieces;0.0;0.0;Mis en production
+E005;Propulsions;3.0;pieces;0.0;0.0;Produit
+E004;Servomoteurs;3000.0;pieces;0.0;0.0;Mis en production
+E002;Plastique;1.5;kilogrammes;0.0;0.0;Mis en production
+E003;Plaques aluminium;0.3;pieces;0.0;0.0;Mis en production
+E005;Propulsions;3.0;pieces;0.0;0.0;Produit
+E004;Servomoteurs;3000.0;pieces;0.0;0.0;Mis en production
+E002;Plastique;1.5;kilogrammes;0.0;0.0;Mis en production
+E003;Plaques aluminium;0.3;pieces;0.0;0.0;Mis en production
+E005;Propulsions;3.0;pieces;0.0;0.0;Produit
+E004;Servomoteurs;3000.0;pieces;0.0;0.0;Mis en production
+E002;Plastique;1.5;kilogrammes;0.0;0.0;Mis en production
+E003;Plaques aluminium;0.3;pieces;0.0;0.0;Mis en production
+E005;Propulsions;3.0;pieces;0.0;0.0;Produit
+E004;Servomoteurs;3000.0;pieces;0.0;0.0;Mis en production
+E002;Plastique;1.5;kilogrammes;0.0;0.0;Mis en production
+E003;Plaques aluminium;0.3;pieces;0.0;0.0;Mis en production
+E005;Propulsions;3.0;pieces;0.0;0.0;Produit
+E004;Servomoteurs;3000.0;pieces;0.0;0.0;Mis en production
+E002;Plastique;1.5;kilogrammes;0.0;0.0;Mis en production
+E003;Plaques aluminium;0.3;pieces;0.0;0.0;Mis en production
+E005;Propulsions;3.0;pieces;0.0;0.0;Produit
+E004;Servomoteurs;3000.0;pieces;0.0;0.0;Mis en production
+E003;Plaques aluminium;0.3;pieces;0.0;0.0;Mis en production
+E002;Plastique;1.5;kilogrammes;0.0;0.0;Mis en production
+E005;Propulsions;3.0;pieces;0.0;0.0;Produit
+E004;Servomoteurs;3000.0;pieces;0.0;0.0;Mis en production
+E003;Plaques aluminium;0.3;pieces;0.0;0.0;Mis en production
+E002;Plastique;1.5;kilogrammes;0.0;0.0;Mis en production
+E005;Propulsions;3.0;pieces;0.0;0.0;Produit
+E004;Servomoteurs;1000.0;pieces;0.0;0.0;Mis en production
+E003;Plaques aluminium;0.1;pieces;0.0;0.0;Mis en production
+E002;Plastique;0.5;kilogrammes;0.0;0.0;Mis en production
+E005;Propulsions;1.0;pieces;0.0;0.0;Produit
+E003;Plaques aluminium;0.1;pieces;2.0000000298023224;0.0;Achat
+E003;Plaques aluminium;5.0;pieces;0.0;0.0;Mis en production
+E002;Plastique;25.0;kilogrammes;0.0;0.0;Mis en production
+E006;Coques;50.0;pieces;0.0;0.0;Produit
+E004;Servomoteurs;0.0;pieces;0.0;0.0;Mis en production
+E003;Plaques aluminium;0.0;pieces;0.0;0.0;Mis en production
+E002;Plastique;0.0;kilogrammes;0.0;0.0;Mis en production
+E005;Propulsions;0.0;pieces;0.0;0.0;Produit
+E004;Servomoteurs;0.0;pieces;0.0;0.0;Mis en production
+E003;Plaques aluminium;0.0;pieces;0.0;0.0;Mis en production
+E002;Plastique;0.0;kilogrammes;0.0;0.0;Mis en production
+E005;Propulsions;0.0;pieces;0.0;0.0;Produit
+E004;Servomoteurs;0.0;pieces;0.0;0.0;Mis en production
+E003;Plaques aluminium;0.0;pieces;0.0;0.0;Mis en production
+E002;Plastique;0.0;kilogrammes;0.0;0.0;Mis en production
+E005;Propulsions;0.0;pieces;0.0;0.0;Produit
+E003;Plaques aluminium;2.0;pieces;0.0;0.0;Mis en production
+E002;Plastique;10.0;kilogrammes;0.0;0.0;Mis en production
+E006;Coques;20.0;pieces;0.0;0.0;Produit
+E003;Plaques aluminium;2.0;pieces;0.0;0.0;Mis en production
+E002;Plastique;10.0;kilogrammes;0.0;0.0;Mis en production
+E006;Coques;20.0;pieces;0.0;0.0;Produit
+E004;Servomoteurs;20000.0;pieces;300000.0;0.0;Achat
+E004;Servomoteurs;3000.0;pieces;0.0;0.0;Mis en production
+E003;Plaques aluminium;0.3;pieces;0.0;0.0;Mis en production
+E002;Plastique;1.5;kilogrammes;0.0;0.0;Mis en production
+E005;Propulsions;3.0;pieces;0.0;0.0;Produit
+E004;Servomoteurs;3000.0;pieces;0.0;0.0;Mis en production
+E003;Plaques aluminium;3.0;pieces;0.0;0.0;Mis en production
+E002;Plastique;15.0;kilogrammes;0.0;0.0;Mis en production
+E005;Propulsions;3.0;pieces;0.0;0.0;Produit
+E003;Plaques aluminium;3.0;pieces;0.0;0.0;Mis en production
+E002;Plastique;15.0;kilogrammes;0.0;0.0;Mis en production
+E006;Coques;30.0;pieces;0.0;0.0;Produit
+E004;Servomoteurs;1000.0;pieces;0.0;0.0;Mis en production
+E003;Plaques aluminium;1.0;pieces;0.0;0.0;Mis en production
+E002;Plastique;5.0;kilogrammes;0.0;0.0;Mis en production
+E005;Propulsions;1.0;pieces;0.0;0.0;Produit
+E004;Servomoteurs;3000.0;pieces;0.0;0.0;Mis en production
+E003;Plaques aluminium;3.0;pieces;0.0;0.0;Mis en production
+E002;Plastique;15.0;kilogrammes;0.0;0.0;Mis en production
+E005;Propulsions;3.0;pieces;0.0;0.0;Produit
+E004;Servomoteurs;0.0;pieces;0.0;0.0;Mis en production
+E003;Plaques aluminium;0.0;pieces;0.0;0.0;Mis en production
+E002;Plastique;0.0;kilogrammes;0.0;0.0;Mis en production
+E005;Propulsions;0.0;pieces;0.0;0.0;Produit
+E004;Servomoteurs;2000.0;pieces;0.0;0.0;Mis en production
+E003;Plaques aluminium;2.0;pieces;0.0;0.0;Mis en production
+E002;Plastique;10.0;kilogrammes;0.0;0.0;Mis en production
+E005;Propulsions;2.0;pieces;0.0;0.0;Produit
+E004;Servomoteurs;0.0;pieces;0.0;0.0;Mis en production
+E003;Plaques aluminium;0.0;pieces;0.0;0.0;Mis en production
+E002;Plastique;0.0;kilogrammes;0.0;0.0;Mis en production
+E005;Propulsions;0.0;pieces;0.0;0.0;Produit
+E004;Servomoteurs;1000.0;pieces;0.0;0.0;Mis en production
+E003;Plaques aluminium;1.0;pieces;0.0;0.0;Mis en production
+E002;Plastique;5.0;kilogrammes;0.0;0.0;Mis en production
+E005;Propulsions;1.0;pieces;0.0;0.0;Produit
+E004;Servomoteurs;1000.0;pieces;0.0;0.0;Mis en production
+E003;Plaques aluminium;1.0;pieces;0.0;0.0;Mis en production
+E002;Plastique;5.0;kilogrammes;0.0;0.0;Mis en production
+E005;Propulsions;1.0;pieces;0.0;0.0;Produit
+E004;Servomoteurs;2000.0;pieces;0.0;0.0;Mis en production
+E003;Plaques aluminium;2.0;pieces;0.0;0.0;Mis en production
+E002;Plastique;10.0;kilogrammes;0.0;0.0;Mis en production
+E005;Propulsions;2.0;pieces;0.0;0.0;Produit
+E004;Servomoteurs;3000.0;pieces;0.0;0.0;Mis en production
+E003;Plaques aluminium;3.0;pieces;0.0;0.0;Mis en production
+E002;Plastique;15.0;kilogrammes;0.0;0.0;Mis en production
+E005;Propulsions;3.0;pieces;0.0;0.0;Produit
+E004;Servomoteurs;1000.0;pieces;0.0;0.0;Mis en production
+E003;Plaques aluminium;1.0;pieces;0.0;0.0;Mis en production
+E002;Plastique;5.0;kilogrammes;0.0;0.0;Mis en production
+E005;Propulsions;1.0;pieces;0.0;0.0;Produit
+E004;Servomoteurs;40000.0;pieces;600000.0;0.0;Achat
+E004;Servomoteurs;1000.0;pieces;0.0;0.0;Mis en production
+E003;Plaques aluminium;1.0;pieces;0.0;0.0;Mis en production
+E002;Plastique;5.0;kilogrammes;0.0;0.0;Mis en production
+E005;Propulsions;1.0;pieces;0.0;0.0;Produit
+E004;Servomoteurs;9000.0;pieces;0.0;0.0;Mis en production
+E003;Plaques aluminium;9.0;pieces;0.0;0.0;Mis en production
+E002;Plastique;45.0;kilogrammes;0.0;0.0;Mis en production
+E005;Propulsions;9.0;pieces;0.0;0.0;Produit
+E004;Servomoteurs;9000.0;pieces;0.0;0.0;Mis en production
+E003;Plaques aluminium;9.0;pieces;0.0;0.0;Mis en production
+E002;Plastique;45.0;kilogrammes;0.0;0.0;Mis en production
+E005;Propulsions;9.0;pieces;0.0;0.0;Produit
+E004;Servomoteurs;9000.0;pieces;0.0;0.0;Mis en production
+E003;Plaques aluminium;9.0;pieces;0.0;0.0;Mis en production
+E002;Plastique;45.0;kilogrammes;0.0;0.0;Mis en production
+E005;Propulsions;9.0;pieces;0.0;0.0;Produit
+E004;Servomoteurs;9000.0;pieces;0.0;0.0;Mis en production
+E003;Plaques aluminium;9.0;pieces;0.0;0.0;Mis en production
+E002;Plastique;45.0;kilogrammes;0.0;0.0;Mis en production
+E005;Propulsions;9.0;pieces;0.0;0.0;Produit
+E003;Plaques aluminium;1.0;pieces;0.0;0.0;Mis en production
+E002;Plastique;5.0;kilogrammes;0.0;0.0;Mis en production
+E006;Coques;10.0;pieces;0.0;0.0;Produit
+E004;Servomoteurs;1000.0;pieces;15000.0;0.0;Achat
+E004;Servomoteurs;1000.0;pieces;0.0;0.0;Mis en production
+E003;Plaques aluminium;1.0;pieces;0.0;0.0;Mis en production
+E002;Plastique;5.0;kilogrammes;0.0;0.0;Mis en production
+E005;Propulsions;1.0;pieces;0.0;0.0;Produit
