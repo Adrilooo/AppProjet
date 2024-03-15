@@ -30,13 +30,11 @@ public class Stocks {
             EStock.add(e);
         }
    }
-    public static void afficherStock() {
-        System.out.println("Stock actuel :");
-        for (Element e : EStock) {
-            System.out.println("Code : " + e.getCode() +
-                    ", Nom : " + e.getNom() +
-                    ", Quantité en stock : " + e.getQuantite() +
-                    " " + e.getUniteMesure());
-        }
+   public int valeurStock(){
+       int valeur =0;
+       for (Element e : EStock){
+           valeur+= (int) e.getPrixVente();
+       }
+       return valeur;
     }
 }
