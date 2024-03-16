@@ -33,7 +33,7 @@ public class Stocks {
    public int valeurStock(){
        int valeur =0;
        for (Element e : EStock){
-           valeur+= (int) e.getPrixVente();
+           valeur += (int) e.getPrixVente();
        }
        return valeur;
     }

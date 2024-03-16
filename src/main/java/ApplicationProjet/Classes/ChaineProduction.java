@@ -49,7 +49,6 @@ public class ChaineProduction {
 
 
 
-
     public HashMap<Element,Float> CoupAchatManquant (HashMap <Element,Float> E){
         HashMap<Element, Float> AchatSupplementaire = new HashMap<Element, Float>();
         for (Map.Entry <Element,Float> o : E.entrySet()) {
@@ -69,8 +68,6 @@ public class ChaineProduction {
     }
 
     public Boolean valider() {
-
-
         for (HashMap.Entry<Element, Float> m : ElementEntree.entrySet()) {
             for (Element e : Stocks.EStock) {
                 if (e == (Element) m.getKey()) {
@@ -78,7 +75,6 @@ public class ChaineProduction {
 
                             return false;
                         }
-
                 }
             }
         }
@@ -111,7 +107,3 @@ public class ChaineProduction {
     }
 
 }
-
-
-
-

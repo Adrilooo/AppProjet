@@ -101,7 +101,7 @@ public class ControllerCommande implements Initializable{
 
     @FXML
     private void PageSimulation(){
-        ChargerPage("Simulation.fxml");
+        ChargerPage("Comparatif.fxml");
     }
 
     public void ChargerPage(String page) {
