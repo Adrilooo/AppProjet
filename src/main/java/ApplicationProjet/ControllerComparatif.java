@@ -14,6 +14,7 @@ import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Objects;
 import java.util.ResourceBundle;
@@ -204,9 +205,6 @@ public class ControllerComparatif {
         primaryStage.show();
     }
 
-    public void Comparatif(){
-
-    }
 
     public void Comparer(){
         String code = Code.getText();
@@ -214,6 +212,11 @@ public class ControllerComparatif {
 
         String code2 = Code2.getText();
         String na2 = NivAct2.getText();
+
+        String tmp = ""+Stocks.valeurStock();
+        VSI.setText(tmp);
+        VSI2.setText(tmp);
+
 
 
 

@@ -30,9 +30,9 @@ public class Stocks {
             EStock.add(e);
         }
    }
-   public int valeurStock(){
+   public static int valeurStock(){
        int valeur =0;
-       for (Element e : EStock){
+       for (Element e : s){
            valeur += (int) e.getPrixVente();
        }
        return valeur;

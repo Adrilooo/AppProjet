@@ -38,6 +38,12 @@ public class ChaineProduction {
     public String getNom() {
         return this.nom;
     }
+    public HashMap<Element,Float> getElementEntree(){
+        return ElementEntree;
+    }
+    public HashMap<Element,Float> getElementSortie(){
+        return ElementSortie;
+    }
 
     public void addElemEntree(Element e){
         this.ElementEntree.put(e, e.getQuantite());
@@ -49,18 +55,18 @@ public class ChaineProduction {
 
 
 
-    public HashMap<Element,Float> CoupAchatManquant (HashMap <Element,Float> E){
-        HashMap<Element, Float> AchatSupplementaire = new HashMap<Element, Float>();
+    public Float CoupAchatManquant (HashMap <Element,Float> E){
+        float AchatSup = 0.0F ;
         for (Map.Entry <Element,Float> o : E.entrySet()) {
             for (Element e : Stocks.EStock) {
                 if (e == (Element) o.getKey()) {
                     if (e.getQuantite() < (Float) o.getValue() * this.NivActivation) {
-                        AchatSupplementaire.put(e,(Float) o.getValue() * this.NivActivation - e.getQuantite());
+                        AchatSup+= (float) (((Float) o.getValue() * this.NivActivation - e.getQuantite())*e.getPrixVente());
                     }
                 }
             }
         }
-        return AchatSupplementaire;
+        return AchatSup;
     }
 
     public void setNivActivation(int Niv) {
@@ -71,10 +77,10 @@ public class ChaineProduction {
         for (HashMap.Entry<Element, Float> m : ElementEntree.entrySet()) {
             for (Element e : Stocks.EStock) {
                 if (e == (Element) m.getKey()) {
-                        if (e.getQuantite() < (Float) m.getValue()*this.NivActivation) {
+                    if (e.getQuantite() < (Float) m.getValue()*this.NivActivation) {
 
-                            return false;
-                        }
+                        return false;
+                    }
                 }
             }
         }
@@ -105,5 +111,4 @@ public class ChaineProduction {
         this.NivActivation = 0;
         return true;
     }
-
 }
