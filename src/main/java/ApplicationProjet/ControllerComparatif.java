@@ -132,6 +132,9 @@ public class ControllerComparatif {
     private Button btnStock;
 
     @FXML
+    private Button btnComparer;
+
+    @FXML
     private TableColumn<Element, String> colNomE1;
 
     @FXML
@@ -209,18 +212,55 @@ public class ControllerComparatif {
     public void Comparer(){
         String code = Code.getText();
         String na = NivAct.getText();
+        ArrayList<Element> EStock2 = new ArrayList<Element>();
+        ArrayList<Element> EStock3 = new ArrayList<Element>();
+        for (Element El : Stocks.EStock){
+            EStock2.add(El);
+        }
+
+        for (Element El : Stocks.EStock){
+            EStock3.add(El);
+        }
 
         String code2 = Code2.getText();
         String na2 = NivAct2.getText();
 
-        String tmp = ""+Stocks.valeurStock();
-        VSI.setText(tmp);
-        VSI2.setText(tmp);
+        String tmp = ""+Stocks.valeurStock(Stocks.EStock);
+        VSI.setText("valeur stock initial : " + tmp);
+        VSI2.setText("valeur stock initial : " + tmp);
+        System.out.println(Stocks.valeurStock(EStock2));
+        VA.setText("valeur d'achat :" + Vachat(na,code,EStock2));
+        VA2.setText("valeur d'achat :" + Vachat(na2,code2,EStock3));
+        System.out.println(Stocks.valeurStock(EStock2));
 
 
 
+
+        String tmp2 = ""+Stocks.valeurStock(EStock2);
+        VSF.setText("valeur stock final : " + tmp2);
+        String tmp3 = ""+Stocks.valeurStock(EStock3);
+        VSF2.setText("valeur stock final : " + tmp3);
+
+        String tmp4 = ((Stocks.valeurStock(Stocks.EStock))/Stocks.valeurStock(EStock2)-1)*100 + " %";
+        String tmp5 = ((Stocks.valeurStock(Stocks.EStock))/Stocks.valeurStock(EStock3)-1)*100 + " %";
+        R.setText("Rentabilité : "+tmp4);
+        R2.setText("Rentabilité : "+tmp5);
 
 
     }
+    public String Vachat(String na,String code,ArrayList <Element> E){
+
+    double achat = 0;
+        if (0 <= Integer.parseInt(na) && Integer.parseInt(na) <= 9) {
+        for (ChaineProduction c : CSV.Chaines) {
+            if (c.getCode().equals(code)) {
+                c.setNivActivation(Integer.parseInt(na));
+                achat = c.simuler(E);
+
+            }
+        }
+    }
+        return "" + achat;
+}
 
 }

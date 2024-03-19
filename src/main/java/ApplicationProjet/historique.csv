@@ -196,3 +196,7 @@ E004;Servomoteurs;1000.0;pieces;0.0;0.0;Mis en production
 E003;Plaques aluminium;1.0;pieces;0.0;0.0;Mis en production
 E002;Plastique;5.0;kilogrammes;0.0;0.0;Mis en production
 E005;Propulsions;1.0;pieces;0.0;0.0;Produit
+E002;Plastique;539.5;kilogrammes;0.0;0.0;Vente
+E003;Plaques aluminium;135.99994;pieces;0.0;1359.9993896484375;Vente
+E002;Plastique;1.0;kilogrammes;3.0;0.0;Achat
+E002;Plastique;1.0;kilogrammes;3.0;0.0;Achat
