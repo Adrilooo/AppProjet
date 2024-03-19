@@ -62,6 +62,30 @@ public class ControllerComparatif {
     private Button BtnV3;
 
     @FXML
+    private Label R;
+
+    @FXML
+    private Label R2;
+
+    @FXML
+    private Label VA;
+
+    @FXML
+    private Label VA2;
+
+    @FXML
+    private Label VSF;
+
+    @FXML
+    private Label VSF2;
+
+    @FXML
+    private Label VSI;
+
+    @FXML
+    private Label VSI2;
+
+    @FXML
     private TextField IdChaine1;
 
     @FXML
@@ -181,6 +205,18 @@ public class ControllerComparatif {
     }
 
     public void Comparatif(){
+
+    }
+
+    public void Comparer(){
+        String code = Code.getText();
+        String na = NivAct.getText();
+
+        String code2 = Code2.getText();
+        String na2 = NivAct2.getText();
+
+
+
 
     }
 

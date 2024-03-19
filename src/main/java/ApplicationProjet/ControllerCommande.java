@@ -52,6 +52,8 @@ public class ControllerCommande implements Initializable{
     @FXML
     private Button btnAchatNew;
 
+
+
     @FXML
     private Label LabelAchat;
 
