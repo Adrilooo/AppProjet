@@ -80,12 +80,12 @@
          </font>
       </Button>
       <Label fx:id="LabelAchat2" layoutX="794.0" layoutY="605.0" prefHeight="17.0" prefWidth="195.0" textAlignment="CENTER" textFill="WHITE" />
-      <Label fx:id="VA" layoutX="240.0" layoutY="511.0" prefHeight="33.0" prefWidth="195.0" style="-fx-border-width: 1px 1px 1px 1px; -fx-border-color: white;" text="valeur d'achat :" textAlignment="RIGHT" textFill="WHITE">
+      <Label fx:id="VA" layoutX="240.0" layoutY="511.0" prefHeight="33.0" prefWidth="274.0" style="-fx-border-width: 1px 1px 1px 1px; -fx-border-color: white;" text="valeur d'achat :" textAlignment="RIGHT" textFill="WHITE">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label fx:id="VSI" layoutX="243.0" layoutY="459.0" prefHeight="33.0" prefWidth="210.0" style="-fx-border-width: 1px 1px 1px 1px; -fx-border-color: white;" text="valeur stock initial :" textAlignment="RIGHT" textFill="WHITE">
+      <Label fx:id="VSI" layoutX="243.0" layoutY="459.0" prefHeight="33.0" prefWidth="274.0" style="-fx-border-width: 1px 1px 1px 1px; -fx-border-color: white;" text="valeur stock initial :" textAlignment="RIGHT" textFill="WHITE">
          <font>
             <Font size="20.0" />
          </font>
@@ -95,22 +95,22 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <Label fx:id="VSF" layoutX="236.0" layoutY="562.0" prefHeight="33.0" prefWidth="223.0" style="-fx-border-width: 1px 1px 1px 1px; -fx-border-color: white;" text="valeur stock final :" textFill="WHITE">
+      <Label fx:id="VSF" layoutX="236.0" layoutY="562.0" prefHeight="33.0" prefWidth="274.0" style="-fx-border-width: 1px 1px 1px 1px; -fx-border-color: white;" text="valeur stock final :" textFill="WHITE">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label fx:id="VSI2" layoutX="777.0" layoutY="475.0" prefHeight="33.0" prefWidth="210.0" style="-fx-border-width: 1px 1px 1px 1px; -fx-border-color: white;" text="valeur stock initial :" textAlignment="RIGHT" textFill="WHITE">
+      <Label fx:id="VSI2" layoutX="777.0" layoutY="475.0" prefHeight="33.0" prefWidth="287.0" style="-fx-border-width: 1px 1px 1px 1px; -fx-border-color: white;" text="valeur stock initial :" textAlignment="RIGHT" textFill="WHITE">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label fx:id="VA2" layoutX="777.0" layoutY="527.0" prefHeight="33.0" prefWidth="210.0" style="-fx-border-width: 1px 1px 1px 1px; -fx-border-color: white;" text="valeur d'achat:" textAlignment="RIGHT" textFill="WHITE">
+      <Label fx:id="VA2" layoutX="777.0" layoutY="527.0" prefHeight="33.0" prefWidth="287.0" style="-fx-border-width: 1px 1px 1px 1px; -fx-border-color: white;" text="valeur d'achat:" textAlignment="RIGHT" textFill="WHITE">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label fx:id="VSF2" layoutX="777.0" layoutY="597.0" prefHeight="33.0" prefWidth="210.0" style="-fx-border-width: 1px 1px 1px 1px; -fx-border-color: white;" text="valeur stock final :" textAlignment="RIGHT" textFill="WHITE">
+      <Label fx:id="VSF2" layoutX="777.0" layoutY="597.0" prefHeight="33.0" prefWidth="274.0" style="-fx-border-width: 1px 1px 1px 1px; -fx-border-color: white;" text="valeur stock final :" textAlignment="RIGHT" textFill="WHITE">
          <font>
             <Font size="20.0" />
          </font>

@@ -208,37 +208,34 @@ public class ControllerComparatif {
         primaryStage.show();
     }
 
-
+    ArrayList<Element> EStock2 = new ArrayList<Element>(Stocks.EStock);
+    ArrayList<Element> EStock3 = new ArrayList<Element>(Stocks.EStock);
     public void Comparer(){
         String code = Code.getText();
         String na = NivAct.getText();
-        ArrayList<Element> EStock2 = new ArrayList<Element>();
-        ArrayList<Element> EStock3 = new ArrayList<Element>();
-        for (Element El : Stocks.EStock){
-            EStock2.add(El);
-        }
-
-        for (Element El : Stocks.EStock){
-            EStock3.add(El);
-        }
 
         String code2 = Code2.getText();
         String na2 = NivAct2.getText();
 
-        String tmp = ""+Stocks.valeurStock(Stocks.EStock);
+        double tmp = Stocks.valeurStock(Stocks.EStock);
         VSI.setText("valeur stock initial : " + tmp);
         VSI2.setText("valeur stock initial : " + tmp);
         System.out.println(Stocks.valeurStock(EStock2));
-        VA.setText("valeur d'achat :" + Vachat(na,code,EStock2));
-        VA2.setText("valeur d'achat :" + Vachat(na2,code2,EStock3));
+
+        double va = Vachat(na,code,EStock2);
+        double va2 = Vachat(na2,code2,EStock3);
+
+
+        VA.setText("valeur d'achat :" + va);
+        VA2.setText("valeur d'achat :" + va2);
         System.out.println(Stocks.valeurStock(EStock2));
 
 
 
 
-        String tmp2 = ""+Stocks.valeurStock(EStock2);
+        double tmp2 = Stocks.valeurStock(EStock2);
         VSF.setText("valeur stock final : " + tmp2);
-        String tmp3 = ""+Stocks.valeurStock(EStock3);
+        double tmp3 = Stocks.valeurStock(EStock3);
         VSF2.setText("valeur stock final : " + tmp3);
 
         String tmp4 = ((Stocks.valeurStock(Stocks.EStock))/Stocks.valeurStock(EStock2)-1)*100 + " %";
@@ -248,7 +245,7 @@ public class ControllerComparatif {
 
 
     }
-    public String Vachat(String na,String code,ArrayList <Element> E){
+    public double Vachat(String na,String code,ArrayList <Element> E){
 
     double achat = 0;
         if (0 <= Integer.parseInt(na) && Integer.parseInt(na) <= 9) {
@@ -260,7 +257,7 @@ public class ControllerComparatif {
             }
         }
     }
-        return "" + achat;
+        return achat;
 }
 
 }

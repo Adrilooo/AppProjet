@@ -37,7 +37,7 @@ public class Stocks {
    public static int valeurStock(ArrayList<Element> E){
        int valeur =0;
        for (Element e : E){
-           valeur += (int) e.getPrixVente();
+           valeur += e.getPrixVente()*e.getQuantite();
        }
        return valeur;
     }
