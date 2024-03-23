@@ -57,10 +57,10 @@ public class ChaineProduction {
     }
 
 
-    public Float CoupAchatManquant(HashMap<Element, Float> E, ArrayList<Element> A) {
+    public float CoupAchatManquant(HashMap<Element, Float> E) {
         float AchatSup = 0.0F;
         for (Map.Entry<Element, Float> o : E.entrySet()) {
-            for (Element e : A) {
+            for (Element e : Stocks.EStock) {
                 if (o.getKey() == e) {
                     if (e.getQuantite() < o.getValue() * this.NivActivation) {
                         AchatSup += (o.getValue() * this.NivActivation - e.getQuantite()) * e.getPrixAchat();
@@ -114,11 +114,11 @@ public class ChaineProduction {
     }
 
 
-    public double simuler(ArrayList<Element>E) {
+    public double simuler() {
         double achat = 0;
         HashMap<Element, Float> Chaine = new HashMap<Element, Float>();
         for (HashMap.Entry<Element, Float> m : ElementEntree.entrySet()) {
-            for (Element e : E) {
+            for (Element e : Stocks.EStock) {
                 if (e == (Element) m.getKey()) {
                     if (e.getQuantite() < (Float) m.getValue() * this.NivActivation) {
                         Chaine.put(m.getKey(),m.getValue());
@@ -126,25 +126,25 @@ public class ChaineProduction {
                 }
             }
         }
-        achat = CoupAchatManquant(Chaine,E);
+        achat = CoupAchatManquant(Chaine);
         for (HashMap.Entry<Element, Float> m : ElementEntree.entrySet()) {
-            for (Element e : E) {
+            for (Element e : Stocks.EStock) {
                 if (e == (Element) m.getKey()) {
-                    Stocks.SimuEnleverElem((Element) m.getKey(), (Float) m.getValue() * Float.parseFloat(String.valueOf(this.NivActivation)),E);
+                    Stocks.SimuEnleverElem((Element) m.getKey(), (Float) m.getValue() * Float.parseFloat(String.valueOf(this.NivActivation)));
                 }
             }
         }
         for (Map.Entry<Element, Float> m : ElementSortie.entrySet()) {
-            if (E.contains((Element) m.getKey())) {
-                for (Element e : E) {
+            if (Stocks.EStock.contains((Element) m.getKey())) {
+                for (Element e : Stocks.EStock) {
                     if (e == (Element) m.getKey()) {
-                        Stocks.SimuAjouterElem((Element) m.getKey(), (Float) m.getValue() * Float.parseFloat(String.valueOf(this.NivActivation)),E);
+                        Stocks.SimuAjouterElem((Element) m.getKey(), (Float) m.getValue() * Float.parseFloat(String.valueOf(this.NivActivation)));
 
                     }
                 }
             } else {
                 Element f = (Element) m.getKey();
-                Stocks.SimuAjouterElem((Element) m.getKey(), (Float) m.getValue() * Float.parseFloat(String.valueOf(this.NivActivation)),E);
+                Stocks.SimuAjouterElem((Element) m.getKey(), (Float) m.getValue() * Float.parseFloat(String.valueOf(this.NivActivation)));
                   }
         }
 

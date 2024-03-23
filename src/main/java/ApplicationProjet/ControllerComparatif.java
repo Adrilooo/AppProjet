@@ -14,6 +14,7 @@ import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 import java.net.URL;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Objects;
@@ -208,8 +209,6 @@ public class ControllerComparatif {
         primaryStage.show();
     }
 
-    ArrayList<Element> EStock2 = new ArrayList<Element>(Stocks.EStock);
-    ArrayList<Element> EStock3 = new ArrayList<Element>(Stocks.EStock);
     public void Comparer(){
         String code = Code.getText();
         String na = NivAct.getText();
@@ -217,42 +216,47 @@ public class ControllerComparatif {
         String code2 = Code2.getText();
         String na2 = NivAct2.getText();
 
-        double tmp = Stocks.valeurStock(Stocks.EStock);
+        double tmp = Stocks.valeurStock();
         VSI.setText("valeur stock initial : " + tmp);
         VSI2.setText("valeur stock initial : " + tmp);
-        System.out.println(Stocks.valeurStock(EStock2));
 
-        double va = Vachat(na,code,EStock2);
-        double va2 = Vachat(na2,code2,EStock3);
+        System.out.println(Stocks.valeurStockFinal());
+        double va = Vachat(na,code);
+
 
 
         VA.setText("valeur d'achat :" + va);
-        VA2.setText("valeur d'achat :" + va2);
-        System.out.println(Stocks.valeurStock(EStock2));
-
-
-
-
-        double tmp2 = Stocks.valeurStock(EStock2);
+        double tmp2 = Stocks.valeurStockFinal();
         VSF.setText("valeur stock final : " + tmp2);
-        double tmp3 = Stocks.valeurStock(EStock3);
+        Stocks.StockTmp.clear();
+        Stocks.copieStock();
+        double va2 = Vachat(na2,code2);
+        VA2.setText("valeur d'achat :" + va2);
+        double tmp3 = Stocks.valeurStockFinal();
         VSF2.setText("valeur stock final : " + tmp3);
+        Double valeur = (1-(Stocks.valeurStock()/tmp2))*100;
+        Double valeur2 = (1-(Stocks.valeurStock()/tmp3))*100;
+        DecimalFormat df = new DecimalFormat("0.00"); // Définition du motif pour arrondir au centième près
+        String valeurArrondieStr = df.format(valeur); // Formatage de la valeur
 
-        String tmp4 = ((Stocks.valeurStock(Stocks.EStock))/Stocks.valeurStock(EStock2)-1)*100 + " %";
-        String tmp5 = ((Stocks.valeurStock(Stocks.EStock))/Stocks.valeurStock(EStock3)-1)*100 + " %";
-        R.setText("Rentabilité : "+tmp4);
-        R2.setText("Rentabilité : "+tmp5);
+        String valeurArrondie = valeurArrondieStr+ "%";
+        DecimalFormat df2 = new DecimalFormat("0.00"); // Définition du motif pour arrondir au centième près
+        String valeurArrondieStr2 = df2.format(valeur2); // Formatage de la valeur
+
+        String valeurArrondie2 = valeurArrondieStr2+ "%"; // Conversion de la chaîne formatée en double
+        R.setText("Rentabilité : "+valeurArrondie);
+        R2.setText("Rentabilité : "+valeurArrondie2);
 
 
     }
-    public double Vachat(String na,String code,ArrayList <Element> E){
+    public double Vachat(String na,String code){
 
     double achat = 0;
         if (0 <= Integer.parseInt(na) && Integer.parseInt(na) <= 9) {
         for (ChaineProduction c : CSV.Chaines) {
             if (c.getCode().equals(code)) {
                 c.setNivActivation(Integer.parseInt(na));
-                achat = c.simuler(E);
+                achat = c.simuler();
 
             }
         }

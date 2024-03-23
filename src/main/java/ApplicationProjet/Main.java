@@ -47,7 +47,7 @@ public class Main extends Application {
         b.LireElement();
         b.LireHistorique();
         b.LireChaine();
-
+        Stocks.copieStock();
         launch();
     }
 }
