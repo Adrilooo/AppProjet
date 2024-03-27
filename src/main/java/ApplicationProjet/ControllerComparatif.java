@@ -117,21 +117,37 @@ public class ControllerComparatif {
     @FXML
     private AnchorPane bpChaine;
 
+    /**
+     * Bouton permettant d'accéder à la chaîne de production.
+     *
+     */
     @FXML
     private Button btnCProd;
 
+    /**
+     * Bouton permettant d'accéder à la gestion des commandes.
+     *
+     */
     @FXML
     private Button btnCommande;
 
+    /**
+     * Bouton permettant d'accéder à l'historique.
+     *
+     */
     @FXML
     private Button btnHistorique;
 
-    @FXML
-    private Button btnSimulation;
-
+    /**
+     * Bouton permettant d'accéder au stock .
+     */
     @FXML
     private Button btnStock;
 
+    /**
+     * Bouton permettant d'accéder à la simulation de production.
+     *
+     */
     @FXML
     private Button btnComparer;
 
