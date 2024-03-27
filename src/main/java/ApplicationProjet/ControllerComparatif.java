@@ -257,7 +257,6 @@ public class ControllerComparatif {
             if (c.getCode().equals(code)) {
                 c.setNivActivation(Integer.parseInt(na));
                 achat = c.simuler();
-                s
 
             }
         }
