@@ -234,8 +234,8 @@ public class ControllerComparatif {
         VA2.setText("valeur d'achat :" + va2);
         double tmp3 = Stocks.valeurStockFinal();
         VSF2.setText("valeur stock final : " + tmp3);
-        Double valeur = (1-(Stocks.valeurStock()/tmp2))*100;
-        Double valeur2 = (1-(Stocks.valeurStock()/tmp3))*100;
+        Double valeur = (1-(Stocks.valeurStock()/tmp2-va))*100;
+        Double valeur2 = (1-(Stocks.valeurStock()/tmp3-va2))*100;
         DecimalFormat df = new DecimalFormat("0.00"); // Définition du motif pour arrondir au centième près
         String valeurArrondieStr = df.format(valeur); // Formatage de la valeur
 

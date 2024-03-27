@@ -6,11 +6,24 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
+/**
+ * Cette classe gère la lecture de données à partir de fichiers CSV (Comma-Separated Values).
+ * Elle fournit des méthodes pour lire des éléments, des chaînes de production et l'historique des changements
+ * à partir de fichiers CSV spécifiques.
+ *
+ * @author Adrilo
+ */
 public class CSV {
-
+    /**
+     * Liste contenant les chaînes de production lues du fichier CSV.
+     */
     public static ArrayList<ChaineProduction> Chaines = new ArrayList<ChaineProduction>();
-
+    /**
+     * Lit les informations sur les éléments d'un fichier CSV et les ajoute au stock.
+     *
+     * @throws FileNotFoundException Si le fichier CSV d'éléments n'est pas trouvé.
+     * @throws IOException En cas d'erreur de lecture du fichier CSV.
+     */
     public  void LireElement() {
         String file = "src/main/java/ApplicationProjet/elements.csv";
 
@@ -33,6 +46,12 @@ public class CSV {
             e.printStackTrace();
         }
     }
+    /**
+     * Lit les informations sur les chaînes de production d'un fichier CSV et les stocke dans une liste.
+     *
+     * @throws FileNotFoundException Si le fichier CSV de chaînes n'est pas trouvé.
+     * @throws IOException En cas d'erreur de lecture du fichier CSV.
+     */
     public void LireChaine() {
         String file = "src/main/java/ApplicationProjet/chaines.csv";
         String line = "";
@@ -80,6 +99,12 @@ public class CSV {
             e.printStackTrace();
         }
     }
+    /**
+     * Lit les informations sur l'historique des changements d'un fichier CSV et les ajoute à l'historique.
+     *
+     * @throws FileNotFoundException Si le fichier CSV d'historique n'est pas trouvé.
+     * @throws IOException En cas d'erreur de lecture du fichier CSV.
+     */
     public  void LireHistorique() {
         String file = "src/main/java/ApplicationProjet/historique.csv";
         String line = "";
