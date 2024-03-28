@@ -143,7 +143,7 @@ public class ControllerStock implements Initializable {
     }
 
     /**
-     * Méthode permettant de charger la page de l'historique des actions.
+     * Méthode permettant de charger la page de l'historique.
      */
     @FXML
     public void PageHistorique() {

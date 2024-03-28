@@ -127,7 +127,7 @@ public class ControllerHistorique implements Initializable {
     private TableView<ChangementStock> tableViewStock;
 
     /**
-     * Méthode permettant de charger la page de l'historique des actions.
+     * Méthode permettant de charger la page de l'historique.
      */
     @FXML
     private void PageHistorique() {
